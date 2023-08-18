@@ -1,0 +1,38 @@
+[
+  {
+    "id": "851d07ff-88b7-4638-b70a-5e514573aa56",
+    "name": "USER"
+  },
+  {
+    "id": "efa5ceda-a861-41c8-af4e-00e93bc05341",
+    "name": "AGENT"
+  },
+  {
+    "id": "0e6f2d3e-56e5-405d-a764-0a459fe2440b",
+    "name": "ADMIN"
+  },
+  {
+    "id": "176d10c8-521e-46a9-bfaf-f8544f4340c2",
+    "name": "SUB-ADMIN"
+  },
+  {
+    "id": "dd312209-8785-46a6-a122-5fead1b66809",
+    "name": "OPERATOR"
+  },
+  {
+    "id": "a7484ae9-510c-4b1c-b563-ac6d664c0622",
+    "name": "AFFILIATE"
+  },
+  {
+    "id": "f46cf92c-c45e-4768-8f2f-e2375b156e33",
+    "name": "AFFILIATE-L1"
+  },
+  {
+    "id": "d729de2f-a4f2-4b78-b2be-f3187da49003",
+    "name": "AFFILIATE-L2"
+  },
+  {
+    "id": "0dbd1927-54e5-46e5-9b57-a8bd0a30becf",
+    "name": "TENANT"
+  }
+]

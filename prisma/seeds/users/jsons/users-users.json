@@ -1,0 +1,73 @@
+[
+  {
+    "id": "425fde8b-ac30-441e-ab49-6f9b0e554905",
+    "email": "hafiz@softic.ai",
+    "password": "$argon2i$v=19$m=4096,t=3,p=1$ZbwfQAl4wSqIs8boMB5LGA$b4auuGSJJUirczjjq5g65teBaEaVkpfrzSCHvUF3pbI",
+    "firstName": "Hafiz",
+    "LastName": "Softic",
+    "userName": "hafiz-softic"
+  },
+  {
+    "id": "af63f67c-ef1c-4e1b-bd72-3cce9c33dc90",
+    "email": "shovon@softic.ai",
+    "password": "$argon2i$v=19$m=4096,t=3,p=1$ZbwfQAl4wSqIs8boMB5LGA$b4auuGSJJUirczjjq5g65teBaEaVkpfrzSCHvUF3pbI",
+    "firstName": "Shovon",
+    "LastName": "Softic",
+    "userName": "shovon-softic",
+    "createdById": "425fde8b-ac30-441e-ab49-6f9b0e554905"
+  },
+  {
+    "id": "750d1002-8f3f-4fe4-b363-65d026555470",
+    "email": "musa@softic.ai",
+    "password": "$argon2i$v=19$m=4096,t=3,p=1$ZbwfQAl4wSqIs8boMB5LGA$b4auuGSJJUirczjjq5g65teBaEaVkpfrzSCHvUF3pbI",
+    "firstName": "Musa",
+    "LastName": "Softic",
+    "userName": "musa-softic",
+    "createdById": "425fde8b-ac30-441e-ab49-6f9b0e554905"
+  },
+  {
+    "id": "3c167b4b-6bc7-4078-8a25-5cfa3e1d1533",
+    "email": "munir@softic.ai",
+    "password": "$argon2i$v=19$m=4096,t=3,p=1$ZbwfQAl4wSqIs8boMB5LGA$b4auuGSJJUirczjjq5g65teBaEaVkpfrzSCHvUF3pbI",
+    "firstName": "Munir",
+    "LastName": "Softic",
+    "userName": "munir-softic",
+    "createdById": "750d1002-8f3f-4fe4-b363-65d026555470"
+  },
+  {
+    "id": "7bf9f43c-39fd-4ef4-8fb2-233489eca3b2",
+    "email": "pranto@softic.ai",
+    "password": "$argon2i$v=19$m=4096,t=3,p=1$ZbwfQAl4wSqIs8boMB5LGA$b4auuGSJJUirczjjq5g65teBaEaVkpfrzSCHvUF3pbI",
+    "firstName": "Pranto",
+    "LastName": "Softic",
+    "userName": "pranto-softic",
+    "createdById": "3c167b4b-6bc7-4078-8a25-5cfa3e1d1533"
+  },
+  {
+    "id": "95b17b1f-06fc-40a9-884d-905d8dc19e7f",
+    "email": "ashik@softic.ai",
+    "password": "$argon2i$v=19$m=4096,t=3,p=1$ZbwfQAl4wSqIs8boMB5LGA$b4auuGSJJUirczjjq5g65teBaEaVkpfrzSCHvUF3pbI",
+    "firstName": "Ashik",
+    "LastName": "Softic",
+    "userName": "ashik-softic",
+    "createdById": "750d1002-8f3f-4fe4-b363-65d026555470"
+  },
+  {
+    "id": "60e7668d-1346-49e9-9485-8dc167525fcb",
+    "email": "rabbi@softic.ai",
+    "password": "$argon2i$v=19$m=4096,t=3,p=1$ZbwfQAl4wSqIs8boMB5LGA$b4auuGSJJUirczjjq5g65teBaEaVkpfrzSCHvUF3pbI",
+    "firstName": "Rabbi",
+    "LastName": "Softic",
+    "userName": "rabbi-softic",
+    "createdById": "3c167b4b-6bc7-4078-8a25-5cfa3e1d1533"
+  },
+  {
+    "id": "7bf9f43c-39fd-4ef4-8fb2-233489eca3b2",
+    "email": "korim@softic.ai",
+    "password": "$argon2i$v=19$m=4096,t=3,p=1$ZbwfQAl4wSqIs8boMB5LGA$b4auuGSJJUirczjjq5g65teBaEaVkpfrzSCHvUF3pbI",
+    "firstName": "Korim",
+    "LastName": "Softic",
+    "userName": "korim-softic",
+    "createdById": "7bf9f43c-39fd-4ef4-8fb2-233489eca3b2"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "id": "d095a917-ba19-48bb-8442-0613e753c141",
+    "name": "Team One T1XT2",
+    "code": "t1-t1xt2",
+    "displayName": "T1",
+    "odd": 1.88
+  },
+  {
+    "id": "54a1fd6b-7edc-4a71-aa04-3663f6c5c806",
+    "name": "Draw",
+    "code": "draw-t1xt2",
+    "displayName": "X",
+    "odd": 1.88
+  },
+  {
+    "id": "85412896-4329-4955-a0ab-31a2590287f1",
+    "name": "Team Two T1XT2",
+    "code": "t2-t1xt2",
+    "displayName": "T2",
+    "odd": 1.88
+  },
+  {
+    "id": "3d88bbfd-858e-4207-9cad-69a1e521853a",
+    "name": "Team One Wins",
+    "code": "t1-team-wins",
+    "displayName": "T1",
+    "odd": 1.88
+  },
+  {
+    "id": "46349fe2-e2e5-4da3-b071-7b3c01658de1",
+    "name": "Team Two Wins",
+    "code": "t2-team-wins",
+    "displayName": "T2",
+    "odd": 1.88
+  },
+  {
+    "id": "9f9c84e1-d6a9-4a2f-9f64-cc6a5f6b4eca",
+    "name": "Draw Yes",
+    "code": "yes-draw",
+    "displayName": "Yes",
+    "odd": 1.88
+  },
+  {
+    "id": "a96675c2-ca98-4eb5-a08a-a69ceae71d47",
+    "name": "Draw No",
+    "code": "no-draw",
+    "displayName": "No",
+    "odd": 1.88
+  }
+]

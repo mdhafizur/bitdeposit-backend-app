@@ -1,0 +1,107 @@
+[
+  {
+    "id": "ee3f481e-b62f-404a-b19d-4039a17e3c6a",
+    "name": "IPL",
+    "leaguePriority": 5,
+    "sportTypeId": "20137776-864b-41c3-b45a-ffe894a28797",
+    "sportCategoryId": "fa92f913-ef52-4b75-9f92-ec7e2206b255"
+  },
+  {
+    "id": "872bdc38-7d61-423d-87a4-3bc4e66bb312",
+    "name": "ICC",
+    "leaguePriority": 6,
+    "sportTypeId": "20137776-864b-41c3-b45a-ffe894a28797",
+    "sportCategoryId": "fa92f913-ef52-4b75-9f92-ec7e2206b255"
+  },
+  {
+    "id": "9844aa10-27e4-45be-aa80-b28002084cae",
+    "name": "BPL",
+    "leaguePriority": 6,
+    "sportTypeId": "20137776-864b-41c3-b45a-ffe894a28797",
+    "sportCategoryId": "fa92f913-ef52-4b75-9f92-ec7e2206b255"
+  },
+  {
+    "id": "ae8dbcac-2a52-49d2-90f3-729932409c5a",
+    "name": "LaLiga",
+    "leaguePriority": 7,
+    "sportTypeId": "81a15c71-bde0-4cc7-a10e-27309e1b1ce2",
+    "sportCategoryId": null
+  },
+  {
+    "id": "65545df0-cf40-4626-9920-b455bcf864f8",
+    "name": "English Premier League",
+    "leaguePriority": 8,
+    "sportTypeId": "81a15c71-bde0-4cc7-a10e-27309e1b1ce2",
+    "sportCategoryId": null
+  },
+  {
+    "id": "53a62b95-9993-4d8f-9996-021155fd7eac",
+    "name": "Nations League",
+    "leaguePriority": 9,
+    "sportTypeId": "81a15c71-bde0-4cc7-a10e-27309e1b1ce2",
+    "sportCategoryId": "fa92f915-ef52-4b75-9f92-ec7e2206b255"
+  },
+  {
+    "id": "d98599aa-38b8-4ef7-9564-f73cdd6fe77b",
+    "name": "Champions League",
+    "leaguePriority": 9,
+    "sportTypeId": "81a15c71-bde0-4cc7-a10e-27309e1b1ce2",
+    "sportCategoryId": "fa92f915-ef52-4b75-9f92-ec7e2206b255"
+  },
+  {
+    "id": "d59a995b-d636-4b2a-be3c-4ab81b4e4cd6",
+    "name": "Europa League",
+    "leaguePriority": 7,
+    "sportTypeId": "81a15c71-bde0-4cc7-a10e-27309e1b1ce2",
+    "sportCategoryId": "fa92f915-ef52-4b75-9f92-ec7e2206b255"
+  },
+  {
+    "id": "c37ed2bc-6a22-4355-899e-c493a7808882",
+    "name": "Euro",
+    "leaguePriority": 9,
+    "sportTypeId": "81a15c71-bde0-4cc7-a10e-27309e1b1ce2",
+    "sportCategoryId": "fa92f915-ef52-4b75-9f92-ec7e2206b255"
+  },
+  {
+    "id": "e3b48015-12de-4b01-9522-271d140f14aa",
+    "name": "Fifa World Cup",
+    "leaguePriority": 8,
+    "sportTypeId": "81a15c71-bde0-4cc7-a10e-27309e1b1ce2",
+    "sportCategoryId": "fa92f914-ef52-4b75-9f92-ec7e2206b255"
+  },
+  {
+    "id": "c605d2e6-e739-4ec3-9eb5-988f3408a2f2",
+    "name": "NBA",
+    "leaguePriority": 6,
+    "sportTypeId": "011619f9-3323-4f39-8fc3-9a6f637b2011",
+    "sportCategoryId": "6692f915-ef52-4b75-9f92-ec7e2206b266"
+  },
+  {
+    "id": "e34d2b75-b943-454c-be8d-e5bd06be3aed",
+    "name": "Polish International",
+    "leaguePriority": 3,
+    "sportTypeId": "55f619f9-3323-4f39-8fc3-9a6f637b2855",
+    "sportCategoryId": "7792f915-ef52-4b75-9f92-ec7e2206b277"
+  },
+  {
+    "id": "0b7e5229-a06e-49ca-96d7-767242137af8",
+    "name": "Baseball Classic",
+    "leaguePriority": 1,
+    "sportTypeId": "99f619f9-3323-4f39-8fc3-9a6f637b2899",
+    "sportCategoryId": null
+  },
+  {
+    "id": "db717c64-c35d-483f-a8b8-4cbf0404deae",
+    "name": "MLB",
+    "leaguePriority": 5,
+    "sportTypeId": "99f619f9-3323-4f39-8fc3-9a6f637b2899",
+    "sportCategoryId": "0092f915-ef52-4b75-9f92-ec7e2206b200"
+  },
+  {
+    "id": "f17f91d6-b170-4c08-af8e-85efd52ac4cf",
+    "name": "UFC",
+    "leaguePriority": 7,
+    "sportTypeId": "00f619f9-3323-4f39-8fc3-9a6f637b2800",
+    "sportCategoryId": "8892f915-ef52-4b75-9f92-ec7e2206b288"
+  }
+]

@@ -1,0 +1,286 @@
+
+[
+  {
+    "id": "5fd9d1fa-6b85-471e-b84d-a3daf4cc0de8",
+    "name": "T1",
+    "displayName": "T1",
+    "odd": 1.88
+  },
+  {
+    "id": "d6a547e7-ad12-401e-aa95-6f18b6902eb9",
+    "name": "X",
+    "displayName": "X",
+    "odd": 25
+  },
+  {
+    "id": "6df3e9e7-39df-41a1-a72a-f468418763c9",
+    "name": "T2",
+    "displayName": "T2",
+    "odd": 1.88
+  },
+
+  {
+    "id": "78e43114-f3dc-4d94-9847-27b5806fcc41",
+    "name": "T1",
+    "displayName": "T1",
+    "odd": 1.33
+  },
+  {
+    "id": "a91ab81c-697b-4327-964b-98bb1b40a56d",
+    "name": "T2",
+    "displayName": "T2",
+    "odd": 3.02
+  },
+
+  {
+    "id": "3436e550-02e6-4165-8cbc-1c36826ab53f",
+    "name": "Yes",
+    "displayName": "Yes",
+    "odd": 25
+  },
+  {
+    "id": "442ab5e1-100a-4069-9342-962fb6f67b2e",
+    "name": "No",
+    "displayName": "No",
+    "odd": 1.006
+  },
+
+  {
+    "id": "969e0818-46e9-4c10-9a77-b5c4118fdfc6",
+    "name": "T1",
+    "displayName": "T1",
+    "odd": 40
+  },
+  {
+    "id": "55a546e7-d72c-45d6-a08b-8d74e5dfc1f8",
+    "name": "T2",
+    "displayName": "T2",
+    "odd": 40
+  },
+
+  {
+    "id": "32500509-d837-4e41-ab8d-be95a984629c",
+    "name": "Even",
+    "displayName": "Even",
+    "odd": 1.95
+  },
+  {
+    "id": "14c963c2-4af2-4dd5-90c0-ca560640ab9d",
+    "name": "Odd",
+    "displayName": "Odd",
+    "odd": 1.72
+  },
+
+  {
+    "id": "11027e20-6936-4239-a93e-2f9a72e25b97",
+    "name": "Even",
+    "displayName": "Even",
+    "odd": 1.85
+  },
+  {
+    "id": "3c8a2686-c94d-4051-9915-4cc0c3f1f01f",
+    "name": "Odd",
+    "displayName": "Odd",
+    "odd": 1.85
+  },
+
+  {
+    "id": "2c5fc82a-110b-46fc-a165-465e7476501d",
+    "name": "Even",
+    "displayName": "Even",
+    "odd": 2.85
+  },
+  {
+    "id": "30bbbc8c-5cb4-4c4b-966f-5ca5879c90b1",
+    "name": "Odd",
+    "displayName": "Odd",
+    "odd": 2.85
+  },
+
+  {
+    "id": "db7b82cf-aab0-42f4-9d93-261091e66109",
+    "name": "Yes",
+    "displayName": "Yes",
+    "odd": 35
+  },
+  {
+    "id": "9075b841-f3d3-4972-a588-8b632b994b67",
+    "name": "No",
+    "displayName": "No",
+    "odd": 0.85
+  },
+
+  {
+    "id": "1a362fd9-e897-4f2a-a25e-fb873811ef28",
+    "name": "Over (43.5)",
+    "displayName": "Over (43.5)",
+    "odd": 1.5
+  },
+  {
+    "id": "df5ed4ef-72fc-4c7b-8a4f-a31c6548309d",
+    "name": "Under (43.5)",
+    "displayName": "Under (43.5)",
+    "odd": 0.85
+  },
+
+  {
+    "id": "9f268e08-1432-4388-80fd-83b4fd4bfd0d",
+    "name": "Over (42.5)",
+    "displayName": "Over (42.5)",
+    "odd": 3.5
+  },
+  {
+    "id": "f8a66efb-72dd-483f-b296-899b0137dadc",
+    "name": "Under (42.5)",
+    "displayName": "Under (42.5)",
+    "odd": 1.85
+  },
+
+  {
+    "id": "28f17312-2a1c-485d-9788-ba95bfb3bc6d",
+    "name": "Over (49.5)",
+    "displayName": "Over (49.5)",
+    "odd": 8.5
+  },
+  {
+    "id": "c4e357e3-493c-43ba-a4ed-05f358d27e31",
+    "name": "Under (49.5)",
+    "displayName": "Under (49.5)",
+    "odd": 14.85
+  },
+
+  {
+    "id": "a84077f9-ef43-4e2d-b13b-c071d1df001b",
+    "name": "Over (43.5)",
+    "displayName": "Over (43.5)",
+    "odd": 1.5
+  },
+  {
+    "id": "163629fb-adb7-4850-be2a-8542dfa5a4d9",
+    "name": "Under (43.5)",
+    "displayName": "Under (43.5)",
+    "odd": 0.85
+  },
+
+  {
+    "id": "cac4898e-b871-40e5-ad71-4dff6f7f539a",
+    "name": "Over (42.5)",
+    "displayName": "Over (42.5)",
+    "odd": 3.5
+  },
+  {
+    "id": "9d6cfb7f-ba70-4a66-af82-41fb4409785e",
+    "name": "Under (42.5)",
+    "displayName": "Under (42.5)",
+    "odd": 1.85
+  },
+
+  {
+    "id": "1f89a53a-083f-4f4b-8f62-ba81acf249d7",
+    "name": "Over 12.5",
+    "displayName": "Over 12.5",
+    "odd": 3.5
+  },
+  {
+    "id": "76564bb4-21fe-46c3-9387-4d31d97cf802",
+    "name": "Under 12.5",
+    "displayName": "Under 12.5",
+    "odd": 1.85
+  },
+
+  {
+    "id": "7a76af96-856a-46a5-818c-3e2316ffdc5f",
+    "name": "Player T1",
+    "displayName": "Player T1",
+    "odd": 3.5
+  },
+  {
+    "id": "5b93bdf8-8fe6-471b-b6bb-7f9e13124b2c",
+    "name": "Player T2",
+    "displayName": "Player T2",
+    "odd": 1.85
+  },
+
+  {
+    "id": "74480f25-372e-4c4d-a5c3-9caa579a9da9",
+    "name": "Player T1",
+    "displayName": "Player T1",
+    "odd": 3.5
+  },
+  {
+    "id": "96fb325e-bd9d-4380-bd85-c27b2e3bebdc",
+    "name": "Player T2",
+    "displayName": "Player T2",
+    "odd": 1.85
+  },
+
+  {
+    "id": "5cca6402-2c59-42bc-a7cb-026d13f9eda0",
+    "name": "T1",
+    "displayName": "T1",
+    "odd": 1.85
+  },
+  {
+    "id": "1e34c5cd-fd85-47b1-9a23-fa3e520867a0",
+    "name": "T2",
+    "displayName": "T2",
+    "odd": 3.5
+  },
+  {
+    "id": "8de7be72-a026-4cb7-b027-0abcc442734b",
+    "name": "X",
+    "displayName": "X",
+    "odd": 1.85
+  },
+
+  {
+    "id": "85acd220-b2e8-4ce1-babd-e52f2f0c26cc",
+    "name": "T1",
+    "displayName": "T1",
+    "odd": 14.85
+  },
+  {
+    "id": "9128b09c-8705-4e38-9d6e-62eac637c3ff",
+    "name": "T2",
+    "displayName": "T2",
+    "odd": 23.5
+  },
+  {
+    "id": "6a4d311a-d079-49d2-9476-da606d7a2b17",
+    "name": "X",
+    "displayName": "X",
+    "odd": 31.85
+  },
+
+  {
+    "id": "aca421fd-f70f-4ffc-8ae5-4f6ba15c6703",
+    "name": "T1",
+    "displayName": "T1",
+    "odd": 13.88
+  },
+  {
+    "id": "5e9db444-abef-4311-b778-5e4368eb44be",
+    "name": "X",
+    "displayName": "X",
+    "odd": 45
+  },
+  {
+    "id": "e8514825-4420-4ba4-b73f-9f8b6c73885d",
+    "name": "T2",
+    "displayName": "T2",
+    "odd": 15.88
+  },
+
+  {
+    "id": "e82212ac-db7c-4a1d-90c4-45b29645bb9c",
+    "name": "T1",
+    "displayName": "T1",
+    "odd": 9.33
+  },
+  {
+    "id": "8398dc9d-96b3-40d3-b3a5-ee10ab6572d7",
+    "name": "T2",
+    "displayName": "T2",
+    "odd": 18.02
+  }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "id": "e32c8e07-1f4c-454b-a955-8ca80b39f8c9",
+        "name": "BANK CARDS"
+    },
+    {
+        "id": "b2f09b20-6e9a-4b8a-92f5-f43839f8d7cf",
+        "name": "E-WALLETS"
+    },
+    {
+        "id": "ae0ce7f7-9635-4931-870f-953a51176d98",
+        "name": "INTERNET BANKING"
+    },
+    {
+        "id": "ac426157-b7de-4e74-be80-230242ffcf2f",
+        "name": "BANK TRANSFER"
+    },
+    {
+        "id": "409bbdb5-ef85-4b00-ad19-6825c0a33a54",
+        "name": "CRYPTOCURRENCY"
+    },
+    {
+        "id": "486bd78f-123a-4576-a317-f4a048df84a6",
+        "name": "E-VOUCHERS"
+    },
+    {
+        "id": "e7c9667f-2068-4e38-9f91-1c811fb3704c",
+        "name": "PAYMENT SYSTEMS"
+    }
+]

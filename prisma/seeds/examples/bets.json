@@ -1,0 +1,38 @@
+{
+  "odds": null,
+  "overallStake": null,
+  "overallWinback": null,
+  "systemBet": {
+      "totalCount": 6,
+      "totalWin": 4
+  },
+  "metaData": {},
+  "userId": "425fde8b-ac30-441e-ab49-6f9b0e554905",
+  "betSlipSettingId": "ebf7a87f-91da-41f0-b627-3f8db1e72b0c",
+  "betTypeId": "c390c9e4-b8e8-440c-b446-78f5dc1779b8",
+  "associatedBets": [
+      {
+          "createdById": "425fde8b-ac30-441e-ab49-6f9b0e554905",
+          "order": 1,
+          "odds": 2.045,
+          "stake": 500,
+          "winback": null,
+          "betStatus": "ACCEPTED",
+          "betHistory": "UNSETTLED",
+          "sportMatchId": "f7858a2d-b0c1-4e1d-9535-5ef8df300c05",
+          "betConditionId": "3d88bbfd-858e-4207-9cad-69a1e521853a"
+      },
+      {
+          "createdById": "425fde8b-ac30-441e-ab49-6f9b0e554905",
+          "order": 1,
+          "odds": 2.045,
+          "stake": 500,
+          "winback": null,
+          "betStatus": "ACCEPTED",
+          "betHistory": "UNSETTLED",
+          "sportMatchId": "f7858a2d-b0c1-4e1d-9535-5ef8df300c05",
+          "betConditionId": "3d88bbfd-858e-4207-9cad-69a1e521853a"
+      }
+  ],
+  "createdById": "425fde8b-ac30-441e-ab49-6f9b0e554905"
+}

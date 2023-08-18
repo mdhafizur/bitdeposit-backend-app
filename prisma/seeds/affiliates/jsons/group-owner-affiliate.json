@@ -1,0 +1,20 @@
+[
+  {
+    "id": "9f7a423a-f5c0-49cf-88d2-bcc82cbd8abd",
+    "groupOwnerId": "7005521d-f1b9-470d-8955-866e293ff1de",
+    "affiliateId": "ed6ebe56-baa8-498f-a799-1425264d879e",
+    "note": "Musa is under Hafiz's Affiliate group"
+  },
+  {
+    "id": "530414e8-84d9-473f-8856-2abbdee44e77",
+    "groupOwnerId": "ed6ebe56-baa8-498f-a799-1425264d879e",
+    "affiliateId": "d137aecd-32ad-4a48-819c-36eb6164c87b",
+    "note": "Munir is under Musa's Affiliate group"
+  },
+  {
+    "id": "af028f37-111d-4fd4-bdbe-8d62f5be2775",
+    "groupOwnerId": "d137aecd-32ad-4a48-819c-36eb6164c87b",
+    "affiliateId": "6c7fdd25-a5f8-4252-a4d7-23d87cca26a9",
+    "note": "Pranto is under Munir's Affiliate group"
+  }
+]

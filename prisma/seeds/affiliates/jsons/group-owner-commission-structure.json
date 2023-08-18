@@ -1,0 +1,38 @@
+[
+  {
+    "id": "7b91b14c-fd72-4331-b332-47088c80080c",
+    "bdPercentage": 30,
+    "oneXPercentage": 20,
+    "incomePercentage": 0,
+    "commissionGroupId": "20b66862-b174-4b11-b3e5-2fa070e78371",
+    "authGroupOwnerId": "7005521d-f1b9-470d-8955-866e293ff1de",
+    "note": "Revenue commission structure(for hafiz)"
+  },
+  {
+    "id": "9dfe799b-63b4-4103-b1ba-36f87321eff1",
+    "bdPercentage": 30,
+    "oneXPercentage": 20,
+    "incomePercentage": 0,
+    "commissionGroupId": "f7d3c91a-81ab-4b31-845f-f0bc985d02a0",
+    "authGroupOwnerId": "ed6ebe56-baa8-498f-a799-1425264d879e",
+    "note": "Refferal commission structure for musa(sub)"
+  },
+  {
+    "id": "3d6913a4-a10a-4ff6-ad63-80724cb0cf96",
+    "bdPercentage": 20,
+    "oneXPercentage": 15,
+    "incomePercentage": 0,
+    "commissionGroupId": "f7d3c91a-81ab-4b31-845f-f0bc985d02a0",
+    "authGroupOwnerId": "d137aecd-32ad-4a48-819c-36eb6164c87b",
+    "note": "Refferal commission structure for munir(level1)"
+  },
+  {
+    "id": "7b7b1d10-3826-45d4-8681-57a14e19c9d5",
+    "bdPercentage": 15,
+    "oneXPercentage": 10,
+    "incomePercentage": 0,
+    "commissionGroupId": "f7d3c91a-81ab-4b31-845f-f0bc985d02a0",
+    "authGroupOwnerId": "6c7fdd25-a5f8-4252-a4d7-23d87cca26a9",
+    "note": "Refferal commission structure for pranto(level2)"
+  }
+]

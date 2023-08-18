@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -o errexit
+set -o pipefail
+set -o nounset
+
+if [ "${BUILD_ENV}" = "development" ]; then
+# npx prisma migrate dev --name init 
+# npx prisma generate
+npm run start:dev
+else
+# npx prisma generate
+npm run start:prod
+fi

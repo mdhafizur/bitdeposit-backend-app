@@ -1,0 +1,37 @@
+[
+  {
+    "id": "cf51987d-ace0-4049-b7c8-ae8b21719f55",
+    "betCriteriaId": "a3e4cb24-98a1-42a9-bfce-473fe2345197",
+    "betConditionId": "d095a917-ba19-48bb-8442-0613e753c141"
+  },
+  {
+    "id": "005c9934-d61f-425b-ace6-eb7f56d4e81f",
+    "betCriteriaId": "a3e4cb24-98a1-42a9-bfce-473fe2345197",
+    "betConditionId": "54a1fd6b-7edc-4a71-aa04-3663f6c5c806"
+  },
+  {
+    "id": "fb52cbef-a4ba-49ea-a705-43639524b7e8",
+    "betCriteriaId": "a3e4cb24-98a1-42a9-bfce-473fe2345197",
+    "betConditionId": "85412896-4329-4955-a0ab-31a2590287f1"
+  },
+  {
+    "id": "17438f68-93e3-4a6c-8e48-cf8353e21eaf",
+    "betCriteriaId": "fe373f74-3ff2-486e-8d4a-902d8ef09538",
+    "betConditionId": "3d88bbfd-858e-4207-9cad-69a1e521853a"
+  },
+  {
+    "id": "bc3e88b3-5290-4cb8-98ee-75b49ca21eb3",
+    "betCriteriaId": "fe373f74-3ff2-486e-8d4a-902d8ef09538",
+    "betConditionId": "46349fe2-e2e5-4da3-b071-7b3c01658de1"
+  },
+  {
+    "id": "0af27c8f-1262-4c6d-a1da-47566941db86",
+    "betCriteriaId": "d86839ad-ce0c-4191-ae16-e80d0b0e4344",
+    "betConditionId": "9f9c84e1-d6a9-4a2f-9f64-cc6a5f6b4eca"
+  },
+  {
+    "id": "2ab7f4b8-0b54-427a-81ad-7b26858fa5c1",
+    "betCriteriaId": "d86839ad-ce0c-4191-ae16-e80d0b0e4344",
+    "betConditionId": "a96675c2-ca98-4eb5-a08a-a69ceae71d47"
+  }
+]

@@ -1,0 +1,46 @@
+[
+    {
+        "id": "20137776-864b-41c3-b45a-ffe894a28797",
+        "name": "Cricket"
+    },
+    {
+        "id": "81a15c71-bde0-4cc7-a10e-27309e1b1ce2",
+        "name": "Football"
+    },
+    {
+        "id": "acf619f9-3323-4f39-8fc3-9a6f637b284f",
+        "name": "Tennis"
+    },
+    {
+        "id": "44f619f9-3323-4f39-8fc3-9a6f637b2844",
+        "name": "Golf"
+    },
+    {
+        "id": "55f619f9-3323-4f39-8fc3-9a6f637b2855",
+        "name": "Badminton"
+    },
+    {
+        "id": "66f619f9-3323-4f39-8fc3-9a6f637b2866",
+        "name": "ESports"
+    },
+    {
+        "id": "77f619f9-3323-4f39-8fc3-9a6f637b2877",
+        "name": "Kabaddi"
+    },
+    {
+        "id": "88f619f9-3323-4f39-8fc3-9a6f637b2888",
+        "name": "Volleyball"
+    },
+    {
+        "id": "99f619f9-3323-4f39-8fc3-9a6f637b2899",
+        "name": "Baseball"
+    },
+    {
+        "id": "00f619f9-3323-4f39-8fc3-9a6f637b2800",
+        "name": "Boxing"
+    },
+    {
+        "id": "011619f9-3323-4f39-8fc3-9a6f637b2011",
+        "name": "Basketball"
+    }
+]

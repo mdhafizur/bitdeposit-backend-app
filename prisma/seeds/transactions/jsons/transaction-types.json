@@ -1,0 +1,17 @@
+[
+    {
+        "id": "bdc1730e-0be6-4443-910e-b3fc0cfce494",
+        "transactionMethodId": "b2f09b20-6e9a-4b8a-92f5-f43839f8d7cf",
+        "name": "Bkash"
+    },
+    {
+        "id": "59e2c5d5-b4c7-459f-8fc1-d8460469e878",
+        "transactionMethodId": "b2f09b20-6e9a-4b8a-92f5-f43839f8d7cf",
+        "name": "Nagad"
+    },
+    {
+        "id": "d87e54d0-7622-4056-9869-c6c91c3d682a",
+        "transactionMethodId": "b2f09b20-6e9a-4b8a-92f5-f43839f8d7cf",
+        "name": "Rocket"
+    }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "019148dc-2f2b-49c6-b4c0-a991a520be43",
+    "sportMatchId": "b8589eef-cf90-4cfe-a1e5-de392e5c3472",
+    "userId": "750d1002-8f3f-4fe4-b363-65d026555470"
+  },
+  {
+    "id": "029148dc-2f2b-49c6-b4c0-a991a520be43",
+    "sportMatchId": "6771438d-fd39-49d5-a6d3-ed54268b3eae",
+    "userId": "3c167b4b-6bc7-4078-8a25-5cfa3e1d1533"
+  },
+  {
+    "id": "039148dc-2f2b-49c6-b4c0-a991a520be43",
+    "sportMatchId": "bb71438d-fd39-49d5-a6d3-ed54268b3eae",
+    "userId": "af63f67c-ef1c-4e1b-bd72-3cce9c33dc90"
+  },
+  {
+    "id": "049148dc-2f2b-49c6-b4c0-a991a520be43",
+    "sportMatchId": "3371438d-fd39-49d5-a6d3-ed54268b3e33",
+    "userId": "750d1002-8f3f-4fe4-b363-65d0265554700"
+  },
+  {
+    "id": "059148dc-2f2b-49c6-b4c0-a991a520be43",
+    "sportMatchId": "4471438d-fd39-49d5-a6d3-ed54268b3e44",
+    "userId": "7bf9f43c-39fd-4ef4-8fb2-233489eca3b2"
+  },
+  {
+    "id": "069148dc-2f2b-49c6-b4c0-a991a520be43",
+    "sportMatchId": "bb71438d-fd39-49d5-a6d3-ed54268b3e44",
+    "userId": "425fde8b-ac30-441e-ab49-6f9b0e554905"
+  },
+  {
+    "id": "079148dc-2f2b-49c6-b4c0-a991a520be43",
+    "sportMatchId": "5571438d-fd39-49d5-a6d3-ed54268b3e55",
+    "userId": "750d1002-8f3f-4fe4-b363-65d026555470"
+  },
+  {
+    "id": "089148dc-2f2b-49c6-b4c0-a991a520be43",
+    "sportMatchId": "9871438d-fd39-49d5-a6d3-ed54268b3e55",
+    "userId": "af63f67c-ef1c-4e1b-bd72-3cce9c33dc90"
+  },
+  {
+    "id": "099148dc-2f2b-49c6-b4c0-a991a520be43",
+    "sportMatchId": "qq71438d-fd39-49d5-a6d3-ed54268b3e55",
+    "userId": "af63f67c-ef1c-4e1b-bd72-3cce9c33dc90"
+  },
+  {
+    "id": "109148dc-2f2b-49c6-b4c0-a991a520be43",
+    "sportMatchId": "rs71438d-fd39-49d5-a6d3-ed54268b3e55",
+    "userId": "425fde8b-ac30-441e-ab49-6f9b0e554905"
+  },
+  {
+    "id": "119148dc-2f2b-49c6-b4c0-a991a520be43",
+    "sportMatchId": "6671438d-fd39-49d5-a6d3-ed54268b3e66",
+    "userId": "750d1002-8f3f-4fe4-b363-65d026555470"
+  },
+  {
+    "id": "129148dc-2f2b-49c6-b4c0-a991a520be43",
+    "sportMatchId": "7771438d-fd39-49d5-a6d3-ed54268b3e66",
+    "userId": "425fde8b-ac30-441e-ab49-6f9b0e554905"
+  }
+]

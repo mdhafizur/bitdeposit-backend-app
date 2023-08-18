@@ -1,0 +1,213 @@
+version: '3.9'
+
+volumes:
+  postgres_data: {}
+  postgres_data_backups: {}
+  pgadmin: {}
+  rabbitmq_data: {}
+  traefik-ssl-certs:
+    driver: local
+  traefik-data: {}
+
+networks:
+  web:
+    external: true
+  internal:
+    external: false
+
+services:
+  nestjs:
+    # for horizontal scaling: docker compose -f compose.yml up -d --scale nestjs=3
+    # to scale a service container_name shouldn't be assigned as it requires unique name. so we can't provide custom name
+    container_name: bitdeposit-nestjs
+    image: '${CI_REGISTRY_IMAGE}/bitdeposit-nestjs:${TAG}'
+    build:
+      context: .
+      dockerfile: ./compose/nestjs/Dockerfile
+      args:
+        - BUILD_ENV=${BUILD_ENV}
+        - TRAEFIK_PROTOCOL=${TRAEFIK_PROTOCOL}
+        - EXPOSE_TRAEFIK=true
+        - TRAEFIK_SUBDOMAIN=api
+        - TRAEFIK_PORT=${PORT}
+      # comment out target at first build or after any updates to package.json
+      target: node-build-stage
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - ${PORT}:${PORT}
+      - 9229:9229
+    command: /start
+    # command: npm run docker:debug
+    env_file:
+      - ./.env
+    environment:
+      # override the environment variables for docker
+      - REDIS_HOST=redis
+      - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@bitdeposit-postgres:${POSTGRES_PORT}/${POSTGRES_DB}?schema=public
+    networks:
+      - web
+      - internal
+    depends_on:
+      - postgres
+      - redis
+    logging:
+      driver: json-file
+      options:
+        max-size: '10m'
+        max-file: '5'
+    restart: always
+
+  postgres:
+    container_name: bitdeposit-postgres
+    build:
+      context: .
+      dockerfile: ./compose/postgres/Dockerfile
+    image: '${CI_REGISTRY_IMAGE}/bitdeposit-postgres:${TAG}'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data:Z
+      - postgres_data_backups:/backups:z
+    env_file:
+      - ./.env
+    ports:
+      - 7655:5432
+    labels:
+      - traefik.enable=false
+    networks:
+      - internal
+    restart: unless-stopped
+
+  # pgadmin:
+  #   container_name: bitdeposit-pgadmin
+  #   image: dpage/pgadmin4
+  #   env_file:
+  #     - ./.env
+  #   volumes:
+  #     - pgadmin:/var/lib/pgadmin
+  #   ports:
+  #     - 5050:80
+  #   labels:
+  #     - traefik.enable=false
+  #   restart: unless-stopped
+
+  redis:
+    image: redis:7.0
+    container_name: bitdeposit-redis
+    ports:
+      - 6379:6379
+    command: bash -c "redis-server /usr/local/etc/redis/redis.conf;"
+    volumes:
+      - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
+    networks:
+      - internal
+
+  mongodb:
+    container_name: bitdeposit-mongodb
+    image: mongo
+    ports:
+      - 27017:27017
+    env_file:
+      - ./.env
+    labels:
+      - traefik.enable=false
+
+  # mongo-express:
+  #   container_name: bitdeposit-mongo-express
+  #   image: mongo-express
+  #   restart: always
+  #   ports:
+  #     - 8081:8081
+  #   env_file:
+  #     - ./.env
+  #   labels:
+  #     - traefik.enable=false
+
+  rabbitmq:
+    container_name: bitdeposit-rabbitmq
+    image: rabbitmq:3.10-management-alpine
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    ports:
+      # AMQP protocol port
+      - 5672:5672
+      # HTTP management UI
+      - 15672:15672
+    env_file:
+      - ./.env
+    networks:
+      - web
+      - internal
+
+  traefik:
+    container_name: bitdeposit-traefik
+    image: '${CI_REGISTRY_IMAGE}/bitdeposit-traefik:${TAG}'
+    build:
+      context: .
+      dockerfile: ./compose/traefik/Dockerfile
+    environment:
+      - DO_AUTH_TOKEN=${DO_AUTH_TOKEN}
+      # DOMAIN_URL is used in traefik config.yml file !
+      - DOMAIN_URL=${DOMAIN_URL}
+    ports:
+      - 80:80 # Exposes port 80 for incomming web requests
+      - 8080:8080 # The Web UI port http://0.0.0.0:8080 (enabled by --api.insecure=true)
+      - 443:443
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      # - traefik-ssl-certs:/ssl-certs # storage integrity for the certs file
+      # - traefik-data:/etc/traefik
+    networks:
+      - web
+      - internal
+
+  # traefik:
+  #   image: 'traefik:v2.6'
+  #   command:
+  #     - --entrypoints.web.address=:80
+  #     - --entrypoints.websecure.address=:443
+  #     - --providers.docker
+  #     - --api
+  #     - --certificatesresolvers.leresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory
+  #     - --certificatesresolvers.leresolver.acme.email=hafiz@softic.ai
+  #     - --certificatesresolvers.leresolver.acme.storage=/acme.json
+  #     - --certificatesresolvers.leresolver.acme.tlschallenge=true
+  #   ports:
+  #     - '80:80'
+  #     - '443:443'
+  #   volumes:
+  #     - '/var/run/docker.sock:/var/run/docker.sock:ro'
+  #     - './acme.json:/acme.json'
+  #   labels:
+  #     # Dashboard
+  #     - 'traefik.http.routers.traefik.rule=Host(`traefik.docker.localhost`)'
+  #     - 'traefik.http.routers.traefik.service=api@internal'
+  #     - 'traefik.http.routers.traefik.tls.certresolver=leresolver'
+  #     - 'traefik.http.routers.traefik.entrypoints=websecure'
+  #     - 'traefik.http.routers.traefik.middlewares=authtraefik'
+  #     - 'traefik.http.middlewares.authtraefik.basicauth.users=admin:$$2y$$05$$PeY6ReOBzx.rzAIio7bImeP0fOT05LhJCtmVES8hKXIOP7EiGFEje' # user/password
+
+  #     # global redirect to https
+  #     - 'traefik.http.routers.http-catchall.rule=hostregexp(`{host:.+}`)'
+  #     - 'traefik.http.routers.http-catchall.entrypoints=web'
+  #     - 'traefik.http.routers.http-catchall.middlewares=redirect-to-https'
+
+  #     # middleware redirect
+  #     - 'traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https'
+  #   networks:
+  #     - web
+  #     - internal
+
+  #  the whoami service to check traefik
+  whoami:
+    image: traefik/whoami:v1.7.1
+    # labels:
+    #   - 'traefik.http.routers.whoami.rule=Host(`whoami.docker.localhost`)'
+    #   - 'traefik.http.routers.whoami.middlewares=auth'
+    #   - 'traefik.http.routers.whoami.entrypoints=websecure'
+    #   - 'traefik.http.routers.whoami.tls=true'
+    #   - 'traefik.http.routers.whoami.tls.certresolver=leresolver'
+    #   - 'traefik.http.middlewares.auth.basicauth.users=user:$$apr1$$q8eZFHjF$$Fvmkk//V6Btlaf2i/ju5n/' # user/password
+    networks:
+      - web
+      - internal

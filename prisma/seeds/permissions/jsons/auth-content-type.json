@@ -1,0 +1,312 @@
+[
+  {
+    "id": "ef15f6ff-b40f-4070-a8e2-da089a5c3830",
+    "appLabel": "Users",
+    "model": "User"
+  },
+  {
+    "id": "5468da58-f5f7-47b2-93c3-9091334d8589",
+    "appLabel": "Users",
+    "model": "Setting"
+  },
+  {
+    "id": "f0ebf744-506d-41f1-b568-b7b8c0015957",
+    "appLabel": "Users",
+    "model": "Location"
+  },
+  {
+    "id": "ceab566c-26ee-48a3-9175-3baf5cbd5ea6",
+    "appLabel": "Users",
+    "model": "LocationsCountry"
+  },
+  {
+    "id": "7e6ed0e7-e00d-4ea1-8142-073d95c04fb5",
+    "appLabel": "Users",
+    "model": "LocationsState"
+  },
+  {
+    "id": "51856d5f-22c3-4354-8aaa-0a3d6b580085",
+    "appLabel": "Users",
+    "model": "LocationsCity"
+  },
+  {
+    "id": "8831f87b-64f0-478a-a940-1f688523d433",
+    "appLabel": "Users",
+    "model": "UserAttachment"
+  },
+  {
+    "id": "6673ac29-f1b1-4801-9bec-8218a71fff69",
+    "appLabel": "Users",
+    "model": "TransactionTypeUserAccount"
+  },
+  {
+    "id": "f2919c00-b2d8-46be-a368-567e9d4de37e",
+    "appLabel": "Users",
+    "model": "UserBetSiteAccount"
+  },
+  {
+    "id": "03aa29f9-5dea-4078-83a7-587eb433990f",
+    "appLabel": "Users",
+    "model": "UserMatch"
+  },
+  {
+    "id": "1d39d3f0-00d5-430f-947d-7a715c157c15",
+    "appLabel": "Users",
+    "model": "UserMatchBet"
+  },
+  {
+    "id": "2eb4d736-3895-4c5d-b9bc-1fe460be2484",
+    "appLabel": "Auth",
+    "model": "ContentType"
+  },
+  {
+    "id": "3dd0578c-2944-4cde-9442-37a90bb21049",
+    "appLabel": "Auth",
+    "model": "Group"
+  },
+  {
+    "id": "b37d26fd-50f3-4bbc-b0f2-d8a0861fe411",
+    "appLabel": "Auth",
+    "model": "UserGroup"
+  },
+  {
+    "id": "1e5126be-232f-49d6-9dea-b5bf21719a1a",
+    "appLabel": "Auth",
+    "model": "GroupPersmission"
+  },
+  {
+    "id": "92c5fab4-9386-4932-98e3-75b00509496d",
+    "appLabel": "Auth",
+    "model": "UserPersmission"
+  },
+  {
+    "id": "6d809f8f-b042-4b8c-98a4-74acfceb75a0",
+    "appLabel": "Auth",
+    "model": "UserAuthenticationProvider"
+  },
+  {
+    "id": "0f758d57-255d-4df2-beed-6a42245e7cd5",
+    "appLabel": "Auth",
+    "model": "RefreshToken"
+  },
+  {
+    "id": "b0625c03-793c-4d93-98eb-7436f1911b9b",
+    "appLabel": "Auth",
+    "model": "VerificationToken"
+  },
+  {
+    "id": "c81872d0-0e14-4259-a29e-fb76adbf23aa",
+    "appLabel": "Auth",
+    "model": "Session"
+  },
+  {
+    "id": "5cd21062-d9c2-43b0-bf54-46a7b7c08af9",
+    "appLabel": "Promotions",
+    "model": "AuthGroupOwnerPromoCode"
+  },
+  {
+    "id": "c0caa9c7-d947-4d9d-a98e-013dde6943e3",
+    "appLabel": "Promotions",
+    "model": "GroupOwnerPromoUser"
+  },
+  {
+    "id": "30e5fe28-6dea-4774-8a74-d8c416005b34",
+    "appLabel": "Affiliates",
+    "model": "GroupOwner"
+  },
+  {
+    "id": "65a5d8d0-01dc-44bb-919b-02f1385ce09c",
+    "appLabel": "Affiliates",
+    "model": "GroupOwnerGroupType"
+  },
+  {
+    "id": "1e70dd61-5043-4470-88d1-726926752833",
+    "appLabel": "Affiliates",
+    "model": "GroupOwnerUser"
+  },
+  {
+    "id": "8a8f6440-ab30-4e4d-b419-6f08d25e57e7",
+    "appLabel": "Affiliates",
+    "model": "CommissionGroup"
+  },
+  {
+    "id": "9229db35-c901-4503-813a-2df2610fa443",
+    "appLabel": "Affiliates",
+    "model": "CommissionType"
+  },
+  {
+    "id": "fe9405ee-ce34-47d0-95d5-0c4afe277495",
+    "appLabel": "Affiliates",
+    "model": "GroupTypeCommissionStructure"
+  },
+  {
+    "id": "0942429a-f452-4f9b-b574-c48f33d2e9ed",
+    "appLabel": "Affiliates",
+    "model": "GroupOwnerAffiliate"
+  },
+  {
+    "id": "e2b2c14a-8878-4928-82bb-3c57090a0757",
+    "appLabel": "Affiliates",
+    "model": "GroupOwnerCommissionStructure"
+  },
+  {
+    "id": "18e61017-d724-4b64-9485-6e5f4da3704e",
+    "appLabel": "Affiliates",
+    "model": "AffiliateTransaction"
+  },
+  {
+    "id": "5796999a-36b9-46d8-9f79-2047c0270ab3",
+    "appLabel": "Transactions",
+    "model": "TransactionMethod"
+  },
+  {
+    "id": "cf143493-dfe2-4880-822d-9856142aacca",
+    "appLabel": "Transactions",
+    "model": "TransactionType"
+  },
+  {
+    "id": "80aba85a-182c-49ad-be4f-7085a0698db1",
+    "appLabel": "Transactions",
+    "model": "TransactionTypeCoinRate"
+  },
+  {
+    "id": "9e729043-b39f-47dc-a000-d86b95b328af",
+    "appLabel": "Transactions",
+    "model": "TransactionTypeAccount"
+  },
+  {
+    "id": "08516420-31ce-4bcb-a3b8-be82ec1e7156",
+    "appLabel": "Transactions",
+    "model": "Transaction"
+  },
+  {
+    "id": "e844859c-d0cb-44cb-84d1-e6601eb2c35a",
+    "appLabel": "Sports",
+    "model": "SportType"
+  },
+  {
+    "id": "e844859c-d0cb-44cb-84d1-e6601eb2c35a",
+    "appLabel": "Sports",
+    "model": "SportCategory"
+  },
+  {
+    "id": "ea7cdc71-0a09-4aa6-b19e-56e1e6a0de73",
+    "appLabel": "Sports",
+    "model": "SportTypeSportCategory"
+  },
+  {
+    "id": "660aba0d-9460-4f90-b766-d55d73736d09",
+    "appLabel": "Sports",
+    "model": "SportTeam"
+  },
+  {
+    "id": "9f6a50db-51ca-4af2-a6d8-d132ff160add",
+    "appLabel": "Sports",
+    "model": "SportType"
+  },
+  {
+    "id": "c652c0c5-3edf-4aeb-a7b8-09a145ca7806",
+    "appLabel": "Sports",
+    "model": "SportLeague"
+  },
+  {
+    "id": "5ec60c9c-d09a-4b43-b5f6-35bb52d68123",
+    "appLabel": "Sports",
+    "model": "SportMatch"
+  },
+  {
+    "id": "7c10c8b3-f756-4e47-a457-4ac4c3869a1d",
+    "appLabel": "Sports",
+    "model": "SportTypeBetCriteria"
+  },
+  {
+    "id": "4fd10ae0-d4e8-4601-ab2f-199cf29e9aaf",
+    "appLabel": "Sports",
+    "model": "SportCategoryBetCriteria"
+  },
+  {
+    "id": "d5f91c78-e358-4eba-8bfa-d474a7f700cb",
+    "appLabel": "Sports",
+    "model": "SportMatchBetCriteria"
+  },
+  {
+    "id": "dbd8a270-b081-4bf4-b55e-b4d524a2bb01",
+    "appLabel": "Sports",
+    "model": "SportMatchBetCriteriaBetCondition"
+  },
+  {
+    "id": "00c87fe0-c642-48e2-90fe-80954bc51bf2",
+    "appLabel": "Bets",
+    "model": "BetSite"
+  },
+  {
+    "id": "02978c8c-38fd-4468-86b4-503d49afedd0",
+    "appLabel": "Bets",
+    "model": "BetSiteAccount"
+  },
+  {
+    "id": "7e5c93ae-dcaa-4e8b-8c06-3ce54c873a50",
+    "appLabel": "Bets",
+    "model": "BetType"
+  },
+  {
+    "id": "c0a3e67b-0778-4beb-b2f7-24a1ca7da9db",
+    "appLabel": "Bets",
+    "model": "BetTypeSportType"
+  },
+  {
+    "id": "9ef67746-0e27-4daa-84e9-2daca4a0c310",
+    "appLabel": "Bets",
+    "model": "BetTypeSportMatch"
+  },
+  {
+    "id": "b690ee67-1ea4-4984-a70e-decbb828e4ee",
+    "appLabel": "Bets",
+    "model": "BetCriteria"
+  },
+  {
+    "id": "80415138-b58a-4e51-ae0f-8bf02bce049e",
+    "appLabel": "Bets",
+    "model": "BetCondition"
+  },
+  {
+    "id": "2f320226-c136-498a-9149-54d1174f2e3c",
+    "appLabel": "Bets",
+    "model": "BetCriteriaBetCondition"
+  },
+  {
+    "id": "6fdb35f1-88b4-445d-877b-b5986217ba01",
+    "appLabel": "Bets",
+    "model": "BetSlipSetting"
+  },
+  {
+    "id": "e59a1de0-6eac-42f5-b771-0dcfa658aaf2",
+    "appLabel": "Notifications",
+    "model": "Notification"
+  },
+  {
+    "id": "25b1a45e-0508-4a4f-8c27-5346a25e3a16",
+    "appLabel": "Notifications",
+    "model": "NotificationDetail"
+  },
+  {
+    "id": "7805b7c1-d749-47bf-b6d4-d2a7b200fc6c",
+    "appLabel": "Supports",
+    "model": "Email"
+  },
+  {
+    "id": "9ef4c448-bcd6-4a68-ab5d-84b68f5d5196",
+    "appLabel": "Supports",
+    "model": "Contact"
+  },
+  {
+    "id": "9754dba4-e242-46dd-bb5a-43a637e2dc39",
+    "appLabel": "Supports",
+    "model": "SocialMessaging"
+  },
+  {
+    "id": "2fb96142-0735-4942-bc07-529630964e12",
+    "appLabel": "Supports",
+    "model": "CallbackRequest"
+  }
+]

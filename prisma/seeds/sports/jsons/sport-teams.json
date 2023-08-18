@@ -1,0 +1,82 @@
+[
+  {
+    "id": "ca109906-4705-4932-bdb3-ee54a21107a8",
+    "name": "Bangladesh",
+    "sportTypeId": "20137776-864b-41c3-b45a-ffe894a28797"
+  },
+  {
+    "id": "6adbd899-44ff-4292-b9a7-779645ae3ef1",
+    "name": "India",
+    "sportTypeId": "20137776-864b-41c3-b45a-ffe894a28797"
+  },
+  {
+    "id": "21f44b23-ed86-4e1f-96b4-2bd0e4b49c5e",
+    "name": "Pakistan",
+    "sportTypeId": "20137776-864b-41c3-b45a-ffe894a28797"
+  },
+  {
+    "id": "f5d8f141-10f1-4c8e-9184-53fec749dfad",
+    "name": "Australia",
+    "sportTypeId": "20137776-864b-41c3-b45a-ffe894a28797"
+  },
+  {
+    "id": "7af2bcb6-a6a8-49fe-b4a6-fda8461db9d6",
+    "name": "Barcelona",
+    "sportTypeId": "20137776-864b-41c3-b45a-ffe894a28797"
+  },
+  {
+    "id": "7af2bcb6-a6a8-49fe-b4a6-fda8561db9d6",
+    "name": "Real Madrid",
+    "sportTypeId": "81a15c71-bde0-4cc7-a10e-27309e1b1ce2"
+  },
+  {
+    "id": "7af2bcb6-a6a8-49fe-b4a6-fda8661db9d6",
+    "name": "Arsenal",
+    "sportTypeId": "81a15c71-bde0-4cc7-a10e-27309e1b1ce2"
+  },
+  {
+    "id": "7af2bcb6-a6a8-49fe-b4a6-fda8761db9d6",
+    "name": "Liverpool",
+    "sportTypeId": "81a15c71-bde0-4cc7-a10e-27309e1b1ce2"
+  },
+  {
+    "id": "7af2bcb6-a6a8-49fe-b4a6-fda8861db9d6",
+    "name": "Brazil",
+    "sportTypeId": "81a15c71-bde0-4cc7-a10e-27309e1b1ce2"
+  },
+  {
+    "id": "7af2bcb6-a6a8-49fe-b4a6-fda8961db9d8",
+    "name": "Argentina",
+    "sportTypeId": "81a15c71-bde0-4cc7-a10e-27309e1b1ce2"
+  },
+  {
+    "id": "4af2bcb6-a6a8-49fe-b4a6-fda8961db9d8",
+    "name": "Italy",
+    "sportTypeId": "81a15c71-bde0-4cc7-a10e-27309e1b1ce2"
+  },
+  {
+    "id": "44f2bcb6-a6a8-49fe-b4a6-fda8961db9d8",
+    "name": "France",
+    "sportTypeId": "81a15c71-bde0-4cc7-a10e-27309e1b1ce2"
+  },
+  {
+    "id": "47f2bcb6-a6a8-49fe-b4a6-fda8961db9d8",
+    "name": "Germany",
+    "sportTypeId": "81a15c71-bde0-4cc7-a10e-27309e1b1ce2"
+  },
+  {
+    "id": "23f2bcb6-a6a8-49fe-b4a6-fda8961db9d8",
+    "name": "Finland",
+    "sportTypeId": "81a15c71-bde0-4cc7-a10e-27309e1b1ce2"
+  },
+  {
+    "id": "56f2bcb6-a6a8-49fe-b4a6-fda8961db9d8",
+    "name": "Minnesota Timberwolves (RINT)",
+    "sportTypeId": "011619f9-3323-4f39-8fc3-9a6f637b2011"
+  },
+  {
+    "id": "67f2bcb6-a6a8-49fe-b4a6-fda8961db9d8",
+    "name": "Toronto Raptors (Lalkoff)",
+    "sportTypeId": "011619f9-3323-4f39-8fc3-9a6f637b2011"
+  }
+]

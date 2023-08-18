@@ -1,0 +1,62 @@
+[
+  {
+    "id": "018c39b2-a664-4299-a27a-22a82ed3d9a8",
+    "sportMatchId": "b8589eef-cf90-4cfe-a1e5-de392e5c3472",
+    "leagueId": "xxc7ed41-4da8-417f-88cf-5a06939b30xx"
+  },
+  {
+    "id": "028c39b2-a664-4299-a27a-22a82ed3d9a8",
+    "sportMatchId": "6771438d-fd39-49d5-a6d3-ed54268b3eae",
+    "leagueId": "xxc7ed41-4da8-417f-88cf-5a06939b30xx"
+  },
+  {
+    "id": "038c39b2-a664-4299-a27a-22a82ed3d9a8",
+    "sportMatchId": "bb71438d-fd39-49d5-a6d3-ed54268b3eae",
+    "leagueId": "xxc7ed41-4da8-417f-88cf-5a06939b30xx"
+  },
+  {
+    "id": "048c39b2-a664-4299-a27a-22a82ed3d9a8",
+    "sportMatchId": "3371438d-fd39-49d5-a6d3-ed54268b3e33",
+    "leagueId": "33c7ed41-4da8-417f-88cf-5a06939b3094"
+  },
+  {
+    "id": "058c39b2-a664-4299-a27a-22a82ed3d9a8",
+    "sportMatchId": "4471438d-fd39-49d5-a6d3-ed54268b3e44",
+    "leagueId": "44c7ed41-4da8-417f-88cf-5a06939b3044"
+  },
+  {
+    "id": "068c39b2-a664-4299-a27a-22a82ed3d9a8",
+    "sportMatchId": "bb71438d-fd39-49d5-a6d3-ed54268b3e44",
+    "leagueId": "mmc7ed41-4da8-417f-88cf-5a06939b3055"
+  },
+  {
+    "id": "078c39b2-a664-4299-a27a-22a82ed3d9a8",
+    "sportMatchId": "5571438d-fd39-49d5-a6d3-ed54268b3e55",
+    "leagueId": "66c7ed41-4da8-417f-88cf-5a06939b3066"
+  },
+  {
+    "id": "088c39b2-a664-4299-a27a-22a82ed3d9a8",
+    "sportMatchId": "9871438d-fd39-49d5-a6d3-ed54268b3e55",
+    "leagueId": "66c7ed41-4da8-417f-88cf-5a06939b3066"
+  },
+  {
+    "id": "098c39b2-a664-4299-a27a-22a82ed3d9a8",
+    "sportMatchId": "rs71438d-fd39-49d5-a6d3-ed54268b3e55",
+    "leagueId": "89c7ed41-4da8-417f-88cf-5a06939b3055"
+  },
+  {
+    "id": "108c39b2-a664-4299-a27a-22a82ed3d9a8",
+    "sportMatchId": "qq71438d-fd39-49d5-a6d3-ed54268b3e55",
+    "leagueId": "0117ed41-4da8-417f-88cf-5a06939b3110"
+  },
+  {
+    "id": "118c39b2-a664-4299-a27a-22a82ed3d9a8",
+    "sportMatchId": "6671438d-fd39-49d5-a6d3-ed54268b3e66",
+    "leagueId": "66c7ed41-4da8-417f-88cf-5a06939b3066"
+  },
+  {
+    "id": "128c39b2-a664-4299-a27a-22a82ed3d9a8",
+    "sportMatchId": "7771438d-fd39-49d5-a6d3-ed54268b3e66",
+    "leagueId": "77c7ed41-4da8-417f-88cf-5a06939b307"
+  }
+]

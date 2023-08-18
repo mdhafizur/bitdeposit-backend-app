@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -o errexit
+set -o pipefail
+set -o nounset
+
+# N.B. If only .env files supported variable expansion...
+export REDIS_HOST=bitdeposit-redis
+export REDIS_PORT=6379
+
+export DATABASE_URL="postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@bitdeposit-postgres:${POSTGRES_PORT}/${POSTGRES_DB}?schema=public"

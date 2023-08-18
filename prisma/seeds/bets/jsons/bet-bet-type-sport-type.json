@@ -1,0 +1,22 @@
+[
+  {
+    "id": "f27710c9-ec50-4584-9269-60210a57103f",
+    "betTypeId": "c390c9e4-b8e8-440c-b446-78f5dc1779b8",
+    "sportTypeId": "20137776-864b-41c3-b45a-ffe894a28797"
+  },
+  {
+    "id": "acfcf7cd-1142-487a-9f77-b9aff1feae57",
+    "betTypeId": "c390c9e4-b8e8-440c-b446-78f5dc1779b8",
+    "sportTypeId": "81a15c71-bde0-4cc7-a10e-27309e1b1ce2"
+  },
+  {
+    "id": "825d353d-de89-4def-9c7f-f6f37d0a264d",
+    "betTypeId": "65995331-3997-4b0a-bc99-9d97c7398a02",
+    "sportTypeId": "acf619f9-3323-4f39-8fc3-9a6f637b284f"
+  },
+  {
+    "id": "d5b126fc-9c82-46bb-9043-6bb0facdddde",
+    "betTypeId": "65995331-3997-4b0a-bc99-9d97c7398a02",
+    "sportTypeId": "81a15c71-bde0-4cc7-a10e-27309e1b1ce2"
+  }
+]

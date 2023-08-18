@@ -1,0 +1,14 @@
+[
+  {
+    "id": "6d75ff20-9d22-4812-8a46-6f5145248316",
+    "userId": "af63f67c-ef1c-4e1b-bd72-3cce9c33dc90",
+    "betTypeId": "c390c9e4-b8e8-440c-b446-78f5dc1779b8",
+    "sportMatchId": "b8589eef-cf90-4cfe-a1e5-de392e5c3472",
+    "betCriteriaBetConditionId": "27117a5a-98cd-4b68-8aaa-1a6627064d8d",
+    "betSlipSettingId": "5b93718c-fb7c-46dc-8312-660c31fce40f",
+    "overallOdd": "2",
+    "stake": 5000,
+    "winback": 10000,
+    "betStatus": "UNSETTLED"
+  }
+]

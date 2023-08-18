@@ -1,0 +1,2102 @@
+[
+  {
+    "id": "3c19c24a-f420-428a-8681-1c58dffb3dd5",
+    "name": "CREATE UsersUser",
+    "action": "CREATE",
+    "codename": "CREATE-UsersUser",
+    "contentTypeId": "ef15f6ff-b40f-4070-a8e2-da089a5c3830"
+  },
+  {
+    "id": "08616368-b900-46aa-8e67-f92fa7526a0e",
+    "name": "READ UsersUser",
+    "action": "READ",
+    "codename": "READ-UsersUser",
+    "contentTypeId": "ef15f6ff-b40f-4070-a8e2-da089a5c3830"
+  },
+  {
+    "id": "28241e27-e4fc-4ab5-bd39-d7a52f20fd1f",
+    "name": "UPDATE UsersUser",
+    "action": "UPDATE",
+    "codename": "UPDATE-UsersUser",
+    "contentTypeId": "ef15f6ff-b40f-4070-a8e2-da089a5c3830"
+  },
+  {
+    "id": "409c90ed-cfd8-4960-b6e2-12887f86dba6",
+    "name": "DELETE UsersUser",
+    "action": "DELETE",
+    "codename": "DELETE-UsersUser",
+    "contentTypeId": "ef15f6ff-b40f-4070-a8e2-da089a5c3830"
+  },
+  {
+    "id": "21c7088c-c056-4975-b906-9ce7fd632d03",
+    "name": "MANAGE UsersSetting",
+    "action": "MANAGE",
+    "codename": "MANAGE-UsersSetting",
+    "contentTypeId": "ef15f6ff-b40f-4070-a8e2-da089a5c3830"
+  },
+  {
+    "id": "b866f25b-752f-40d5-a159-5455e6df6068",
+    "name": "CREATE UsersSetting",
+    "action": "CREATE",
+    "codename": "CREATE-UsersSetting",
+    "contentTypeId": "5468da58-f5f7-47b2-93c3-9091334d8589"
+  },
+  {
+    "id": "50d4252c-ad59-4187-9d20-ffdbd870b5dc",
+    "name": "READ UsersSetting",
+    "action": "READ",
+    "codename": "READ-UsersSetting",
+    "contentTypeId": "5468da58-f5f7-47b2-93c3-9091334d8589"
+  },
+  {
+    "id": "aff552b5-c3a4-44cf-a9ee-8a0b51e39bfa",
+    "name": "UPDATE UsersSetting",
+    "action": "UPDATE",
+    "codename": "UPDATE-UsersSetting",
+    "contentTypeId": "5468da58-f5f7-47b2-93c3-9091334d8589"
+  },
+  {
+    "id": "aee96e5b-ad5b-4f3c-bb43-1648903e1612",
+    "name": "DELETE UsersSetting",
+    "action": "DELETE",
+    "codename": "DELETE-UsersSetting",
+    "contentTypeId": "5468da58-f5f7-47b2-93c3-9091334d8589"
+  },
+  {
+    "id": "6027c5f3-3b2d-4461-a472-cd79bd60a71c",
+    "name": "MANAGE UsersSetting",
+    "action": "MANAGE",
+    "codename": "MANAGE-UsersSetting",
+    "contentTypeId": "5468da58-f5f7-47b2-93c3-9091334d8589"
+  },
+  {
+    "id": "8819e82f-9504-472a-ab47-f89a88cc6731",
+    "name": "CREATE UsersLocation",
+    "action": "CREATE",
+    "codename": "CREATE-UsersLocation",
+    "contentTypeId": "f0ebf744-506d-41f1-b568-b7b8c0015957"
+  },
+  {
+    "id": "83af486b-23dc-45b6-a307-1f079dba99d9",
+    "name": "READ UsersLocation",
+    "action": "READ",
+    "codename": "READ-UsersLocation",
+    "contentTypeId": "f0ebf744-506d-41f1-b568-b7b8c0015957"
+  },
+  {
+    "id": "ebf1f27c-4c9c-4d99-9f4a-f778ac0617cd",
+    "name": "UPDATE UsersLocation",
+    "action": "UPDATE",
+    "codename": "UPDATE-UsersLocation",
+    "contentTypeId": "f0ebf744-506d-41f1-b568-b7b8c0015957"
+  },
+  {
+    "id": "f0ef33c6-3122-4872-9cc5-bb74cbcd5abc",
+    "name": "DELETE UsersLocation",
+    "action": "DELETE",
+    "codename": "DELETE-UsersLocation",
+    "contentTypeId": "f0ebf744-506d-41f1-b568-b7b8c0015957"
+  },
+  {
+    "id": "e9d6320a-e32a-43d6-a804-3632bc73d214",
+    "name": "MANAGE UsersLocation",
+    "action": "MANAGE",
+    "codename": "MANAGE-UsersLocation",
+    "contentTypeId": "f0ebf744-506d-41f1-b568-b7b8c0015957"
+  },
+  {
+    "id": "e9bf4e25-3dce-47e6-9268-e39cf07cb7ab",
+    "name": "CREATE LocationsCountry",
+    "action": "CREATE",
+    "codename": "CREATE-LocationsCountry",
+    "contentTypeId": "ceab566c-26ee-48a3-9175-3baf5cbd5ea6"
+  },
+  {
+    "id": "592ca416-b4c1-4157-944b-dff221fc6e3c",
+    "name": "READ LocationsCountry",
+    "action": "READ",
+    "codename": "READ-LocationsCountry",
+    "contentTypeId": "ceab566c-26ee-48a3-9175-3baf5cbd5ea6"
+  },
+  {
+    "id": "bf139dfb-c738-47a6-9156-b776243523ff",
+    "name": "UPDATE LocationsCountry",
+    "action": "UPDATE",
+    "codename": "UPDATE-LocationsCountry",
+    "contentTypeId": "ceab566c-26ee-48a3-9175-3baf5cbd5ea6"
+  },
+  {
+    "id": "041198f5-3d68-47f7-a0a6-cbb18cc98399",
+    "name": "DELETE LocationsCountry",
+    "action": "DELETE",
+    "codename": "DELETE-LocationsCountry",
+    "contentTypeId": "ceab566c-26ee-48a3-9175-3baf5cbd5ea6"
+  },
+  {
+    "id": "0b058e37-b1eb-416d-9c3c-b588dbfa6172",
+    "name": "MANAGE LocationsCountry",
+    "action": "MANAGE",
+    "codename": "MANAGE-LocationsCountry",
+    "contentTypeId": "ceab566c-26ee-48a3-9175-3baf5cbd5ea6"
+  },
+  {
+    "id": "0fb39714-6b9a-4050-8704-6e83079e623e",
+    "name": "CREATE LocationsState",
+    "action": "CREATE",
+    "codename": "CREATE-LocationsState",
+    "contentTypeId": "7e6ed0e7-e00d-4ea1-8142-073d95c04fb5"
+  },
+  {
+    "id": "5634e778-ee8a-47ec-a184-a2649da0c385",
+    "name": "READ LocationsState",
+    "action": "READ",
+    "codename": "READ-LocationsState",
+    "contentTypeId": "7e6ed0e7-e00d-4ea1-8142-073d95c04fb5"
+  },
+  {
+    "id": "62ee4523-2d95-4d4e-ba86-eecc6847988c",
+    "name": "UPDATE LocationsState",
+    "action": "UPDATE",
+    "codename": "UPDATE-LocationsState",
+    "contentTypeId": "7e6ed0e7-e00d-4ea1-8142-073d95c04fb5"
+  },
+  {
+    "id": "3f0cadde-6887-43a4-83f4-24259bda65c1",
+    "name": "DELETE LocationsState",
+    "action": "DELETE",
+    "codename": "DELETE-LocationsState",
+    "contentTypeId": "7e6ed0e7-e00d-4ea1-8142-073d95c04fb5"
+  },
+  {
+    "id": "c0f4c08f-73b6-4e4e-b3df-07bfc852689f",
+    "name": "MANAGE LocationsState",
+    "action": "MANAGE",
+    "codename": "MANAGE-LocationsState",
+    "contentTypeId": "7e6ed0e7-e00d-4ea1-8142-073d95c04fb5"
+  },
+  {
+    "id": "f3a82bd1-b49e-4f7d-9bff-2e7e351816b4",
+    "name": "CREATE LocationsCity",
+    "action": "CREATE",
+    "codename": "CREATE-LocationsCity",
+    "contentTypeId": "51856d5f-22c3-4354-8aaa-0a3d6b580085"
+  },
+  {
+    "id": "8bb332ee-3d42-4cdc-8334-3fe2c3e5744f",
+    "name": "READ LocationsCity",
+    "action": "READ",
+    "codename": "READ-LocationsCity",
+    "contentTypeId": "51856d5f-22c3-4354-8aaa-0a3d6b580085"
+  },
+  {
+    "id": "62ee4523-2d95-4d4e-ba86-eecc6847988c",
+    "name": "UPDATE LocationsCity",
+    "action": "UPDATE",
+    "codename": "UPDATE-LocationsCity",
+    "contentTypeId": "51856d5f-22c3-4354-8aaa-0a3d6b580085"
+  },
+  {
+    "id": "08d08f29-a997-477e-80c2-8f027d716284",
+    "name": "DELETE LocationsCity",
+    "action": "DELETE",
+    "codename": "DELETE-LocationsCity",
+    "contentTypeId": "51856d5f-22c3-4354-8aaa-0a3d6b580085"
+  },
+  {
+    "id": "9d5f7927-c3f9-4157-b7b2-72022bb99321",
+    "name": "MANAGE LocationsCity",
+    "action": "MANAGE",
+    "codename": "MANAGE-LocationsCity",
+    "contentTypeId": "51856d5f-22c3-4354-8aaa-0a3d6b580085"
+  },
+  {
+    "id": "b0a64664-9627-40e2-926e-77184d7ba954",
+    "name": "CREATE UsersUserAttachment",
+    "action": "CREATE",
+    "codename": "CREATE-UsersUserAttachment",
+    "contentTypeId": "8831f87b-64f0-478a-a940-1f688523d433"
+  },
+  {
+    "id": "1f72d3f2-1d6a-4702-90b2-8f594154b634",
+    "name": "READ UsersUserAttachment",
+    "action": "READ",
+    "codename": "READ-UsersUserAttachment",
+    "contentTypeId": "8831f87b-64f0-478a-a940-1f688523d433"
+  },
+  {
+    "id": "4883d615-8158-4a15-8815-54df94a4535b",
+    "name": "UPDATE UsersUserAttachment",
+    "action": "UPDATE",
+    "codename": "UPDATE-UsersUserAttachment",
+    "contentTypeId": "8831f87b-64f0-478a-a940-1f688523d433"
+  },
+  {
+    "id": "7b195285-2ba2-4443-86a9-847ddeb8269a",
+    "name": "DELETE UsersUserAttachment",
+    "action": "DELETE",
+    "codename": "DELETE-UsersUserAttachment",
+    "contentTypeId": "8831f87b-64f0-478a-a940-1f688523d433"
+  },
+  {
+    "id": "d492b84a-895c-4e3b-9c76-c7e1d8afe4b2",
+    "name": "MANAGE UsersUserAttachment",
+    "action": "MANAGE",
+    "codename": "MANAGE-UsersUserAttachment",
+    "contentTypeId": "8831f87b-64f0-478a-a940-1f688523d433"
+  },
+  {
+    "id": "d4d39385-8226-4334-a280-f7531f0199a8",
+    "name": "CREATE UsersTransactionTypeUserAccount",
+    "action": "CREATE",
+    "codename": "CREATE-UsersTransactionTypeUserAccount",
+    "contentTypeId": "6673ac29-f1b1-4801-9bec-8218a71fff69"
+  },
+  {
+    "id": "df88a7d4-ba55-4054-ab40-5cf43b8ea1a8",
+    "name": "READ UsersTransactionTypeUserAccount",
+    "action": "READ",
+    "codename": "READ-UsersTransactionTypeUserAccount",
+    "contentTypeId": "6673ac29-f1b1-4801-9bec-8218a71fff69"
+  },
+  {
+    "id": "d4fadad5-c25f-4039-9dc5-69cfc50a3050",
+    "name": "UPDATE UsersTransactionTypeUserAccount",
+    "action": "UPDATE",
+    "codename": "UPDATE-UsersTransactionTypeUserAccount",
+    "contentTypeId": "6673ac29-f1b1-4801-9bec-8218a71fff69"
+  },
+  {
+    "id": "d3b41449-374d-4c36-a28b-7f8a63f604f4",
+    "name": "DELETE UsersTransactionTypeUserAccount",
+    "action": "DELETE",
+    "codename": "DELETE-UsersTransactionTypeUserAccount",
+    "contentTypeId": "6673ac29-f1b1-4801-9bec-8218a71fff69"
+  },
+  {
+    "id": "90418008-c277-41cd-ba0a-dd217cddf19e",
+    "name": "MANAGE UsersTransactionTypeUserAccount",
+    "action": "MANAGE",
+    "codename": "MANAGE-UsersTransactionTypeUserAccount",
+    "contentTypeId": "6673ac29-f1b1-4801-9bec-8218a71fff69"
+  },
+  {
+    "id": "9a5e8ff2-6be2-472c-b3df-fd93dda8dc89",
+    "name": "CREATE UsersUserMatch",
+    "action": "CREATE",
+    "codename": "CREATE-UsersUserMatch",
+    "contentTypeId": "03aa29f9-5dea-4078-83a7-587eb433990f"
+  },
+  {
+    "id": "86ea4ea3-ab3e-4618-a491-53d978c133e4",
+    "name": "READ UsersUserMatch",
+    "action": "READ",
+    "codename": "READ-UsersUserMatch",
+    "contentTypeId": "03aa29f9-5dea-4078-83a7-587eb433990f"
+  },
+  {
+    "id": "e4738626-7cee-4249-94c7-f8c9c04ca75d",
+    "name": "UPDATE UsersUserMatch",
+    "action": "UPDATE",
+    "codename": "UPDATE-UsersUserMatch",
+    "contentTypeId": "03aa29f9-5dea-4078-83a7-587eb433990f"
+  },
+  {
+    "id": "447006e1-3985-4c57-850c-7af8259be62b",
+    "name": "DELETE UsersUserMatch",
+    "action": "DELETE",
+    "codename": "DELETE-UsersUserMatch",
+    "contentTypeId": "03aa29f9-5dea-4078-83a7-587eb433990f"
+  },
+  {
+    "id": "cdbb7dad-1d8c-44b4-bad4-3ebc970dad4c",
+    "name": "MANAGE UsersUserMatch",
+    "action": "MANAGE",
+    "codename": "MANAGE-UsersUserMatch",
+    "contentTypeId": "03aa29f9-5dea-4078-83a7-587eb433990f"
+  },
+  {
+    "id": "ebe2c74f-a626-4f0a-afb5-122530e35e1a",
+    "name": "CREATE UsersUserMatchBet",
+    "action": "CREATE",
+    "codename": "CREATE-UsersUserMatchBet",
+    "contentTypeId": "1d39d3f0-00d5-430f-947d-7a715c157c15"
+  },
+  {
+    "id": "b082b839-1fbf-4c2c-8ead-ff14be3fc049",
+    "name": "READ UsersUserMatchBet",
+    "action": "READ",
+    "codename": "READ-UsersUserMatchBet",
+    "contentTypeId": "1d39d3f0-00d5-430f-947d-7a715c157c15"
+  },
+  {
+    "id": "2730c868-f1a5-49e4-bddf-54ec9fe3436b",
+    "name": "UPDATE UsersUserMatchBet",
+    "action": "UPDATE",
+    "codename": "UPDATE-UsersUserMatchBet",
+    "contentTypeId": "1d39d3f0-00d5-430f-947d-7a715c157c15"
+  },
+  {
+    "id": "7cc806b0-26b1-4429-974a-bd7ba8fa5ebb",
+    "name": "DELETE UsersUserMatchBet",
+    "action": "DELETE",
+    "codename": "DELETE-UsersUserMatchBet",
+    "contentTypeId": "1d39d3f0-00d5-430f-947d-7a715c157c15"
+  },
+  {
+    "id": "c4d6ac3f-c8ee-4c8c-8ae5-85245e15abbc",
+    "name": "MANAGE UsersUserMatchBet",
+    "action": "MANAGE",
+    "codename": "MANAGE-UsersUserMatchBet",
+    "contentTypeId": "1d39d3f0-00d5-430f-947d-7a715c157c15"
+  },
+  {
+    "id": "76037633-d2e0-4942-95e4-1a945159f347",
+    "name": "CREATE AuthContentType",
+    "action": "CREATE",
+    "codename": "CREATE-AuthContentType",
+    "contentTypeId": "2eb4d736-3895-4c5d-b9bc-1fe460be2484"
+  },
+  {
+    "id": "6c02469a-9d4e-4de0-88d8-07ed474007b5",
+    "name": "READ AuthContentType",
+    "action": "READ",
+    "codename": "READ-AuthContentType",
+    "contentTypeId": "2eb4d736-3895-4c5d-b9bc-1fe460be2484"
+  },
+  {
+    "id": "4e8ca536-2ebf-4065-911a-cdad1fb5311e",
+    "name": "UPDATE AuthContentType",
+    "action": "UPDATE",
+    "codename": "UPDATE-AuthContentType",
+    "contentTypeId": "2eb4d736-3895-4c5d-b9bc-1fe460be2484"
+  },
+  {
+    "id": "232b98c1-7a40-4669-a361-a17feb6cbe3c",
+    "name": "DELETE AuthContentType",
+    "action": "DELETE",
+    "codename": "DELETE-AuthContentType",
+    "contentTypeId": "2eb4d736-3895-4c5d-b9bc-1fe460be2484"
+  },
+  {
+    "id": "8984f190-d7fe-4d9d-8921-ad27fbdddca1",
+    "name": "MANAGE AuthContentType",
+    "action": "MANAGE",
+    "codename": "MANAGE-AuthContentType",
+    "contentTypeId": "2eb4d736-3895-4c5d-b9bc-1fe460be2484"
+  },
+  {
+    "id": "29a7ef4d-3450-4b9d-aa66-dd33dce2c1d1",
+    "name": "CREATE AuthGroup",
+    "action": "CREATE",
+    "codename": "CREATE-AuthGroup",
+    "contentTypeId": "3dd0578c-2944-4cde-9442-37a90bb21049"
+  },
+  {
+    "id": "3c7e280c-0d34-48cd-ba07-7de04c523521",
+    "name": "READ AuthGroup",
+    "action": "READ",
+    "codename": "READ-AuthGroup",
+    "contentTypeId": "3dd0578c-2944-4cde-9442-37a90bb21049"
+  },
+  {
+    "id": "b3a8428d-5269-4821-852e-507d8b8698dc",
+    "name": "UPDATE AuthGroup",
+    "action": "UPDATE",
+    "codename": "UPDATE-AuthGroup",
+    "contentTypeId": "3dd0578c-2944-4cde-9442-37a90bb21049"
+  },
+  {
+    "id": "4ab4c469-7f09-4734-983f-07afd4c796b3",
+    "name": "DELETE AuthGroup",
+    "action": "DELETE",
+    "codename": "DELETE-AuthGroup",
+    "contentTypeId": "3dd0578c-2944-4cde-9442-37a90bb21049"
+  },
+  {
+    "id": "ad9fa8d0-ed49-4011-9338-eeddc81ff9af",
+    "name": "MANAGE AuthGroup",
+    "action": "MANAGE",
+    "codename": "MANAGE-AuthGroup",
+    "contentTypeId": "3dd0578c-2944-4cde-9442-37a90bb21049"
+  },
+  {
+    "id": "93394bda-572f-462d-bd2f-5d3aaffdb957",
+    "name": "CREATE AuthUserGroup",
+    "action": "CREATE",
+    "codename": "CREATE-AuthUserGroup",
+    "contentTypeId": "b37d26fd-50f3-4bbc-b0f2-d8a0861fe411"
+  },
+  {
+    "id": "c0af05b1-89b1-41d4-a10b-c9d6a23f8a39",
+    "name": "READ AuthUserGroup",
+    "action": "READ",
+    "codename": "READ-AuthUserGroup",
+    "contentTypeId": "b37d26fd-50f3-4bbc-b0f2-d8a0861fe411"
+  },
+  {
+    "id": "a49b00a4-4832-4d54-b404-979f453a8111",
+    "name": "UPDATE AuthUserGroup",
+    "action": "UPDATE",
+    "codename": "UPDATE-AuthUserGroup",
+    "contentTypeId": "b37d26fd-50f3-4bbc-b0f2-d8a0861fe411"
+  },
+  {
+    "id": "4987cb9b-336d-44d2-9a6c-cd5efaf323a4",
+    "name": "DELETE AuthUserGroup",
+    "action": "DELETE",
+    "codename": "DELETE-AuthUserGroup",
+    "contentTypeId": "b37d26fd-50f3-4bbc-b0f2-d8a0861fe411"
+  },
+  {
+    "id": "93b86b95-4352-4ed6-8f91-5dee04e35e28",
+    "name": "MANAGE AuthUserGroup",
+    "action": "MANAGE",
+    "codename": "MANAGE-AuthUserGroup",
+    "contentTypeId": "b37d26fd-50f3-4bbc-b0f2-d8a0861fe411"
+  },
+  {
+    "id": "beda6545-7d08-4c79-81bf-9636956d2940",
+    "name": "CREATE AuthGroupPersmission",
+    "action": "CREATE",
+    "codename": "CREATE-AuthGroupPersmission",
+    "contentTypeId": "1e5126be-232f-49d6-9dea-b5bf21719a1a"
+  },
+  {
+    "id": "d3ba7926-6101-4dfe-9d51-d7392b762f78",
+    "name": "READ AuthGroupPersmission",
+    "action": "READ",
+    "codename": "READ-AuthGroupPersmission",
+    "contentTypeId": "1e5126be-232f-49d6-9dea-b5bf21719a1a"
+  },
+  {
+    "id": "2fb9bc59-fb79-40c0-8ab4-c7916b395915",
+    "name": "UPDATE AuthGroupPersmission",
+    "action": "UPDATE",
+    "codename": "UPDATE-AuthGroupPersmission",
+    "contentTypeId": "1e5126be-232f-49d6-9dea-b5bf21719a1a"
+  },
+  {
+    "id": "48218f38-4ad9-49c0-aacf-9fa0d06faeeb",
+    "name": "DELETE AuthGroupPersmission",
+    "action": "DELETE",
+    "codename": "DELETE-AuthGroupPersmission",
+    "contentTypeId": "1e5126be-232f-49d6-9dea-b5bf21719a1a"
+  },
+  {
+    "id": "83bf697c-c3a4-4689-8a90-b3c21084f40c",
+    "name": "MANAGE AuthGroupPersmission",
+    "action": "MANAGE",
+    "codename": "MANAGE-AuthGroupPersmission",
+    "contentTypeId": "1e5126be-232f-49d6-9dea-b5bf21719a1a"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE AuthUserPersmission",
+    "action": "CREATE",
+    "codename": "CREATE-AuthUserPersmission",
+    "contentTypeId": "92c5fab4-9386-4932-98e3-75b00509496d"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ AuthUserPersmission",
+    "action": "READ",
+    "codename": "READ-AuthUserPersmission",
+    "contentTypeId": "92c5fab4-9386-4932-98e3-75b00509496d"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE AuthUserPersmission",
+    "action": "UPDATE",
+    "codename": "UPDATE-AuthUserPersmission",
+    "contentTypeId": "92c5fab4-9386-4932-98e3-75b00509496d"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE AuthUserPersmission",
+    "action": "DELETE",
+    "codename": "DELETE-AuthUserPersmission",
+    "contentTypeId": "92c5fab4-9386-4932-98e3-75b00509496d"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE AuthUserPersmission",
+    "action": "MANAGE",
+    "codename": "MANAGE-AuthUserPersmission",
+    "contentTypeId": "92c5fab4-9386-4932-98e3-75b00509496d"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE AuthUserAuthenticationProvider",
+    "action": "CREATE",
+    "codename": "CREATE-AuthUserAuthenticationProvider",
+    "contentTypeId": "6d809f8f-b042-4b8c-98a4-74acfceb75a0"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ AuthUserAuthenticationProvider",
+    "action": "READ",
+    "codename": "READ-AuthUserAuthenticationProvider",
+    "contentTypeId": "6d809f8f-b042-4b8c-98a4-74acfceb75a0"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE AuthUserAuthenticationProvider",
+    "action": "UPDATE",
+    "codename": "UPDATE-AuthUserAuthenticationProvider",
+    "contentTypeId": "6d809f8f-b042-4b8c-98a4-74acfceb75a0"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE AuthUserAuthenticationProvider",
+    "action": "DELETE",
+    "codename": "DELETE-AuthUserAuthenticationProvider",
+    "contentTypeId": "6d809f8f-b042-4b8c-98a4-74acfceb75a0"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE AuthUserAuthenticationProvider",
+    "action": "MANAGE",
+    "codename": "MANAGE-AuthUserAuthenticationProvider",
+    "contentTypeId": "6d809f8f-b042-4b8c-98a4-74acfceb75a0"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE AuthRefreshToken",
+    "action": "CREATE",
+    "codename": "CREATE-AuthRefreshToken",
+    "contentTypeId": "0f758d57-255d-4df2-beed-6a42245e7cd5"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ AuthRefreshToken",
+    "action": "READ",
+    "codename": "READ-AuthRefreshToken",
+    "contentTypeId": "0f758d57-255d-4df2-beed-6a42245e7cd5"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE AuthRefreshToken",
+    "action": "UPDATE",
+    "codename": "UPDATE-AuthRefreshToken",
+    "contentTypeId": "0f758d57-255d-4df2-beed-6a42245e7cd5"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE AuthRefreshToken",
+    "action": "DELETE",
+    "codename": "DELETE-AuthRefreshToken",
+    "contentTypeId": "0f758d57-255d-4df2-beed-6a42245e7cd5"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE AuthRefreshToken",
+    "action": "MANAGE",
+    "codename": "MANAGE-AuthRefreshToken",
+    "contentTypeId": "0f758d57-255d-4df2-beed-6a42245e7cd5"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE AuthVerificationToken",
+    "action": "CREATE",
+    "codename": "CREATE-AuthVerificationToken",
+    "contentTypeId": "b0625c03-793c-4d93-98eb-7436f1911b9b"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ AuthVerificationToken",
+    "action": "READ",
+    "codename": "READ-AuthVerificationToken",
+    "contentTypeId": "b0625c03-793c-4d93-98eb-7436f1911b9b"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE AuthVerificationToken",
+    "action": "UPDATE",
+    "codename": "UPDATE-AuthVerificationToken",
+    "contentTypeId": "b0625c03-793c-4d93-98eb-7436f1911b9b"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE AuthVerificationToken",
+    "action": "DELETE",
+    "codename": "DELETE-AuthVerificationToken",
+    "contentTypeId": "b0625c03-793c-4d93-98eb-7436f1911b9b"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE AuthVerificationToken",
+    "action": "MANAGE",
+    "codename": "MANAGE-AuthVerificationToken",
+    "contentTypeId": "b0625c03-793c-4d93-98eb-7436f1911b9b"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE AuthSession",
+    "action": "CREATE",
+    "codename": "CREATE-AuthSession",
+    "contentTypeId": "c81872d0-0e14-4259-a29e-fb76adbf23aa"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ AuthSession",
+    "action": "READ",
+    "codename": "READ-AuthSession",
+    "contentTypeId": "c81872d0-0e14-4259-a29e-fb76adbf23aa"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE AuthSession",
+    "action": "UPDATE",
+    "codename": "UPDATE-AuthSession",
+    "contentTypeId": "c81872d0-0e14-4259-a29e-fb76adbf23aa"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE AuthSession",
+    "action": "DELETE",
+    "codename": "DELETE-AuthSession",
+    "contentTypeId": "c81872d0-0e14-4259-a29e-fb76adbf23aa"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE AuthSession",
+    "action": "MANAGE",
+    "codename": "MANAGE-AuthSession",
+    "contentTypeId": "c81872d0-0e14-4259-a29e-fb76adbf23aa"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE AffiliatesGroupOwner",
+    "action": "CREATE",
+    "codename": "CREATE-AffiliatesGroupOwner",
+    "contentTypeId": "30e5fe28-6dea-4774-8a74-d8c416005b34"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ AffiliatesGroupOwner",
+    "action": "READ",
+    "codename": "READ-AffiliatesGroupOwner",
+    "contentTypeId": "30e5fe28-6dea-4774-8a74-d8c416005b34"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE AffiliatesGroupOwner",
+    "action": "UPDATE",
+    "codename": "UPDATE-AffiliatesGroupOwner",
+    "contentTypeId": "30e5fe28-6dea-4774-8a74-d8c416005b34"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE AffiliatesGroupOwner",
+    "action": "DELETE",
+    "codename": "DELETE-AffiliatesGroupOwner",
+    "contentTypeId": "30e5fe28-6dea-4774-8a74-d8c416005b34"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE AffiliatesGroupOwner",
+    "action": "MANAGE",
+    "codename": "MANAGE-AffiliatesGroupOwner",
+    "contentTypeId": "30e5fe28-6dea-4774-8a74-d8c416005b34"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE AffiliatesGroupOwnerGroupType",
+    "action": "CREATE",
+    "codename": "CREATE-AffiliatesGroupOwnerGroupType",
+    "contentTypeId": "65a5d8d0-01dc-44bb-919b-02f1385ce09c"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ AffiliatesGroupOwnerGroupType",
+    "action": "READ",
+    "codename": "READ-AffiliatesGroupOwnerGroupType",
+    "contentTypeId": "65a5d8d0-01dc-44bb-919b-02f1385ce09c"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE AffiliatesGroupOwnerGroupType",
+    "action": "UPDATE",
+    "codename": "UPDATE-AffiliatesGroupOwnerGroupType",
+    "contentTypeId": "65a5d8d0-01dc-44bb-919b-02f1385ce09c"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE AffiliatesGroupOwnerGroupType",
+    "action": "DELETE",
+    "codename": "DELETE-AffiliatesGroupOwnerGroupType",
+    "contentTypeId": "65a5d8d0-01dc-44bb-919b-02f1385ce09c"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE AffiliatesGroupOwnerGroupType",
+    "action": "MANAGE",
+    "codename": "MANAGE-AffiliatesGroupOwnerGroupType",
+    "contentTypeId": "65a5d8d0-01dc-44bb-919b-02f1385ce09c"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE AffiliatesGroupOwnerUser",
+    "action": "CREATE",
+    "codename": "CREATE-AffiliatesGroupOwnerUser",
+    "contentTypeId": "1e70dd61-5043-4470-88d1-726926752833"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ AffiliatesGroupOwnerUser",
+    "action": "READ",
+    "codename": "READ-AffiliatesGroupOwnerUser",
+    "contentTypeId": "1e70dd61-5043-4470-88d1-726926752833"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE AffiliatesGroupOwnerUser",
+    "action": "UPDATE",
+    "codename": "UPDATE-AffiliatesGroupOwnerUser",
+    "contentTypeId": "1e70dd61-5043-4470-88d1-726926752833"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE AffiliatesGroupOwnerUser",
+    "action": "DELETE",
+    "codename": "DELETE-AffiliatesGroupOwnerUser",
+    "contentTypeId": "1e70dd61-5043-4470-88d1-726926752833"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE AffiliatesGroupOwnerUser",
+    "action": "MANAGE",
+    "codename": "MANAGE-AffiliatesGroupOwnerUser",
+    "contentTypeId": "1e70dd61-5043-4470-88d1-726926752833"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE AffiliatesCommissionGroup",
+    "action": "CREATE",
+    "codename": "CREATE-AffiliatesCommissionGroup",
+    "contentTypeId": "8a8f6440-ab30-4e4d-b419-6f08d25e57e7"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ AffiliatesCommissionGroup",
+    "action": "READ",
+    "codename": "READ-AffiliatesCommissionGroup",
+    "contentTypeId": "8a8f6440-ab30-4e4d-b419-6f08d25e57e7"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE AffiliatesCommissionGroup",
+    "action": "UPDATE",
+    "codename": "UPDATE-AffiliatesCommissionGroup",
+    "contentTypeId": "8a8f6440-ab30-4e4d-b419-6f08d25e57e7"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE AffiliatesCommissionGroup",
+    "action": "DELETE",
+    "codename": "DELETE-AffiliatesCommissionGroup",
+    "contentTypeId": "8a8f6440-ab30-4e4d-b419-6f08d25e57e7"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE AffiliatesCommissionGroup",
+    "action": "MANAGE",
+    "codename": "MANAGE-AffiliatesCommissionGroup",
+    "contentTypeId": "8a8f6440-ab30-4e4d-b419-6f08d25e57e7"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE AffiliatesCommissionType",
+    "action": "CREATE",
+    "codename": "CREATE-AffiliatesCommissionType",
+    "contentTypeId": "9229db35-c901-4503-813a-2df2610fa443"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ AffiliatesCommissionType",
+    "action": "READ",
+    "codename": "READ-AffiliatesCommissionType",
+    "contentTypeId": "9229db35-c901-4503-813a-2df2610fa443"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE AffiliatesCommissionType",
+    "action": "UPDATE",
+    "codename": "UPDATE-AffiliatesCommissionType",
+    "contentTypeId": "9229db35-c901-4503-813a-2df2610fa443"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE AffiliatesCommissionType",
+    "action": "DELETE",
+    "codename": "DELETE-AffiliatesCommissionType",
+    "contentTypeId": "9229db35-c901-4503-813a-2df2610fa443"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE AffiliatesCommissionType",
+    "action": "MANAGE",
+    "codename": "MANAGE-AffiliatesCommissionType",
+    "contentTypeId": "9229db35-c901-4503-813a-2df2610fa443"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE AffiliatesGroupTypeCommissionStructure",
+    "action": "CREATE",
+    "codename": "CREATE-AffiliatesGroupTypeCommissionStructure",
+    "contentTypeId": "fe9405ee-ce34-47d0-95d5-0c4afe277495"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ AffiliatesGroupTypeCommissionStructure",
+    "action": "READ",
+    "codename": "READ-AffiliatesGroupTypeCommissionStructure",
+    "contentTypeId": "fe9405ee-ce34-47d0-95d5-0c4afe277495"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE AffiliatesGroupTypeCommissionStructure",
+    "action": "UPDATE",
+    "codename": "UPDATE-AffiliatesGroupTypeCommissionStructure",
+    "contentTypeId": "fe9405ee-ce34-47d0-95d5-0c4afe277495"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE AffiliatesGroupTypeCommissionStructure",
+    "action": "DELETE",
+    "codename": "DELETE-AffiliatesGroupTypeCommissionStructure",
+    "contentTypeId": "fe9405ee-ce34-47d0-95d5-0c4afe277495"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE AffiliatesGroupTypeCommissionStructure",
+    "action": "MANAGE",
+    "codename": "MANAGE-AffiliatesGroupTypeCommissionStructure",
+    "contentTypeId": "fe9405ee-ce34-47d0-95d5-0c4afe277495"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE AffiliatesGroupOwnerAffiliate",
+    "action": "CREATE",
+    "codename": "CREATE-AffiliatesGroupOwnerAffiliate",
+    "contentTypeId": "0942429a-f452-4f9b-b574-c48f33d2e9ed"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ AffiliatesGroupOwnerAffiliate",
+    "action": "READ",
+    "codename": "READ-AffiliatesGroupOwnerAffiliate",
+    "contentTypeId": "0942429a-f452-4f9b-b574-c48f33d2e9ed"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE AffiliatesGroupOwnerAffiliate",
+    "action": "UPDATE",
+    "codename": "UPDATE-AffiliatesGroupOwnerAffiliate",
+    "contentTypeId": "0942429a-f452-4f9b-b574-c48f33d2e9ed"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE AffiliatesGroupOwnerAffiliate",
+    "action": "DELETE",
+    "codename": "DELETE-AffiliatesGroupOwnerAffiliate",
+    "contentTypeId": "0942429a-f452-4f9b-b574-c48f33d2e9ed"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE AffiliatesGroupOwnerAffiliate",
+    "action": "MANAGE",
+    "codename": "MANAGE-AffiliatesGroupOwnerAffiliate",
+    "contentTypeId": "0942429a-f452-4f9b-b574-c48f33d2e9ed"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE AffiliatesGroupOwnerCommissionStructure",
+    "action": "CREATE",
+    "codename": "CREATE-AffiliatesGroupOwnerCommissionStructure",
+    "contentTypeId": "e2b2c14a-8878-4928-82bb-3c57090a0757"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ AffiliatesGroupOwnerCommissionStructure",
+    "action": "READ",
+    "codename": "READ-AffiliatesGroupOwnerCommissionStructure",
+    "contentTypeId": "e2b2c14a-8878-4928-82bb-3c57090a0757"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE AffiliatesGroupOwnerCommissionStructure",
+    "action": "UPDATE",
+    "codename": "UPDATE-AffiliatesGroupOwnerCommissionStructure",
+    "contentTypeId": "e2b2c14a-8878-4928-82bb-3c57090a0757"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE AffiliatesGroupOwnerCommissionStructure",
+    "action": "DELETE",
+    "codename": "DELETE-AffiliatesGroupOwnerCommissionStructure",
+    "contentTypeId": "e2b2c14a-8878-4928-82bb-3c57090a0757"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE AffiliatesGroupOwnerCommissionStructure",
+    "action": "MANAGE",
+    "codename": "MANAGE-AffiliatesGroupOwnerCommissionStructure",
+    "contentTypeId": "e2b2c14a-8878-4928-82bb-3c57090a0757"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE AffiliatesAffiliateTransaction",
+    "action": "CREATE",
+    "codename": "CREATE-AffiliatesAffiliateTransaction",
+    "contentTypeId": "18e61017-d724-4b64-9485-6e5f4da3704e"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ AffiliatesAffiliateTransaction",
+    "action": "READ",
+    "codename": "READ-AffiliatesAffiliateTransaction",
+    "contentTypeId": "18e61017-d724-4b64-9485-6e5f4da3704e"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE AffiliatesAffiliateTransaction",
+    "action": "UPDATE",
+    "codename": "UPDATE-AffiliatesAffiliateTransaction",
+    "contentTypeId": "18e61017-d724-4b64-9485-6e5f4da3704e"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE AffiliatesAffiliateTransaction",
+    "action": "DELETE",
+    "codename": "DELETE-AffiliatesAffiliateTransaction",
+    "contentTypeId": "18e61017-d724-4b64-9485-6e5f4da3704e"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE AffiliatesAffiliateTransaction",
+    "action": "MANAGE",
+    "codename": "MANAGE-AffiliatesAffiliateTransaction",
+    "contentTypeId": "18e61017-d724-4b64-9485-6e5f4da3704e"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE TransactionsTransactionMethod",
+    "action": "CREATE",
+    "codename": "CREATE-TransactionsTransactionMethod",
+    "contentTypeId": "5796999a-36b9-46d8-9f79-2047c0270ab3"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ TransactionsTransactionMethod",
+    "action": "READ",
+    "codename": "READ-TransactionsTransactionMethod",
+    "contentTypeId": "5796999a-36b9-46d8-9f79-2047c0270ab3"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE TransactionsTransactionMethod",
+    "action": "UPDATE",
+    "codename": "UPDATE-TransactionsTransactionMethod",
+    "contentTypeId": "5796999a-36b9-46d8-9f79-2047c0270ab3"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE TransactionsTransactionMethod",
+    "action": "DELETE",
+    "codename": "DELETE-TransactionsTransactionMethod",
+    "contentTypeId": "5796999a-36b9-46d8-9f79-2047c0270ab3"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE TransactionsTransactionMethod",
+    "action": "MANAGE",
+    "codename": "MANAGE-TransactionsTransactionMethod",
+    "contentTypeId": "5796999a-36b9-46d8-9f79-2047c0270ab3"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE TransactionsTransactionType",
+    "action": "CREATE",
+    "codename": "CREATE-TransactionsTransactionType",
+    "contentTypeId": "cf143493-dfe2-4880-822d-9856142aacca"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ TransactionsTransactionType",
+    "action": "READ",
+    "codename": "READ-TransactionsTransactionType",
+    "contentTypeId": "cf143493-dfe2-4880-822d-9856142aacca"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE TransactionsTransactionType",
+    "action": "UPDATE",
+    "codename": "UPDATE-TransactionsTransactionType",
+    "contentTypeId": "cf143493-dfe2-4880-822d-9856142aacca"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE TransactionsTransactionType",
+    "action": "DELETE",
+    "codename": "DELETE-TransactionsTransactionType",
+    "contentTypeId": "cf143493-dfe2-4880-822d-9856142aacca"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE TransactionsTransactionType",
+    "action": "MANAGE",
+    "codename": "MANAGE-TransactionsTransactionType",
+    "contentTypeId": "cf143493-dfe2-4880-822d-9856142aacca"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE TransactionsTransactionTypeCoinRate",
+    "action": "CREATE",
+    "codename": "CREATE-TransactionsTransactionTypeCoinRate",
+    "contentTypeId": "80aba85a-182c-49ad-be4f-7085a0698db1"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ TransactionsTransactionTypeCoinRate",
+    "action": "READ",
+    "codename": "READ-TransactionsTransactionTypeCoinRate",
+    "contentTypeId": "80aba85a-182c-49ad-be4f-7085a0698db1"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE TransactionsTransactionTypeCoinRate",
+    "action": "UPDATE",
+    "codename": "UPDATE-TransactionsTransactionTypeCoinRate",
+    "contentTypeId": "80aba85a-182c-49ad-be4f-7085a0698db1"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE TransactionsTransactionTypeCoinRate",
+    "action": "DELETE",
+    "codename": "DELETE-TransactionsTransactionTypeCoinRate",
+    "contentTypeId": "80aba85a-182c-49ad-be4f-7085a0698db1"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE TransactionsTransactionTypeCoinRate",
+    "action": "MANAGE",
+    "codename": "MANAGE-TransactionsTransactionTypeCoinRate",
+    "contentTypeId": "80aba85a-182c-49ad-be4f-7085a0698db1"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE TransactionsTransactionTypeAccount",
+    "action": "CREATE",
+    "codename": "CREATE-TransactionsTransactionTypeAccount",
+    "contentTypeId": "9e729043-b39f-47dc-a000-d86b95b328af"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ TransactionsTransactionTypeAccount",
+    "action": "READ",
+    "codename": "READ-TransactionsTransactionTypeAccount",
+    "contentTypeId": "9e729043-b39f-47dc-a000-d86b95b328af"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE TransactionsTransactionTypeAccount",
+    "action": "UPDATE",
+    "codename": "UPDATE-TransactionsTransactionTypeAccount",
+    "contentTypeId": "9e729043-b39f-47dc-a000-d86b95b328af"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE TransactionsTransactionTypeAccount",
+    "action": "DELETE",
+    "codename": "DELETE-TransactionsTransactionTypeAccount",
+    "contentTypeId": "9e729043-b39f-47dc-a000-d86b95b328af"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE TransactionsTransactionTypeAccount",
+    "action": "MANAGE",
+    "codename": "MANAGE-TransactionsTransactionTypeAccount",
+    "contentTypeId": "9e729043-b39f-47dc-a000-d86b95b328af"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE TransactionsTransaction",
+    "action": "CREATE",
+    "codename": "CREATE-TransactionsTransaction",
+    "contentTypeId": "08516420-31ce-4bcb-a3b8-be82ec1e7156"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ TransactionsTransaction",
+    "action": "READ",
+    "codename": "READ-TransactionsTransaction",
+    "contentTypeId": "08516420-31ce-4bcb-a3b8-be82ec1e7156"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE TransactionsTransaction",
+    "action": "UPDATE",
+    "codename": "UPDATE-TransactionsTransaction",
+    "contentTypeId": "08516420-31ce-4bcb-a3b8-be82ec1e7156"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE TransactionsTransaction",
+    "action": "DELETE",
+    "codename": "DELETE-TransactionsTransaction",
+    "contentTypeId": "08516420-31ce-4bcb-a3b8-be82ec1e7156"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE TransactionsTransaction",
+    "action": "MANAGE",
+    "codename": "MANAGE-TransactionsTransaction",
+    "contentTypeId": "08516420-31ce-4bcb-a3b8-be82ec1e7156"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE SportsSportType",
+    "action": "CREATE",
+    "codename": "CREATE-SportsSportType",
+    "contentTypeId": "e844859c-d0cb-44cb-84d1-e6601eb2c35a"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ SportsSportType",
+    "action": "READ",
+    "codename": "READ-SportsSportType",
+    "contentTypeId": "e844859c-d0cb-44cb-84d1-e6601eb2c35a"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE SportsSportType",
+    "action": "UPDATE",
+    "codename": "UPDATE-SportsSportType",
+    "contentTypeId": "e844859c-d0cb-44cb-84d1-e6601eb2c35a"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE SportsSportType",
+    "action": "DELETE",
+    "codename": "DELETE-SportsSportType",
+    "contentTypeId": "e844859c-d0cb-44cb-84d1-e6601eb2c35a"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE SportsSportType",
+    "action": "MANAGE",
+    "codename": "MANAGE-SportsSportType",
+    "contentTypeId": "e844859c-d0cb-44cb-84d1-e6601eb2c35a"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE SportsSportCategory",
+    "action": "CREATE",
+    "codename": "CREATE-SportsSportCategory",
+    "contentTypeId": "e844859c-d0cb-44cb-84d1-e6601eb2c35a"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ SportsSportCategory",
+    "action": "READ",
+    "codename": "READ-SportsSportCategory",
+    "contentTypeId": "e844859c-d0cb-44cb-84d1-e6601eb2c35a"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE SportsSportCategory",
+    "action": "UPDATE",
+    "codename": "UPDATE-SportsSportCategory",
+    "contentTypeId": "e844859c-d0cb-44cb-84d1-e6601eb2c35a"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE SportsSportCategory",
+    "action": "DELETE",
+    "codename": "DELETE-SportsSportCategory",
+    "contentTypeId": "e844859c-d0cb-44cb-84d1-e6601eb2c35a"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE SportsSportCategory",
+    "action": "MANAGE",
+    "codename": "MANAGE-SportsSportCategory",
+    "contentTypeId": "e844859c-d0cb-44cb-84d1-e6601eb2c35a"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE SportsSportTeam",
+    "action": "CREATE",
+    "codename": "CREATE-SportsSportTeam",
+    "contentTypeId": "660aba0d-9460-4f90-b766-d55d73736d09"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ SportsSportTeam",
+    "action": "READ",
+    "codename": "READ-SportsSportTeam",
+    "contentTypeId": "660aba0d-9460-4f90-b766-d55d73736d09"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE SportsSportTeam",
+    "action": "UPDATE",
+    "codename": "UPDATE-SportsSportTeam",
+    "contentTypeId": "660aba0d-9460-4f90-b766-d55d73736d09"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE SportsSportTeam",
+    "action": "DELETE",
+    "codename": "DELETE-SportsSportTeam",
+    "contentTypeId": "660aba0d-9460-4f90-b766-d55d73736d09"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE SportsSportTeam",
+    "action": "MANAGE",
+    "codename": "MANAGE-SportsSportTeam",
+    "contentTypeId": "660aba0d-9460-4f90-b766-d55d73736d09"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE SportsSportType",
+    "action": "CREATE",
+    "codename": "CREATE-SportsSportType",
+    "contentTypeId": "9f6a50db-51ca-4af2-a6d8-d132ff160add"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ SportsSportType",
+    "action": "READ",
+    "codename": "READ-SportsSportType",
+    "contentTypeId": "9f6a50db-51ca-4af2-a6d8-d132ff160add"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE SportsSportType",
+    "action": "UPDATE",
+    "codename": "UPDATE-SportsSportType",
+    "contentTypeId": "9f6a50db-51ca-4af2-a6d8-d132ff160add"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE SportsSportType",
+    "action": "DELETE",
+    "codename": "DELETE-SportsSportType",
+    "contentTypeId": "9f6a50db-51ca-4af2-a6d8-d132ff160add"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE SportsSportType",
+    "action": "MANAGE",
+    "codename": "MANAGE-SportsSportType",
+    "contentTypeId": "9f6a50db-51ca-4af2-a6d8-d132ff160add"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE SportsSportLeague",
+    "action": "CREATE",
+    "codename": "CREATE-SportsSportLeague",
+    "contentTypeId": "c652c0c5-3edf-4aeb-a7b8-09a145ca7806"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ SportsSportLeague",
+    "action": "READ",
+    "codename": "READ-SportsSportLeague",
+    "contentTypeId": "c652c0c5-3edf-4aeb-a7b8-09a145ca7806"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE SportsSportLeague",
+    "action": "UPDATE",
+    "codename": "UPDATE-SportsSportLeague",
+    "contentTypeId": "c652c0c5-3edf-4aeb-a7b8-09a145ca7806"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE SportsSportLeague",
+    "action": "DELETE",
+    "codename": "DELETE-SportsSportLeague",
+    "contentTypeId": "c652c0c5-3edf-4aeb-a7b8-09a145ca7806"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE SportsSportLeague",
+    "action": "MANAGE",
+    "codename": "MANAGE-SportsSportLeague",
+    "contentTypeId": "c652c0c5-3edf-4aeb-a7b8-09a145ca7806"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE SportsSportMatch",
+    "action": "CREATE",
+    "codename": "CREATE-SportsSportMatch",
+    "contentTypeId": "5ec60c9c-d09a-4b43-b5f6-35bb52d68123"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ SportsSportMatch",
+    "action": "READ",
+    "codename": "READ-SportsSportMatch",
+    "contentTypeId": "5ec60c9c-d09a-4b43-b5f6-35bb52d68123"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE SportsSportMatch",
+    "action": "UPDATE",
+    "codename": "UPDATE-SportsSportMatch",
+    "contentTypeId": "5ec60c9c-d09a-4b43-b5f6-35bb52d68123"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE SportsSportMatch",
+    "action": "DELETE",
+    "codename": "DELETE-SportsSportMatch",
+    "contentTypeId": "5ec60c9c-d09a-4b43-b5f6-35bb52d68123"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE SportsSportMatch",
+    "action": "MANAGE",
+    "codename": "MANAGE-SportsSportMatch",
+    "contentTypeId": "5ec60c9c-d09a-4b43-b5f6-35bb52d68123"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE SportsSportTypeBetCriteria",
+    "action": "CREATE",
+    "codename": "CREATE-SportsSportTypeBetCriteria",
+    "contentTypeId": "7c10c8b3-f756-4e47-a457-4ac4c3869a1d"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ SportsSportTypeBetCriteria",
+    "action": "READ",
+    "codename": "READ-SportsSportTypeBetCriteria",
+    "contentTypeId": "7c10c8b3-f756-4e47-a457-4ac4c3869a1d"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE SportsSportTypeBetCriteria",
+    "action": "UPDATE",
+    "codename": "UPDATE-SportsSportTypeBetCriteria",
+    "contentTypeId": "7c10c8b3-f756-4e47-a457-4ac4c3869a1d"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE SportsSportTypeBetCriteria",
+    "action": "DELETE",
+    "codename": "DELETE-SportsSportTypeBetCriteria",
+    "contentTypeId": "7c10c8b3-f756-4e47-a457-4ac4c3869a1d"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE SportsSportTypeBetCriteria",
+    "action": "MANAGE",
+    "codename": "MANAGE-SportsSportTypeBetCriteria",
+    "contentTypeId": "7c10c8b3-f756-4e47-a457-4ac4c3869a1d"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE SportsSportCategoryBetCriteria",
+    "action": "CREATE",
+    "codename": "CREATE-SportsSportCategoryBetCriteria",
+    "contentTypeId": "4fd10ae0-d4e8-4601-ab2f-199cf29e9aaf"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ SportsSportCategoryBetCriteria",
+    "action": "READ",
+    "codename": "READ-SportsSportCategoryBetCriteria",
+    "contentTypeId": "4fd10ae0-d4e8-4601-ab2f-199cf29e9aaf"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE SportsSportCategoryBetCriteria",
+    "action": "UPDATE",
+    "codename": "UPDATE-SportsSportCategoryBetCriteria",
+    "contentTypeId": "4fd10ae0-d4e8-4601-ab2f-199cf29e9aaf"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE SportsSportCategoryBetCriteria",
+    "action": "DELETE",
+    "codename": "DELETE-SportsSportCategoryBetCriteria",
+    "contentTypeId": "4fd10ae0-d4e8-4601-ab2f-199cf29e9aaf"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE SportsSportCategoryBetCriteria",
+    "action": "MANAGE",
+    "codename": "MANAGE-SportsSportCategoryBetCriteria",
+    "contentTypeId": "4fd10ae0-d4e8-4601-ab2f-199cf29e9aaf"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE SportsSportMatchBetCriteria",
+    "action": "CREATE",
+    "codename": "CREATE-SportsSportMatchBetCriteria",
+    "contentTypeId": "d5f91c78-e358-4eba-8bfa-d474a7f700cb"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ SportsSportMatchBetCriteria",
+    "action": "READ",
+    "codename": "READ-SportsSportMatchBetCriteria",
+    "contentTypeId": "d5f91c78-e358-4eba-8bfa-d474a7f700cb"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE SportsSportMatchBetCriteria",
+    "action": "UPDATE",
+    "codename": "UPDATE-SportsSportMatchBetCriteria",
+    "contentTypeId": "d5f91c78-e358-4eba-8bfa-d474a7f700cb"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE SportsSportMatchBetCriteria",
+    "action": "DELETE",
+    "codename": "DELETE-SportsSportMatchBetCriteria",
+    "contentTypeId": "d5f91c78-e358-4eba-8bfa-d474a7f700cb"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE SportsSportMatchBetCriteria",
+    "action": "MANAGE",
+    "codename": "MANAGE-SportsSportMatchBetCriteria",
+    "contentTypeId": "d5f91c78-e358-4eba-8bfa-d474a7f700cb"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE SportsSportMatchBetCriteriaBetCondition",
+    "action": "CREATE",
+    "codename": "CREATE-SportsSportMatchBetCriteriaBetCondition",
+    "contentTypeId": "dbd8a270-b081-4bf4-b55e-b4d524a2bb01"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ SportsSportMatchBetCriteriaBetCondition",
+    "action": "READ",
+    "codename": "READ-SportsSportMatchBetCriteriaBetCondition",
+    "contentTypeId": "dbd8a270-b081-4bf4-b55e-b4d524a2bb01"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE SportsSportMatchBetCriteriaBetCondition",
+    "action": "UPDATE",
+    "codename": "UPDATE-SportsSportMatchBetCriteriaBetCondition",
+    "contentTypeId": "dbd8a270-b081-4bf4-b55e-b4d524a2bb01"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE SportsSportMatchBetCriteriaBetCondition",
+    "action": "DELETE",
+    "codename": "DELETE-SportsSportMatchBetCriteriaBetCondition",
+    "contentTypeId": "dbd8a270-b081-4bf4-b55e-b4d524a2bb01"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE SportsSportMatchBetCriteriaBetCondition",
+    "action": "MANAGE",
+    "codename": "MANAGE-SportsSportMatchBetCriteriaBetCondition",
+    "contentTypeId": "dbd8a270-b081-4bf4-b55e-b4d524a2bb01"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE BetsBetSite",
+    "action": "CREATE",
+    "codename": "CREATE-BetsBetSite",
+    "contentTypeId": "00c87fe0-c642-48e2-90fe-80954bc51bf2"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ BetsBetSite",
+    "action": "READ",
+    "codename": "READ-BetsBetSite",
+    "contentTypeId": "00c87fe0-c642-48e2-90fe-80954bc51bf2"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE BetsBetSite",
+    "action": "UPDATE",
+    "codename": "UPDATE-BetsBetSite",
+    "contentTypeId": "00c87fe0-c642-48e2-90fe-80954bc51bf2"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE BetsBetSite",
+    "action": "DELETE",
+    "codename": "DELETE-BetsBetSite",
+    "contentTypeId": "00c87fe0-c642-48e2-90fe-80954bc51bf2"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE BetsBetSite",
+    "action": "MANAGE",
+    "codename": "MANAGE-BetsBetSite",
+    "contentTypeId": "00c87fe0-c642-48e2-90fe-80954bc51bf2"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE BetsBetSiteAccount",
+    "action": "CREATE",
+    "codename": "CREATE-BetsBetSiteAccount",
+    "contentTypeId": "02978c8c-38fd-4468-86b4-503d49afedd0"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ BetsBetSiteAccount",
+    "action": "READ",
+    "codename": "READ-BetsBetSiteAccount",
+    "contentTypeId": "02978c8c-38fd-4468-86b4-503d49afedd0"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE BetsBetSiteAccount",
+    "action": "UPDATE",
+    "codename": "UPDATE-BetsBetSiteAccount",
+    "contentTypeId": "02978c8c-38fd-4468-86b4-503d49afedd0"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE BetsBetSiteAccount",
+    "action": "DELETE",
+    "codename": "DELETE-BetsBetSiteAccount",
+    "contentTypeId": "02978c8c-38fd-4468-86b4-503d49afedd0"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE BetsBetSiteAccount",
+    "action": "MANAGE",
+    "codename": "MANAGE-BetsBetSiteAccount",
+    "contentTypeId": "02978c8c-38fd-4468-86b4-503d49afedd0"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE BetsBetType",
+    "action": "CREATE",
+    "codename": "CREATE-BetsBetType",
+    "contentTypeId": "7e5c93ae-dcaa-4e8b-8c06-3ce54c873a50"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ BetsBetType",
+    "action": "READ",
+    "codename": "READ-BetsBetType",
+    "contentTypeId": "7e5c93ae-dcaa-4e8b-8c06-3ce54c873a50"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE BetsBetType",
+    "action": "UPDATE",
+    "codename": "UPDATE-BetsBetType",
+    "contentTypeId": "7e5c93ae-dcaa-4e8b-8c06-3ce54c873a50"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE BetsBetType",
+    "action": "DELETE",
+    "codename": "DELETE-BetsBetType",
+    "contentTypeId": "7e5c93ae-dcaa-4e8b-8c06-3ce54c873a50"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE BetsBetType",
+    "action": "MANAGE",
+    "codename": "MANAGE-BetsBetType",
+    "contentTypeId": "7e5c93ae-dcaa-4e8b-8c06-3ce54c873a50"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE BetsBetTypeSportType",
+    "action": "CREATE",
+    "codename": "CREATE-BetsBetTypeSportType",
+    "contentTypeId": "c0a3e67b-0778-4beb-b2f7-24a1ca7da9db"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ BetsBetTypeSportType",
+    "action": "READ",
+    "codename": "READ-BetsBetTypeSportType",
+    "contentTypeId": "c0a3e67b-0778-4beb-b2f7-24a1ca7da9db"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE BetsBetTypeSportType",
+    "action": "UPDATE",
+    "codename": "UPDATE-BetsBetTypeSportType",
+    "contentTypeId": "c0a3e67b-0778-4beb-b2f7-24a1ca7da9db"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE BetsBetTypeSportType",
+    "action": "DELETE",
+    "codename": "DELETE-BetsBetTypeSportType",
+    "contentTypeId": "c0a3e67b-0778-4beb-b2f7-24a1ca7da9db"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE BetsBetTypeSportType",
+    "action": "MANAGE",
+    "codename": "MANAGE-BetsBetTypeSportType",
+    "contentTypeId": "c0a3e67b-0778-4beb-b2f7-24a1ca7da9db"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE BetsBetTypeSportMatch",
+    "action": "CREATE",
+    "codename": "CREATE-BetsBetTypeSportMatch",
+    "contentTypeId": "9ef67746-0e27-4daa-84e9-2daca4a0c310"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ BetsBetTypeSportMatch",
+    "action": "READ",
+    "codename": "READ-BetsBetTypeSportMatch",
+    "contentTypeId": "9ef67746-0e27-4daa-84e9-2daca4a0c310"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE BetsBetTypeSportMatch",
+    "action": "UPDATE",
+    "codename": "UPDATE-BetsBetTypeSportMatch",
+    "contentTypeId": "9ef67746-0e27-4daa-84e9-2daca4a0c310"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE BetsBetTypeSportMatch",
+    "action": "DELETE",
+    "codename": "DELETE-BetsBetTypeSportMatch",
+    "contentTypeId": "9ef67746-0e27-4daa-84e9-2daca4a0c310"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE BetsBetTypeSportMatch",
+    "action": "MANAGE",
+    "codename": "MANAGE-BetsBetTypeSportMatch",
+    "contentTypeId": "9ef67746-0e27-4daa-84e9-2daca4a0c310"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE BetsBetCriteria",
+    "action": "CREATE",
+    "codename": "CREATE-BetsBetCriteria",
+    "contentTypeId": "b690ee67-1ea4-4984-a70e-decbb828e4ee"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ BetsBetCriteria",
+    "action": "READ",
+    "codename": "READ-BetsBetCriteria",
+    "contentTypeId": "b690ee67-1ea4-4984-a70e-decbb828e4ee"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE BetsBetCriteria",
+    "action": "UPDATE",
+    "codename": "UPDATE-BetsBetCriteria",
+    "contentTypeId": "b690ee67-1ea4-4984-a70e-decbb828e4ee"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE BetsBetCriteria",
+    "action": "DELETE",
+    "codename": "DELETE-BetsBetCriteria",
+    "contentTypeId": "b690ee67-1ea4-4984-a70e-decbb828e4ee"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE BetsBetCriteria",
+    "action": "MANAGE",
+    "codename": "MANAGE-BetsBetCriteria",
+    "contentTypeId": "b690ee67-1ea4-4984-a70e-decbb828e4ee"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE BetsBetCondition",
+    "action": "CREATE",
+    "codename": "CREATE-BetsBetCondition",
+    "contentTypeId": "80415138-b58a-4e51-ae0f-8bf02bce049e"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ BetsBetCondition",
+    "action": "READ",
+    "codename": "READ-BetsBetCondition",
+    "contentTypeId": "80415138-b58a-4e51-ae0f-8bf02bce049e"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE BetsBetCondition",
+    "action": "UPDATE",
+    "codename": "UPDATE-BetsBetCondition",
+    "contentTypeId": "80415138-b58a-4e51-ae0f-8bf02bce049e"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE BetsBetCondition",
+    "action": "DELETE",
+    "codename": "DELETE-BetsBetCondition",
+    "contentTypeId": "80415138-b58a-4e51-ae0f-8bf02bce049e"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE BetsBetCondition",
+    "action": "MANAGE",
+    "codename": "MANAGE-BetsBetCondition",
+    "contentTypeId": "80415138-b58a-4e51-ae0f-8bf02bce049e"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE BetsBetCriteriaBetCondition",
+    "action": "CREATE",
+    "codename": "CREATE-BetsBetCriteriaBetCondition",
+    "contentTypeId": "2f320226-c136-498a-9149-54d1174f2e3c"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ BetsBetCriteriaBetCondition",
+    "action": "READ",
+    "codename": "READ-BetsBetCriteriaBetCondition",
+    "contentTypeId": "2f320226-c136-498a-9149-54d1174f2e3c"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE BetsBetCriteriaBetCondition",
+    "action": "UPDATE",
+    "codename": "UPDATE-BetsBetCriteriaBetCondition",
+    "contentTypeId": "2f320226-c136-498a-9149-54d1174f2e3c"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE BetsBetCriteriaBetCondition",
+    "action": "DELETE",
+    "codename": "DELETE-BetsBetCriteriaBetCondition",
+    "contentTypeId": "2f320226-c136-498a-9149-54d1174f2e3c"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE BetsBetCriteriaBetCondition",
+    "action": "MANAGE",
+    "codename": "MANAGE-BetsBetCriteriaBetCondition",
+    "contentTypeId": "2f320226-c136-498a-9149-54d1174f2e3c"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE BetsBetSlipSetting",
+    "action": "CREATE",
+    "codename": "CREATE-BetsBetSlipSetting",
+    "contentTypeId": "6fdb35f1-88b4-445d-877b-b5986217ba01"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ BetsBetSlipSetting",
+    "action": "READ",
+    "codename": "READ-BetsBetSlipSetting",
+    "contentTypeId": "6fdb35f1-88b4-445d-877b-b5986217ba01"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE BetsBetSlipSetting",
+    "action": "UPDATE",
+    "codename": "UPDATE-BetsBetSlipSetting",
+    "contentTypeId": "6fdb35f1-88b4-445d-877b-b5986217ba01"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE BetsBetSlipSetting",
+    "action": "DELETE",
+    "codename": "DELETE-BetsBetSlipSetting",
+    "contentTypeId": "6fdb35f1-88b4-445d-877b-b5986217ba01"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE BetsBetSlipSetting",
+    "action": "MANAGE",
+    "codename": "MANAGE-BetsBetSlipSetting",
+    "contentTypeId": "6fdb35f1-88b4-445d-877b-b5986217ba01"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE NotificationsNotification",
+    "action": "CREATE",
+    "codename": "CREATE-NotificationsNotification",
+    "contentTypeId": "e59a1de0-6eac-42f5-b771-0dcfa658aaf2"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ NotificationsNotification",
+    "action": "READ",
+    "codename": "READ-NotificationsNotification",
+    "contentTypeId": "e59a1de0-6eac-42f5-b771-0dcfa658aaf2"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE NotificationsNotification",
+    "action": "UPDATE",
+    "codename": "UPDATE-NotificationsNotification",
+    "contentTypeId": "e59a1de0-6eac-42f5-b771-0dcfa658aaf2"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE NotificationsNotification",
+    "action": "DELETE",
+    "codename": "DELETE-NotificationsNotification",
+    "contentTypeId": "e59a1de0-6eac-42f5-b771-0dcfa658aaf2"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE NotificationsNotification",
+    "action": "MANAGE",
+    "codename": "MANAGE-NotificationsNotification",
+    "contentTypeId": "e59a1de0-6eac-42f5-b771-0dcfa658aaf2"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE NotificationsNotificationDetail",
+    "action": "CREATE",
+    "codename": "CREATE-NotificationsNotificationDetail",
+    "contentTypeId": "25b1a45e-0508-4a4f-8c27-5346a25e3a16"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ NotificationsNotificationDetail",
+    "action": "READ",
+    "codename": "READ-NotificationsNotificationDetail",
+    "contentTypeId": "25b1a45e-0508-4a4f-8c27-5346a25e3a16"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE NotificationsNotificationDetail",
+    "action": "UPDATE",
+    "codename": "UPDATE-NotificationsNotificationDetail",
+    "contentTypeId": "25b1a45e-0508-4a4f-8c27-5346a25e3a16"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE NotificationsNotificationDetail",
+    "action": "DELETE",
+    "codename": "DELETE-NotificationsNotificationDetail",
+    "contentTypeId": "25b1a45e-0508-4a4f-8c27-5346a25e3a16"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE NotificationsNotificationDetail",
+    "action": "MANAGE",
+    "codename": "MANAGE-NotificationsNotificationDetail",
+    "contentTypeId": "25b1a45e-0508-4a4f-8c27-5346a25e3a16"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE SupportsEmail",
+    "action": "CREATE",
+    "codename": "CREATE-SupportsEmail",
+    "contentTypeId": "7805b7c1-d749-47bf-b6d4-d2a7b200fc6c"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ SupportsEmail",
+    "action": "READ",
+    "codename": "READ-SupportsEmail",
+    "contentTypeId": "7805b7c1-d749-47bf-b6d4-d2a7b200fc6c"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE SupportsEmail",
+    "action": "UPDATE",
+    "codename": "UPDATE-SupportsEmail",
+    "contentTypeId": "7805b7c1-d749-47bf-b6d4-d2a7b200fc6c"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE SupportsEmail",
+    "action": "DELETE",
+    "codename": "DELETE-SupportsEmail",
+    "contentTypeId": "7805b7c1-d749-47bf-b6d4-d2a7b200fc6c"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE SupportsEmail",
+    "action": "MANAGE",
+    "codename": "MANAGE-SupportsEmail",
+    "contentTypeId": "7805b7c1-d749-47bf-b6d4-d2a7b200fc6c"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE SupportsContact",
+    "action": "CREATE",
+    "codename": "CREATE-SupportsContact",
+    "contentTypeId": "9ef4c448-bcd6-4a68-ab5d-84b68f5d5196"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ SupportsContact",
+    "action": "READ",
+    "codename": "READ-SupportsContact",
+    "contentTypeId": "9ef4c448-bcd6-4a68-ab5d-84b68f5d5196"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE SupportsContact",
+    "action": "UPDATE",
+    "codename": "UPDATE-SupportsContact",
+    "contentTypeId": "9ef4c448-bcd6-4a68-ab5d-84b68f5d5196"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE SupportsContact",
+    "action": "DELETE",
+    "codename": "DELETE-SupportsContact",
+    "contentTypeId": "9ef4c448-bcd6-4a68-ab5d-84b68f5d5196"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE SupportsContact",
+    "action": "MANAGE",
+    "codename": "MANAGE-SupportsContact",
+    "contentTypeId": "9ef4c448-bcd6-4a68-ab5d-84b68f5d5196"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE SupportsSocialMessaging",
+    "action": "CREATE",
+    "codename": "CREATE-SupportsSocialMessaging",
+    "contentTypeId": "9754dba4-e242-46dd-bb5a-43a637e2dc39"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ SupportsSocialMessaging",
+    "action": "READ",
+    "codename": "READ-SupportsSocialMessaging",
+    "contentTypeId": "9754dba4-e242-46dd-bb5a-43a637e2dc39"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE SupportsSocialMessaging",
+    "action": "UPDATE",
+    "codename": "UPDATE-SupportsSocialMessaging",
+    "contentTypeId": "9754dba4-e242-46dd-bb5a-43a637e2dc39"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE SupportsSocialMessaging",
+    "action": "DELETE",
+    "codename": "DELETE-SupportsSocialMessaging",
+    "contentTypeId": "9754dba4-e242-46dd-bb5a-43a637e2dc39"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE SupportsSocialMessaging",
+    "action": "MANAGE",
+    "codename": "MANAGE-SupportsSocialMessaging",
+    "contentTypeId": "9754dba4-e242-46dd-bb5a-43a637e2dc39"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE SupportsCallbackRequest",
+    "action": "CREATE",
+    "codename": "CREATE-SupportsCallbackRequest",
+    "contentTypeId": "2fb96142-0735-4942-bc07-529630964e12"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ SupportsCallbackRequest",
+    "action": "READ",
+    "codename": "READ-SupportsCallbackRequest",
+    "contentTypeId": "2fb96142-0735-4942-bc07-529630964e12"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE SupportsCallbackRequest",
+    "action": "UPDATE",
+    "codename": "UPDATE-SupportsCallbackRequest",
+    "contentTypeId": "2fb96142-0735-4942-bc07-529630964e12"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE SupportsCallbackRequest",
+    "action": "DELETE",
+    "codename": "DELETE-SupportsCallbackRequest",
+    "contentTypeId": "2fb96142-0735-4942-bc07-529630964e12"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE SupportsCallbackRequest",
+    "action": "MANAGE",
+    "codename": "MANAGE-SupportsCallbackRequest",
+    "contentTypeId": "2fb96142-0735-4942-bc07-529630964e12"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE PromotionsAuthGroupOwnerPromoCode",
+    "action": "CREATE",
+    "codename": "CREATE-PromotionsAuthGroupOwnerPromoCode",
+    "contentTypeId": "5cd21062-d9c2-43b0-bf54-46a7b7c08af9"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ PromotionsAuthGroupOwnerPromoCode",
+    "action": "READ",
+    "codename": "READ-PromotionsAuthGroupOwnerPromoCode",
+    "contentTypeId": "5cd21062-d9c2-43b0-bf54-46a7b7c08af9"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE PromotionsAuthGroupOwnerPromoCode",
+    "action": "UPDATE",
+    "codename": "UPDATE-PromotionsAuthGroupOwnerPromoCode",
+    "contentTypeId": "5cd21062-d9c2-43b0-bf54-46a7b7c08af9"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE PromotionsAuthGroupOwnerPromoCode",
+    "action": "DELETE",
+    "codename": "DELETE-PromotionsAuthGroupOwnerPromoCode",
+    "contentTypeId": "5cd21062-d9c2-43b0-bf54-46a7b7c08af9"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE PromotionsAuthGroupOwnerPromoCode",
+    "action": "MANAGE",
+    "codename": "MANAGE-PromotionsAuthGroupOwnerPromoCode",
+    "contentTypeId": "5cd21062-d9c2-43b0-bf54-46a7b7c08af9"
+  },
+  {
+    "id": "f14746e8-effb-4439-9ca3-18646a8cce30",
+    "name": "CREATE PromotionsGroupOwnerPromoUser",
+    "action": "CREATE",
+    "codename": "CREATE-PromotionsGroupOwnerPromoUser",
+    "contentTypeId": "c0caa9c7-d947-4d9d-a98e-013dde6943e3"
+  },
+  {
+    "id": "8423b056-7c82-477e-bab7-2992268c288f",
+    "name": "READ PromotionsGroupOwnerPromoUser",
+    "action": "READ",
+    "codename": "READ-PromotionsGroupOwnerPromoUser",
+    "contentTypeId": "c0caa9c7-d947-4d9d-a98e-013dde6943e3"
+  },
+  {
+    "id": "88d29f5f-a978-4046-aae3-dd197188f2c9",
+    "name": "UPDATE PromotionsGroupOwnerPromoUser",
+    "action": "UPDATE",
+    "codename": "UPDATE-PromotionsGroupOwnerPromoUser",
+    "contentTypeId": "c0caa9c7-d947-4d9d-a98e-013dde6943e3"
+  },
+  {
+    "id": "0de569ea-b285-4e11-94d4-fc4faffe932e",
+    "name": "DELETE PromotionsGroupOwnerPromoUser",
+    "action": "DELETE",
+    "codename": "DELETE-PromotionsGroupOwnerPromoUser",
+    "contentTypeId": "c0caa9c7-d947-4d9d-a98e-013dde6943e3"
+  },
+  {
+    "id": "4322513c-6d9f-4c71-a455-5d3aa4cbf6bc",
+    "name": "MANAGE PromotionsGroupOwnerPromoUser",
+    "action": "MANAGE",
+    "codename": "MANAGE-PromotionsGroupOwnerPromoUser",
+    "contentTypeId": "c0caa9c7-d947-4d9d-a98e-013dde6943e3"
+  }
+]

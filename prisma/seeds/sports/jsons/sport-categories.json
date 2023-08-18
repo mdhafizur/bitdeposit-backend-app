@@ -1,0 +1,57 @@
+[
+  {
+    "id": "5051fa7d-8b6a-4a97-81a5-c1242609fad6",
+    "name": "ODI",
+    "sportTypeId": "20137776-864b-41c3-b45a-ffe894a28797"
+  },
+  {
+    "id": "9b4f2e9f-f49b-412e-a71a-6d45c1886fbe",
+    "name": "TEST",
+    "sportTypeId": "20137776-864b-41c3-b45a-ffe894a28797"
+  },
+  {
+    "id": "fa92f913-ef52-4b75-9f92-ec7e2206b255",
+    "name": "T20",
+    "sportTypeId": "20137776-864b-41c3-b45a-ffe894a28797"
+  },
+  {
+    "id": "16e78291-ef47-4144-8001-b7e06a4e2b4c",
+    "name": "T10",
+    "sportTypeId": "20137776-864b-41c3-b45a-ffe894a28797"
+  },
+  {
+    "id": "fa92f914-ef52-4b75-9f92-ec7e2206b255",
+    "name": "FIFA",
+    "sportTypeId": "81a15c71-bde0-4cc7-a10e-27309e1b1ce2"
+  },
+  {
+    "id": "fa92f915-ef52-4b75-9f92-ec7e2206b255",
+    "name": "UEFA",
+    "sportTypeId": "81a15c71-bde0-4cc7-a10e-27309e1b1ce2"
+  },
+  {
+    "id": "6692f915-ef52-4b75-9f92-ec7e2206b266",
+    "name": "NBA",
+    "sportTypeId": "99f619f9-3323-4f39-8fc3-9a6f637b2899"
+  },
+  {
+    "id": "7792f915-ef52-4b75-9f92-ec7e2206b277",
+    "name": "ATP",
+    "sportTypeId": "acf619f9-3323-4f39-8fc3-9a6f637b284f"
+  },
+  {
+    "id": "8892f915-ef52-4b75-9f92-ec7e2206b288",
+    "name": "UFC",
+    "sportTypeId": "00f619f9-3323-4f39-8fc3-9a6f637b2800"
+  },
+  {
+    "id": "9992f915-ef52-4b75-9f92-ec7e2206b299",
+    "name": "JLPGA",
+    "sportTypeId": "44f619f9-3323-4f39-8fc3-9a6f637b2844"
+  },
+  {
+    "id": "0092f915-ef52-4b75-9f92-ec7e2206b200",
+    "name": "USA MLB",
+    "sportTypeId": "011619f9-3323-4f39-8fc3-9a6f637b2011"
+  }
+]

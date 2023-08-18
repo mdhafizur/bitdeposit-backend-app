@@ -1,0 +1,26 @@
+[
+  {
+    "id": "97bfab52-ec2f-4032-9eb4-d8c15dda0c1e",
+    "name": "Hafiz's 1xbet Account",
+    "betSiteIAccountd": "70f36015-6ecd-48cc-9a48-a202fb0dffc6",
+    "userId": "425fde8b-ac30-441e-ab49-6f9b0e554905",
+    "metaData": {
+      "credentails": {
+        "userName": "user-softic",
+        "password": "12345678"
+      }
+    }
+  },
+  {
+    "id": "01c271a3-4cbf-4404-90fa-1ea62f2b8d88",
+    "name": "Shovon's 1xbet Account",
+    "betSiteIAccountd": "70f36015-6ecd-48cc-9a48-a202fb0dffc6",
+    "userId": "af63f67c-ef1c-4e1b-bd72-3cce9c33dc90",
+    "metaData": {
+      "credentails": {
+        "userName": "user-softic",
+        "password": "12345678"
+      }
+    }
+  }
+]

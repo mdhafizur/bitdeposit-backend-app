@@ -1,0 +1,1898 @@
+generator client {
+  provider      = "prisma-client-js"
+  // output   = "../node_modules/@prisma/client"
+  binaryTargets = ["native"]
+}
+
+datasource mainDb {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator docs {
+  provider = "node node_modules/prisma-docs-generator"
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+generator jsonSchema {
+  provider = "prisma-json-schema-generator"
+}
+
+generator erd {
+  provider                  = "prisma-erd-generator"
+  includeRelationFromFields = true
+  theme                     = "dark"
+}
+
+generator prismaClassGenerator {
+  provider = "prisma-class-generator"
+  output   = "../src/generated/prisma-class"
+  dryRun   = true
+}
+
+generator class_validator {
+  provider = "prisma-class-validator-generator"
+  output   = "../src/generated/generated-models"
+}
+
+generator enum {
+  provider = "node node_modules/prisma-enum-generator"
+  output   = "../src/generated/types"
+}
+
+generator nestjsDto {
+  provider                        = "prisma-generator-nestjs-dto"
+  output                          = "../src/generated/nestjs-dto"
+  outputToNestJsResourceStructure = "false"
+  exportRelationModifierClasses   = "true"
+  reExport                        = "false"
+  createDtoPrefix                 = "Create"
+  updateDtoPrefix                 = "Update"
+  dtoSuffix                       = "DTO"
+  entityPrefix                    = ""
+  entitySuffix                    = ""
+  fileNamingStyle                 = "kebab"
+}
+
+/// list of field status type
+enum FieldStatusEnum {
+  ACTIVE
+  INACTIVE
+}
+
+/// list of session status type
+enum AuthSessionStatusEnum {
+  ACTIVE
+  INACTIVE
+}
+
+/// list of transaction type
+enum TransactionTypeEnum {
+  TRANSFER
+  WITHDRAW
+  DEPOSIT
+  CASHIN
+  CASHOUT
+  DEPOSIT1X
+  WITHDRAW1X
+  BET
+}
+
+/// list of transaction type
+enum AgentsTransactionTypeEnum {
+  TRANSFER
+  WITHDRAW
+  DEPOSIT
+  CASHIN
+  CASHOUT
+}
+
+/// list of transaction status type
+enum TransactionStatusEnum {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+/// list of attachment type
+enum AttachmentTypeEnum {
+  ProfilePicture
+  NID
+  LICENSE
+  PASSPORT
+  FILE
+}
+
+/// list of attachment type
+enum MatchStatusEnum {
+  FINISHED
+  ONGOING
+  UPCOMING
+}
+
+/// list of user's bet Status e.g. ACCEPTED, LOST, PAIDOUT, SOLD, WON, REMOVED
+enum BetStatusEnum {
+  ACCEPTED
+  LOST
+  PAIDOUT
+  REMOVED
+  SOLD
+  WON
+}
+
+/// list of user's bet history e.g. SETTLED, UNSETTLED
+enum BetHistoryEnum {
+  SETTLED
+  UNSETTLED
+}
+
+/// list of countries for location
+model LocationsCountry {
+  id   Int    @id @default(autoincrement())
+  /// name of country,e.g.- Bangladesh,India
+  name String @unique @mainDb.VarChar(255)
+  /// country code, e.g. - Bangladesh +880
+  code String @unique @mainDb.VarChar(255)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// list of states which belongs to country
+  states LocationsState[]
+  /// list of cities which belongs to country
+  cities LocationsCity[]
+  /// list of all the users associated to this country
+  users  UsersLocation[]
+
+  @@index([name, code])
+}
+
+/// list of states of a country
+model LocationsState {
+  id   Int    @id @default(autoincrement())
+  /// name of State,e.g.- Chattogram, Dhaka, Khulna, Rajshahi, Rangpur
+  name String @unique @mainDb.VarChar(255)
+  /// state code
+  code String @mainDb.VarChar(255)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// ID of a country in which the state is located
+  countryId Int
+  country   LocationsCountry @relation(fields: [countryId], references: [id])
+
+  /// list of the cities which belongs to the state
+  cities LocationsCity[]
+  /// list of all the users associated to this state
+  users  UsersLocation[]
+
+  @@index([name, code])
+}
+
+/// list of cities of a country and sometimes of a state
+model LocationsCity {
+  id   Int    @id @default(autoincrement())
+  /// name of cities, e.g.- Dhaka, Khulna
+  name String @unique @mainDb.VarChar(255)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// ID of a country in which the city is located
+  countryId Int
+  country   LocationsCountry @relation(fields: [countryId], references: [id])
+
+  /// ID of a state in which the city is located
+  stateId Int?
+  state   LocationsState? @relation(fields: [stateId], references: [id])
+
+  /// list of all the users associated to this city
+  users UsersLocation[]
+
+  @@index([name, stateId, countryId])
+}
+
+/// table to store user information
+model UsersUser {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  /// user's first name
+  firstName   String?   @mainDb.VarChar(255)
+  /// user's last name
+  lastName    String?   @mainDb.VarChar(255)
+  /// user's username which will be used for creating an account
+  userName    String    @unique @mainDb.VarChar(255)
+  /// user's date of birth
+  dateOfBirth DateTime? @mainDb.Date
+  /// user's email 
+  email       String?   @unique @mainDb.VarChar(255)
+  /// user's phone
+  phone       String?   @unique @mainDb.VarChar(255)
+  /// user's password
+  password    String    @mainDb.VarChar(255)
+
+  /// define if the user is an admin or not
+  isAdmin         Boolean @default(false)
+  /// define if the user is a super User or not
+  isSuperUser     Boolean @default(false)
+  /// define if the user's email is verified or not
+  isEmailVerified Boolean @default(false)
+  /// define if the user's phone is verified or not
+  isPhoneVerified Boolean @default(false)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  /// user's verification tokens
+  verificationTokens  AuthVerificationToken[]
+  /// user's transaction accounts
+  transactionAccounts UsersTransactionTypeUserAccount[]
+  /// user's attachments
+  attachments         UsersUserAttachment[]
+  /// user's refresh tokens
+  authRefreshToken    AuthRefreshToken?
+  /// user's bet site accounts
+  betSiteAccounts     UsersUserBetSiteAccount[]
+
+  /// associated user to user transactions
+  usersUserTransactions  TransactionsTransaction[] @relation("userId")
+  /// associated user to agent transactions
+  usersAgentTransactions TransactionsTransaction[] @relation("agentId")
+  /// associated transfer transaction sent by these users
+  senders                TransactionsTransaction[] @relation("sender")
+  /// associated transfer transaction received by the users
+  receivers              TransactionsTransaction[] @relation("receiver")
+
+  /// associated agent to agent transaction
+  agentsAgentTransactions   AgentsTransaction[] @relation("agentId")
+  /// associated between agent and user transactions to
+  agentsUserTransactions    AgentsTransaction[] @relation("userId")
+  /// associated agent transaction sender
+  agentTransactionSenders   AgentsTransaction[] @relation("sender")
+  /// associated agent transaction receiver
+  agentTransactionReceivers AgentsTransaction[] @relation("receiver")
+
+  /// user's access permissions
+  permissions                 AuthUserPersmission[]
+  /// list of groups which user belongs to
+  groups                      AuthUserGroup[]
+  /// list of group owner which user belongs to
+  groupOwners                 AffiliatesGroupOwner[]               @relation("owner")
+  /// list of bets which user placed
+  bets                        UsersUserMatchBet[]
+  /// user's location
+  location                    UsersLocation?
+  /// user's authentication proviers
+  authenticationProviders     AuthUserAuthenticationProvider[]
+  /// user's settings
+  settings                    UsersSetting[]
+  /// user's notifications
+  notifications               NotificationsNotification[]
+  /// user's notifications details
+  notificationDetails         NotificationsNotificationDetail[]
+  /// user's promo codes
+  groupOwnerPromoCodes        PromotionsAuthGroupOwnerPromoCode[]
+  /// user's promotions
+  userPromotions              PromotionsGroupOwnerPromoUser[]
+  /// list of all favourute matches of user
+  userMatches                 UsersUserMatch[]
+  /// a admin user who will manage transactions related to this accounts
+  assignedTransactionAccounts TransactionsTransactionTypeAccount[]
+  /// users under the specific group owner
+  groupUsers                  AffiliatesGroupOwnerUser[]
+  /// supports call back request 
+  supportsCallbackRequest     SupportsCallbackRequest[]
+  /// all associated auth sessions
+  authSessions                AuthSession[]
+  /// if user is a tenant (Belongs to Tenant AuthGroup) their info can be found here 
+  tenant                      UsersUserTenant?
+
+  @@index([userName, email])
+}
+
+model UsersUserTenant {
+  id   String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  name String @mainDb.VarChar(100)
+  code String @unique @mainDb.VarChar(100)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  user   UsersUser @relation(fields: [userId], references: [id])
+  userId String    @unique @mainDb.Uuid
+}
+
+/// a users location
+model UsersLocation {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// id of a county in which the user is located
+  countryId Int
+  country   LocationsCountry @relation(fields: [countryId], references: [id])
+
+  /// id of a state in which the user is located
+  stateId Int?
+  state   LocationsState? @relation(fields: [stateId], references: [id])
+
+  /// id of a city in which the user is located
+  cityId Int?
+  city   LocationsCity? @relation(fields: [cityId], references: [id])
+
+  /// id of user
+  userId String    @unique @mainDb.Uuid
+  user   UsersUser @relation(fields: [userId], references: [id])
+
+  @@index([userId, cityId, stateId, countryId])
+}
+
+/// stores settings data of the users
+model UsersSetting {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  /// user's personalize informations
+  personalize Json? @default("{}")
+  /// user's security informations
+  security    Json? @default("{}")
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  /// id of associated user
+  userId String    @unique @mainDb.Uuid
+  user   UsersUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+/// one user can have many attachments or files
+model UsersUserAttachment {
+  id             String             @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// title of the attachments
+  title          String?            @unique @mainDb.VarChar(255)
+  /// source of the attachments
+  source         String             @mainDb.VarChar(255)
+  /// types of the attachments
+  attachmentType AttachmentTypeEnum @default(FILE)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// ID of associated user
+  userId String    @mainDb.Uuid
+  /// usersAttachment will be remove if userAccount is being deleted
+  user   UsersUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, title, attachmentType])
+}
+
+/// one user can have multiple transaction type account e.g. Bkash, Nagad Accounts
+model UsersTransactionTypeUserAccount {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  /// title of user transaction account
+  title String @mainDb.VarChar(255)
+  /// value of user transaction account
+  value String @mainDb.VarChar(255)
+
+  // otp code to verify the phone number by user
+  verificationCode Int?
+  // status of verification of the phone number
+  isVerified       Boolean @default(false)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// The id of the type which the account is related to
+  transactionTypeId String                      @mainDb.Uuid
+  /// when transcation type is deleted, users account will be also deleted
+  transactionType   TransactionsTransactionType @relation(fields: [transactionTypeId], references: [id], onDelete: Cascade)
+
+  /// id of the User who is associated with the account
+  userId           String                    @mainDb.Uuid
+  /// when user is deleted, users transaction account account will be also deleted
+  user             UsersUser                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// transactions associated with the account
+  transactions     TransactionsTransaction[]
+  /// associated agent transaction
+  agentTransaction AgentsTransaction[]
+
+  @@index([userId, transactionTypeId, title])
+}
+
+/// one user can have many bet site accounts
+model UsersUserBetSiteAccount {
+  id   String  @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// name of user bet site account
+  name String? @mainDb.VarChar(255)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// associated user ID
+  userId           String             @mainDb.Uuid
+  user             UsersUser          @relation(fields: [userId], references: [id])
+  /// associated bet site account id
+  betSiteAccountId String             @unique @mainDb.Uuid
+  betSiteAccount   BetsBetSiteAccount @relation(fields: [betSiteAccountId], references: [id])
+
+  transactions TransactionsTransaction[]
+
+  @@index([userId, name, betSiteAccountId])
+}
+
+/// list of user's favourite match
+model UsersUserMatch {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  status      FieldStatusEnum @default(ACTIVE)
+  metaData    Json?           @default("{}")
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  /// associated user id
+  userId       String           @mainDb.Uuid
+  user         UsersUser        @relation(fields: [userId], references: [id])
+  /// associated sports match id
+  sportMatchId String           @mainDb.Uuid
+  sportMatch   SportsSportMatch @relation(fields: [sportMatchId], references: [id])
+
+  @@index([userId, sportMatchId])
+}
+
+model UsersAssociatedBet {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  /// order of the bet to calculate accumulator as the bets results depend on the winning order
+  order      Int?
+  /// overall odd during bet
+  odds       Decimal         @mainDb.Decimal(10, 3)
+  /// amount of tk, user wants to bet for
+  stake      Decimal?        @mainDb.Decimal(10, 3)
+  /// amount of win back
+  winback    Decimal?        @mainDb.Decimal(10, 3)
+  /// bet status.e.g.-  "ACCEPTED", "LOST", "PAIDOUT", "SOLD", "WON", "REMOVED"
+  betStatus  BetStatusEnum?  @default(ACCEPTED)
+  betHistory BetHistoryEnum? @default(UNSETTLED)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  /// associated betType id
+  betTypeId String      @mainDb.Uuid
+  betType   BetsBetType @relation(fields: [betTypeId], references: [id], onDelete: Cascade)
+
+  sportMatchId String           @mainDb.Uuid
+  sportMatch   SportsSportMatch @relation(fields: [sportMatchId], references: [id], onDelete: Cascade)
+
+  betConditionId String           @mainDb.Uuid
+  betCondition   BetsBetCondition @relation(fields: [betConditionId], references: [id], onDelete: Cascade)
+
+  userMatchBetId String            @mainDb.Uuid
+  userMatchBet   UsersUserMatchBet @relation(fields: [userMatchBetId], references: [id], onDelete: Cascade)
+}
+
+/// one user can place bet on many matches with different bet type and bet condition
+model UsersUserMatchBet {
+  id             String          @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// unique bet id this is auto generated with prefix: BDB
+  betId          String
+  /// overall odd during bet
+  odds           Decimal?        @mainDb.Decimal(10, 3)
+  /// amount of tk, user wants to bet for
+  overallStake   Decimal?        @mainDb.Decimal(10, 3)
+  /// amount of win back
+  overallWinback Decimal?        @mainDb.Decimal(10, 3)
+  /// bet status.e.g.-  "ACCEPTED", "LOST", "PAIDOUT", "SOLD", "WON", "REMOVED"
+  betStatus      BetStatusEnum?  @default(ACCEPTED)
+  /// bet history.e.g.-  "SETTLED", "UNSETTLED"
+  betHistory     BetHistoryEnum? @default(UNSETTLED)
+  /// systemBet will store condition for multibet winning as user need to win certain number of total number of bet e.g. {"totalCount": 5, "totalWin": 3}
+  systemBet      Json?           @default("{}")
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  /// associated betsBetSlipSetting id
+  betSlipSettingId String               @mainDb.Uuid
+  betSlipSetting   BetsBetSlipSetting   @relation(fields: [betSlipSettingId], references: [id])
+  /// associated user id
+  userId           String               @mainDb.Uuid
+  user             UsersUser            @relation(fields: [userId], references: [id])
+  /// associated bet specially for multi-bet and accumulator
+  associatedBets   UsersAssociatedBet[]
+
+  @@index([userId, betSlipSettingId])
+}
+
+/// list of App (Module) + App Models (Tables) 
+model AuthContentType {
+  id       String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// label of the app which a model belongs to
+  /// e.g. Users
+  appLabel String
+  /// label of the model
+  /// e.g. Users app has model User, Profile, Account
+  /// e.g. Auth app has model Permission, Group etc.
+  model    String
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// set of permissions for this App + Model
+  authPermissions AuthPersmission[]
+
+  @@index([appLabel, model])
+}
+
+/// list of group e.g. Affiliate, Admin
+model AuthGroup {
+  id   String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// name of the group
+  /// e.g. Affiliate
+  name String @unique @mainDb.VarChar(255)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// list of users who belongs to this group
+  users            AuthUserGroup[]
+  /// list of permissions the group has
+  permissions      AuthGroupPersmission[]
+  /// list of users/owners who has a group.
+  /// e.g. Affiliate group can have many owners who controls a group of users
+  /// notifications related to the group
+  notifications    NotificationsNotification[]
+  /// different group owners
+  /// e.g. Affiliate group can have many owners
+  authGroupsOwners AffiliatesGroupOwner[]      @relation("group")
+
+  @@index([name])
+}
+
+/// one Group can have many User and one User can belong to many Group. RELATION: m-n
+model AuthUserGroup {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// groupdId of the group, which the user will be assigned to
+  /// a group can have many users
+  groupId String    @mainDb.Uuid
+  group   AuthGroup @relation(fields: [groupId], references: [id])
+  /// userId of the user who will the assigned to the groupId
+  /// a user can join many groups
+  userId  String    @mainDb.Uuid
+  user    UsersUser @relation(fields: [userId], references: [id])
+
+  @@index([userId, groupId])
+}
+
+/// set of permissions for this App + Model
+model AuthPersmission {
+  id       String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// name of the permission
+  /// e.g. Can Create User
+  name     String
+  /// name of the action
+  /// CRUD e.g. Create, Delete
+  action   String
+  /// name of the code
+  /// e.g. add_user, update_user
+  codename String
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// associated content type ID
+  contentTypeId String                 @mainDb.Uuid
+  contentType   AuthContentType        @relation(fields: [contentTypeId], references: [id])
+  /// list of users assoicated with the auth user permission
+  users         AuthUserPersmission[]
+  /// list of group assoicated with the auth user permission
+  groups        AuthGroupPersmission[]
+
+  @@unique([contentTypeId, action], name: "contentTypeAction")
+  @@index([name, action, codename, contentTypeId])
+}
+
+/// one Group can have many Permission and one Permission can belong to many Group. RELATION: m-n
+model AuthGroupPersmission {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// groupId which will have the permissionId assigned to
+  groupId      String          @mainDb.Uuid
+  group        AuthGroup       @relation(fields: [groupId], references: [id])
+  /// permissionId which will be assigned to this groupId
+  permissionId String          @mainDb.Uuid
+  permission   AuthPersmission @relation(fields: [permissionId], references: [id])
+
+  /// same group is not allowed to take same permission more than once
+  @@unique([groupId, permissionId], name: "groupPermission")
+  @@index([groupId, permissionId])
+}
+
+/// set of user's permissions for this App + Model 
+model AuthUserPersmission {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// userId of user to whom this permission is assigned to
+  userId       String          @mainDb.Uuid
+  user         UsersUser       @relation(fields: [userId], references: [id])
+  /// permissionId of the permission which is assigned to the user
+  permissionId String          @mainDb.Uuid
+  permission   AuthPersmission @relation(fields: [permissionId], references: [id])
+
+  @@unique([userId, permissionId], name: "userPermission")
+  @@index([userId, permissionId])
+}
+
+/// One user  can have provider details for each provider type
+model AuthUserAuthenticationProvider {
+  /// key provided by the provider
+  providerKey  String  @id @mainDb.VarChar(100)
+  /// type of the provider
+  providerType String  @mainDb.VarChar(50)
+  /// ip address of provider
+  ipAddress    String? @mainDb.VarChar(100)
+
+  metaData    Json?
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// ID of associated user
+  userId String    @mainDb.Uuid
+  user   UsersUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, providerType], name: "userProvider")
+  @@index([userId, providerType, providerKey])
+}
+
+/// one user can have only one refresh token
+model AuthRefreshToken {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// refresh token
+  token     String?  @mainDb.VarChar(1000)
+  /// check if the token is revoked?
+  isRevoked Boolean  @default(false)
+  /// refresh token expire date
+  expiresAt DateTime @default(now()) @mainDb.Timestamptz(6)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// ID of associated user
+  userId String    @unique @mainDb.Uuid
+  /// refresh token will be removed if userAccount is being deleted
+  user   UsersUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([token, userId])
+}
+
+/// verification token for user email and phone number
+model AuthVerificationToken {
+  id                            String  @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// type of verification token
+  type                          String  @mainDb.VarChar(255)
+  /// verification token
+  token                         Int
+  /// secret of two factor authentication
+  twoFactorAuthenticationSecret String?
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// ID of associated user
+  userId String    @mainDb.Uuid
+  user   UsersUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, type], name: "userVerificationType")
+  @@index([userId, token])
+}
+
+/// Auth user session details
+model AuthSession {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  sessionStatus AuthSessionStatusEnum @default(INACTIVE)
+  platform      Json?                 @default("{}")
+  location      Json?                 @default("{}")
+  deviceId      String                @unique @mainDb.VarChar(100)
+  ip            String                @mainDb.VarChar(100)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  userId String    @mainDb.Uuid
+  user   UsersUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+/// one User can be assigned to one AffiliatesGroupOwner (User associated with a group) and one AffiliatesGroupOwner can be assigned to many User. RELATION: m-n
+model AffiliatesGroupOwner {
+  id    String  @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// name of sub auth group
+  /// e.g. There can be one or more Sub Affiliate group with different names
+  title String?
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// This field is the id of one of one of the groups where the owner belongs
+  /// e.g. groupId of Affiliate; where John belongs
+  groupId String    @mainDb.Uuid
+  group   AuthGroup @relation("group", fields: [groupId], references: [id])
+  /// This field is the id of one of the user of a group who is acting as an owner
+  /// e.g. userId of John; who belongs to Affiliate group which can have many affiliate
+  ownerId String    @mainDb.Uuid
+  owner   UsersUser @relation("owner", fields: [ownerId], references: [id])
+
+  /// associated sub affiliates
+  affiliateSubAffiliates      AffiliatesGroupOwnerAffiliate[]  @relation("affiliate")
+  /// associated owner affiliates
+  affiliateSubAffiliatesOwner AffiliatesGroupOwnerAffiliate[]  @relation("groupOwner")
+  /// associated primary user affiliates
+  primaryUserTransactions     AffiliatesAffiliateTransaction[] @relation("primaryUser")
+  /// associated level1 user affiliates
+  level1UserTransactions      AffiliatesAffiliateTransaction[] @relation("level1User")
+  /// associated level2 user affiliates
+  level2UserTransactions      AffiliatesAffiliateTransaction[] @relation("level2User")
+
+  authGroupOwnerGroupTypeId String?                        @mainDb.Uuid
+  authGroupOwnerGroupType   AffiliatesGroupOwnerGroupType? @relation(fields: [authGroupOwnerGroupTypeId], references: [id])
+
+  /// associated users
+  authGroupOwnerUsers  AffiliatesGroupOwnerUser[]
+  /// associated commission percentage
+  commissionPercentage AffiliatesGroupOwnerCommissionStructure?
+
+  @@index([title, groupId, ownerId, authGroupOwnerGroupTypeId])
+}
+
+/// this table define owner group type for affiliate. e.g.- primary, sub, level1, level2
+model AffiliatesGroupOwnerGroupType {
+  id    String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  ///e.g.- primary, sub, level1,level2
+  title String @unique @mainDb.VarChar(255)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  /// associated groupOwner
+  groupOwner              AffiliatesGroupOwner[]
+  /// associated affiliateTypeCommission
+  affiliateTypeCommission AffiliatesGroupTypeCommissionStructure[]
+
+  @@index([title])
+}
+
+/// This table associate an user With AffiliatesGroupOwner- Only for AffiliatesUser
+model AffiliatesGroupOwnerUser {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// id of user, whom we want to associate with a groupOwner
+  userId       String               @mainDb.Uuid
+  user         UsersUser            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// This field is the id of one of the user of a group who is acting as an owner
+  /// e.g. userId of John; who belongs to Affiliate group which can have many affiliate
+  groupOwnerId String               @mainDb.Uuid
+  groupOwner   AffiliatesGroupOwner @relation(fields: [groupOwnerId], references: [id], onDelete: Cascade)
+
+  @@index([groupOwnerId, userId])
+}
+
+/// this table define the group name for affiliate commission.e.g Rev. share, referral etc
+model AffiliatesCommissionGroup {
+  id                                      String                                    @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  ///e.g Rev. share, referral etc
+  title                                   String                                    @unique @mainDb.VarChar(255)
+  metaData                                Json?                                     @default("{}")
+  status                                  FieldStatusEnum                           @default(ACTIVE)
+  createdById                             String?                                   @mainDb.Uuid
+  updatedById                             String?                                   @mainDb.Uuid
+  createdAt                               DateTime                                  @default(now()) @mainDb.Timestamptz(6)
+  updatedAt                               DateTime?                                 @updatedAt
+  /// associated commission percentage
+  affiliatesGroupOwnerCommissionStructure AffiliatesGroupOwnerCommissionStructure[]
+
+  @@index([title])
+}
+
+/// this table define the group name for affiliate commission.e.g. BD, Income, 1X Transfer
+model AffiliatesCommissionType {
+  id          String          @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// e.g. BD, Income, 1X Transfer
+  title       String          @unique @mainDb.VarChar(255)
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  @@index([title])
+}
+
+/// (default comisison Table) - specifically for user
+model AffiliatesGroupTypeCommissionStructure {
+  id               String  @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  bdPercentage     Decimal @default(0) @mainDb.Decimal(10, 3)
+  oneXPercentage   Decimal @default(0) @mainDb.Decimal(10, 3)
+  incomePercentage Decimal @default(0) @mainDb.Decimal(10, 3)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  /// this field define ownerGroupType. e.g.-primary,sub
+  authGroupOwnerGroupTypeId String                        @mainDb.Uuid
+  authGroupOwnerGroupType   AffiliatesGroupOwnerGroupType @relation(fields: [authGroupOwnerGroupTypeId], references: [id], onDelete: Cascade)
+
+  @@index([authGroupOwnerGroupTypeId])
+}
+
+/// This table associate an affiliate created by an affiliate
+model AffiliatesGroupOwnerAffiliate {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// e.g. primary/sub/level -1 affiliate id
+  groupOwnerId String?               @mainDb.Uuid
+  groupOwner   AffiliatesGroupOwner? @relation(fields: [groupOwnerId], references: [id], name: "groupOwner", onDelete: Cascade)
+  /// sub/level-1/level-2 affiliate id
+  affiliateId  String                @mainDb.Uuid
+  affiliate    AffiliatesGroupOwner  @relation(fields: [affiliateId], references: [id], name: "affiliate", onDelete: Cascade)
+
+  @@index([groupOwnerId, affiliateId])
+}
+
+/// here we associate a AffiliatesGroupOwnerGroupType(eg.-primary,sub) with a commission type(e.g.-Income, 1X Transfer)
+model AffiliatesGroupOwnerCommissionStructure {
+  id               String  @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  bdPercentage     Decimal @default(0) @mainDb.Decimal(10, 3)
+  oneXPercentage   Decimal @default(0) @mainDb.Decimal(10, 3)
+  incomePercentage Decimal @default(0) @mainDb.Decimal(10, 3)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  /// this field define commissionTypeId. e.g.-Income, 1X Transfer
+  commissionGroupId String                    @mainDb.Uuid
+  commissionGroup   AffiliatesCommissionGroup @relation(fields: [commissionGroupId], references: [id], onDelete: Cascade)
+  /// this field define sub affiliate Id. and commission will be applyed on that id
+  authGroupOwnerId  String                    @unique @mainDb.Uuid
+  authGroupOwner    AffiliatesGroupOwner      @relation(fields: [authGroupOwnerId], references: [id], onDelete: Cascade)
+
+  @@index([commissionGroupId, authGroupOwnerId])
+}
+
+/// This table hold the transaction of AffiliatesGroupOwnerUser(e.g.-affiliates group owner user's transaction)
+model AffiliatesAffiliateTransaction {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// transaction Id of user
+  transactionId        String                  @mainDb.Uuid
+  transaction          TransactionsTransaction @relation(fields: [transactionId], references: [id], onDelete: Cascade)
+  /// transaction amount
+  amount               Decimal                 @mainDb.Decimal(10, 3)
+  /// this owner made transaction 100 his payable would be 20 if the has a created by with level sub
+  payable              Decimal                 @mainDb.Decimal(10, 3)
+  /// paidOut will be carry out by admin
+  paidOut              Boolean                 @default(false)
+  /// primary user Id of that user
+  primaryUserId        String?                 @mainDb.Uuid
+  primaryUser          AffiliatesGroupOwner?   @relation(fields: [primaryUserId], references: [id], name: "primaryUser")
+  /// this owner made transaction 100 his payable would be 20 if the has a created by with level sub
+  /// amount need to pay to the primary lvl affilates from this transaction 
+  primaryPayable       Decimal                 @mainDb.Decimal(10, 3)
+  primaryPayableStatus Boolean                 @default(false)
+  /// level1 Id of that user
+  level1UserId         String?                 @mainDb.Uuid
+  level1User           AffiliatesGroupOwner?   @relation(fields: [level1UserId], references: [id], name: "level1User")
+  /// amount need to pay to the  lvl1 affilates from this transaction 
+  level1Payable        Decimal                 @mainDb.Decimal(10, 3)
+  level1PayableStatus  Boolean                 @default(false)
+  /// level2 Id of that user
+  level2UserId         String?                 @mainDb.Uuid
+  level2User           AffiliatesGroupOwner?   @relation(fields: [level2UserId], references: [id], name: "level2User")
+  /// amount need to pay to the  lvl2 affilates from this transaction 
+  level2Payable        Decimal                 @mainDb.Decimal(10, 3)
+  level2PayableStatus  Boolean                 @default(false)
+
+  @@index([transactionId, primaryUserId, level1UserId, level2UserId])
+}
+
+/// list of transaction method e.g. Bank Card, E-Wallets, CRYPTOCURRENCY, Internet Banking etc.
+model TransactionsTransactionMethod {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  /// name of transaction method
+  name String  @unique @mainDb.VarChar(255)
+  /// transaction method code
+  code String? @unique @mainDb.VarChar(255)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// list of transaction type associated with transaction method
+  transactionTypes  TransactionsTransactionType[]
+  /// list of transaction associated with transaction method
+  transactions      TransactionsTransaction[]
+  /// list of agent transaction associated with transaction method
+  agentTransactions AgentsTransaction[]
+
+  @@index([name, code])
+}
+
+/// list of transaction type e.g. Bkash, Nagad, BitCoid, DogeCoin etc.
+model TransactionsTransactionType {
+  id   String  @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// name of transaction type
+  name String  @unique @mainDb.VarChar(255)
+  /// transaction type code
+  code String? @unique @mainDb.VarChar(255)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// associated transaction method ID e.g. Bank Card, E-Wallets, CRYPTOCURRENCY, Internet Banking etc.
+  transactionMethodId String                               @mainDb.Uuid
+  transactionMethod   TransactionsTransactionMethod        @relation(fields: [transactionMethodId], references: [id])
+  /// associated transactions
+  transactions        TransactionsTransaction[]
+  /// coinrates associated with transaction
+  coinRates           TransactionsTransactionTypeCoinRate?
+  /// contacts associated transactions
+  transactionAccounts TransactionsTransactionTypeAccount[]
+  /// associated user accounts
+  userAccounts        UsersTransactionTypeUserAccount[]
+  /// associated agent transactions
+  agentTransactions   AgentsTransaction[]
+
+  @@index([name, code, transactionMethodId])
+}
+
+/// one transaction type can have one coin rate
+model TransactionsTransactionTypeCoinRate {
+  id   String   @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// coin rate during transaction
+  rate Decimal  @mainDb.Decimal(10, 3)
+  /// min coin rate during transaction
+  min  Decimal? @mainDb.Decimal(10, 3)
+  /// max coin rate during transaction
+  max  Decimal? @mainDb.Decimal(10, 3)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// associated transaction type ID
+  transactionTypeId String                      @unique @mainDb.Uuid
+  transactionType   TransactionsTransactionType @relation(fields: [transactionTypeId], references: [id])
+
+  @@index([transactionTypeId])
+}
+
+/// list of contacts used for transactions and belongs to transactionType e.g. Bkash, Nagad can be used in same contact no
+model TransactionsTransactionTypeAccount {
+  id    String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// title of transaction type contact
+  title String @default("") @mainDb.VarChar(255)
+  /// value of transaction type contact
+  value String @default("") @mainDb.VarChar(255)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// transactionType to which this contacts belongs to
+  /// e.g. Type => Bkash can have many contact numbers
+  transactionTypeId String                      @mainDb.Uuid
+  transactionType   TransactionsTransactionType @relation(fields: [transactionTypeId], references: [id])
+  /// list of users who has this contacts assigned to them
+  transactions      TransactionsTransaction[]
+  /// users who is in charge of this account
+  /// admin who will manage all transactions related to this account
+  assignedToUserId  String?                     @mainDb.Uuid
+  assignedToUser    UsersUser?                  @relation(fields: [assignedToUserId], references: [id])
+
+  /// list of agents who has this contacts assigned to them
+  agentTransaction AgentsTransaction[]
+
+  @@index([title, value, transactionTypeId, assignedToUserId])
+}
+
+/// list of transaction by user
+model TransactionsTransaction {
+  id              String                @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// user transaction ID
+  tranId          String                @unique @mainDb.VarChar(255)
+  /// user transaction refference ID
+  tranRefId       String?               @mainDb.VarChar(255)
+  /// user transaction type
+  tranType        TransactionTypeEnum
+  /// user transaction status
+  tranStatus      TransactionStatusEnum @default(PENDING)
+  /// user transaction amount
+  amount          Decimal               @mainDb.Decimal(10, 3)
+  /// user transaction coin
+  coin            Decimal?              @mainDb.Decimal(10, 3)
+  /// user transaction status changes time
+  statusChangedAt DateTime?             @default(now()) @mainDb.Timestamptz(6)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// associated user ID
+  userId     String?    @mainDb.Uuid
+  user       UsersUser? @relation("userId", fields: [userId], references: [id])
+  /// associated agent ID
+  agentId    String?    @mainDb.Uuid
+  agent      UsersUser? @relation("agentId", fields: [agentId], references: [id])
+  /// sender associated Transfer Account
+  senderId   String?    @mainDb.Uuid
+  sender     UsersUser? @relation("sender", fields: [senderId], references: [id])
+  /// receiver associated Transfer Account
+  receiverId String?    @mainDb.Uuid
+  receiver   UsersUser? @relation("receiver", fields: [receiverId], references: [id])
+
+  /// associatted bet site ID.eg. 1xbet
+  betSiteUserAccountId     String?                             @mainDb.Uuid
+  userbetSiteAccounts      UsersUserBetSiteAccount?            @relation(fields: [betSiteUserAccountId], references: [id])
+  /// associated transaction method ID. e.g. Bank Card, E-Wallets, CRYPTOCURRENCY, Internet Banking etc.
+  transactionMethodId      String?                             @mainDb.Uuid
+  transactionMethod        TransactionsTransactionMethod?      @relation(fields: [transactionMethodId], references: [id])
+  /// associated transaction type ID. e.g. Bkash, Nagad, BitCoid, DogeCoin etc.
+  transactionTypeId        String?                             @mainDb.Uuid
+  transactionType          TransactionsTransactionType?        @relation(fields: [transactionTypeId], references: [id])
+  /// associated transaction type account /  bitdeposit account ID. 
+  /// e.g. Bkash, Nagad can be used in same contact no
+  transactionTypeAccountId String?                             @mainDb.Uuid
+  transactionTypeAccount   TransactionsTransactionTypeAccount? @relation(fields: [transactionTypeAccountId], references: [id])
+  /// associated User Transaction Account
+  /// one user can have multiple transaction type account e.g. Bkash, Nagad Accounts
+  userTransactionAccountId String?                             @mainDb.Uuid
+  userTransactionAccount   UsersTransactionTypeUserAccount?    @relation(fields: [userTransactionAccountId], references: [id])
+
+  agentTransactionId String?            @unique @mainDb.Uuid
+  agentTransaction   AgentsTransaction? @relation(fields: [agentTransactionId], references: [id])
+
+  affiliateTransactions AffiliatesAffiliateTransaction[]
+
+  @@index([tranId, tranRefId, tranType, tranStatus, userId, betSiteUserAccountId, transactionMethodId, transactionTypeId, transactionTypeAccountId, userTransactionAccountId, senderId, receiverId])
+}
+
+model AgentsTransaction {
+  id              String                    @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// agent transaction ID
+  tranId          String                    @unique @mainDb.VarChar(255)
+  /// agent transaction refference ID
+  tranRefId       String?                   @mainDb.VarChar(255)
+  /// agent transaction type
+  tranType        AgentsTransactionTypeEnum @default(TRANSFER)
+  /// user transaction status
+  tranStatus      TransactionStatusEnum     @default(PENDING)
+  /// user transaction amount
+  amount          Decimal                   @mainDb.Decimal(10, 2)
+  /// user transaction coin
+  coin            Decimal?                  @mainDb.Decimal(10, 2)
+  /// user transaction status changes time
+  statusChangedAt DateTime?                 @default(now()) @mainDb.Timestamptz(6)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// associated agent ID: used for agent to agent transfer
+  agentId String?    @mainDb.Uuid
+  agent   UsersUser? @relation("agentId", fields: [agentId], references: [id])
+
+  /// associated user ID: user for agent to user transfer
+  userId String?    @mainDb.Uuid
+  user   UsersUser? @relation("userId", fields: [userId], references: [id])
+
+  /// associated transaction method ID
+  /// e.g. Bank Card, E-Wallets, CRYPTOCURRENCY, Internet Banking etc.
+  transactionMethodId String?                        @mainDb.Uuid
+  transactionMethod   TransactionsTransactionMethod? @relation(fields: [transactionMethodId], references: [id])
+
+  /// associated transaction type ID
+  /// e.g. Bkash, Nagad, BitCoid, DogeCoin etc.
+  transactionTypeId String?                      @mainDb.Uuid
+  transactionType   TransactionsTransactionType? @relation(fields: [transactionTypeId], references: [id])
+
+  /// associated transaction type account /  bitdeposit account ID
+  /// e.g. Bkash, Nagad can be used in same contact no
+  transactionTypeAccountId String?                             @mainDb.Uuid
+  transactionTypeAccount   TransactionsTransactionTypeAccount? @relation(fields: [transactionTypeAccountId], references: [id])
+
+  /// associated User Transaction Account
+  /// one user can have multiple transaction type account e.g. Bkash, Nagad Accounts
+  userTransactionAccountId String?                          @mainDb.Uuid
+  userTransactionAccount   UsersTransactionTypeUserAccount? @relation(fields: [userTransactionAccountId], references: [id])
+
+  /// sender associated Transfer Account
+  senderId   String?    @mainDb.Uuid
+  sender     UsersUser? @relation("sender", fields: [senderId], references: [id])
+  /// receiver associated Transfer Account
+  receiverId String?    @mainDb.Uuid
+  receiver   UsersUser? @relation("receiver", fields: [receiverId], references: [id])
+
+  userTransaction TransactionsTransaction?
+
+  @@index([tranId, tranRefId, tranType, tranStatus, userId, transactionMethodId, transactionTypeId, transactionTypeAccountId, userTransactionAccountId, senderId, receiverId])
+}
+
+/// Holds promo code assigned to a group owner
+model PromotionsAuthGroupOwnerPromoCode {
+  id    String  @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// title of promo code. e.g.- "BET T20"
+  title String? @unique @mainDb.VarChar(100)
+  /// code of promo code. e.g.- "BETT20"
+  code  String  @unique @mainDb.VarChar(100)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// associated group owner ID
+  groupOwnerId   String                          @mainDb.Uuid
+  groupOwner     UsersUser                       @relation(fields: [groupOwnerId], references: [id])
+  /// user associated with promo code
+  promotionUsers PromotionsGroupOwnerPromoUser[]
+
+  @@index([title])
+}
+
+/// Hold records of relation of user and promo code
+model PromotionsGroupOwnerPromoUser {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  promotionId String                            @mainDb.Uuid
+  promotion   PromotionsAuthGroupOwnerPromoCode @relation(fields: [promotionId], references: [id])
+  userId      String                            @mainDb.Uuid
+  user        UsersUser                         @relation(fields: [userId], references: [id])
+
+  @@unique([promotionId, userId], name: "UserPromotion")
+  @@index([promotionId, userId])
+}
+
+/// List of SportType e.g. Cricket, Football, Tennis etc.
+model SportsSportType {
+  id   String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// sports type name. e.g. Cricket, Football, Tennis etc.
+  name String @unique @mainDb.VarChar(255)
+
+  status      FieldStatusEnum @default(ACTIVE)
+  metaData    Json?           @default("{}")
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  /// associated bet types
+  betTypes          BetsBetTypeSportType[]
+  /// associated sports teams
+  sportTeams        SportsSportTeam[]
+  /// associated sports leagues
+  sportLeagues      SportsSportLeague[]
+  /// associated sports categories
+  sportCategories   SportsSportCategory[]
+  betCriterias      SportsSportTypeBetCriteria[]
+  sportUIConditions SportsSportTypeUICondition[]
+
+  @@index([name])
+}
+
+/// List of SportCategory e.g. T20, ODI, TEST etc.
+model SportsSportCategory {
+  id   String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// title of SportCategory e.g. T20, ODI, TEST etc.
+  name String @unique @mainDb.VarChar(255)
+
+  status      FieldStatusEnum @default(ACTIVE)
+  metaData    Json?           @default("{}")
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  /// associated sports leagues
+  sportLeagues SportsSportLeague[]
+
+  sportTypeId String          @mainDb.Uuid
+  sportType   SportsSportType @relation(fields: [sportTypeId], references: [id])
+
+  @@index([name])
+}
+
+/// list of sports team and their details
+model SportsSportTeam {
+  id   String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// name of a team. e.g.- Bangladesh, India
+  name String @default("") @mainDb.VarChar(255)
+  /// code of a team. e.g.- BAN, IND
+  code String @default("") @mainDb.VarChar(100)
+
+  status      FieldStatusEnum @default(ACTIVE)
+  /// all details info should be stored in metadata(ex: flag)
+  metaData    Json?           @default("{}")
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  /// associated sports type. e.g. cricket / football
+  sportTypeId String?          @mainDb.Uuid
+  sportType   SportsSportType? @relation(fields: [sportTypeId], references: [id])
+
+  teamOneMatches SportsSportMatch[] @relation("teamOne")
+  teamTwoMatches SportsSportMatch[] @relation("teamTwo")
+
+  @@index([name, sportTypeId])
+}
+
+/// List of SportLeague and their information
+model SportsSportLeague {
+  id             String   @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// name of league. e.g.- IPL,BPL
+  name           String   @default("") @mainDb.VarChar(255)
+  /// Priority ranging from 1 to 10 which decides the league as a top league
+  leaguePriority Decimal? @mainDb.Decimal(10, 3)
+
+  /// info related to a league should be stored in metadata
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  /// sport type id
+  sportTypeId     String?              @mainDb.Uuid
+  sportType       SportsSportType?     @relation(fields: [sportTypeId], references: [id])
+  /// sport category id optional
+  sportCategoryId String?              @mainDb.Uuid
+  sportCategory   SportsSportCategory? @relation(fields: [sportCategoryId], references: [id])
+
+  /// list of matches related to this sport league.
+  sportMatches SportsSportMatch[]
+
+  @@index([name, leaguePriority, sportTypeId, sportCategoryId])
+}
+
+/// info about a SportMatch
+model SportsSportMatch {
+  id            String          @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  name          String          @mainDb.VarChar(255)
+  /// matchPriority ranging from 1 to 10 which decides the match as a top match
+  matchPriority Decimal?        @mainDb.Decimal(10, 3)
+  /// SportMatch need a field matchStatus e.g. UPCOMING, ONGOING, FINISHED
+  matchStatus   MatchStatusEnum @default(UPCOMING)
+  isLocked      Boolean         @default(false)
+
+  status      FieldStatusEnum @default(ACTIVE)
+  /// all information related to a match will be stored in metadata
+  metaData    Json?           @default("{}")
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  /// associated SportsSportTeam one
+  teamOneId        String?          @mainDb.Uuid
+  sportTeamOneInfo SportsSportTeam? @relation("teamOne", fields: [teamOneId], references: [id])
+  /// associated SportsSportTeam two.
+  teamTwoId        String?          @mainDb.Uuid
+  sportTeamTwoInfo SportsSportTeam? @relation("teamTwo", fields: [teamTwoId], references: [id])
+
+  /// associated sports category and type ID
+  sportLeagueId String?            @mainDb.Uuid
+  sportLeague   SportsSportLeague? @relation(fields: [sportLeagueId], references: [id])
+
+  /// match criteria special condition
+  betConditions SportsSportMatchBetCondition[]
+  /// list of users who has this match as favourite match 
+  users         UsersUserMatch[]
+  /// list of bet types the match belongs to
+  betTypes      BetsBetTypeSportMatch[]
+  bets          UsersAssociatedBet[]
+
+  @@index([name, matchPriority, matchStatus, teamOneId, teamTwoId, sportLeagueId])
+}
+
+/// one sport type can have many bet criterias and one bet criteria can belong to many sport types
+model SportsSportTypeBetCriteria {
+  id            String          @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  status        FieldStatusEnum @default(ACTIVE)
+  metaData      Json?           @default("{}")
+  createdById   String?         @mainDb.Uuid
+  updatedById   String?         @mainDb.Uuid
+  createdAt     DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt     DateTime?       @updatedAt @mainDb.Timestamptz(6)
+  /// associated sport type id
+  sportTypeId   String          @mainDb.Uuid
+  sportType     SportsSportType @relation(fields: [sportTypeId], references: [id])
+  /// associated bet criteria id
+  betCriteriaId String          @mainDb.Uuid
+  betCriteria   BetsBetCriteria @relation(fields: [betCriteriaId], references: [id])
+
+  @@index([sportTypeId, betCriteriaId])
+}
+
+/// one sport match criteria can have special conditions
+model SportsSportMatchBetCondition {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  /// odd value of the conditions
+  odd       Decimal @mainDb.Decimal(10, 3)
+  /// check if the criteria is locked
+  isLocked  Boolean @default(false)
+  /// check if the criteria is visible
+  isVisible Boolean @default(false)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// associated match Id
+  sportMatchId   String           @mainDb.Uuid
+  sportMatch     SportsSportMatch @relation(fields: [sportMatchId], references: [id])
+  /// associated BetsBetCriteriaBetCondition Id
+  betConditionId String           @mainDb.Uuid
+  betCondition   BetsBetCondition @relation(fields: [betConditionId], references: [id])
+
+  @@index([sportMatchId])
+}
+
+model SportsUICondition {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  /// name of UI condition
+  name        String @default("") @mainDb.VarChar(100)
+  /// code of UI condition to compare with bet condition
+  code        String @unique @default("") @mainDb.VarChar(100)
+  /// display name for the UI condition
+  displayName String @default("") @mainDb.VarChar(100)
+  /// order in which the condition will be placed in ui
+  /// 1 indicats left side and 1++ suggest to right side 
+  order       Int    @default(0)
+
+  metaData    Json?                        @default("{}")
+  status      FieldStatusEnum              @default(ACTIVE)
+  createdById String?                      @mainDb.Uuid
+  updatedById String?                      @mainDb.Uuid
+  createdAt   DateTime                     @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?                    @updatedAt @mainDb.Timestamptz(6)
+  sportTypes  SportsSportTypeUICondition[]
+}
+
+model SportsSportTypeUICondition {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  sportTypeId String          @mainDb.Uuid
+  sportType   SportsSportType @relation(fields: [sportTypeId], references: [id], onDelete: Cascade)
+
+  sportUIConditionId String            @mainDb.Uuid
+  sportUICondition   SportsUICondition @relation(fields: [sportUIConditionId], references: [id], onDelete: Cascade)
+}
+
+/// list of bet sites 
+model BetsBetSite {
+  id   String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// name of bet sites
+  name String @unique @mainDb.VarChar(255)
+  /// url of bet sites
+  url  String @mainDb.VarChar(255)
+  /// code provided by the bet site
+  code String @mainDb.VarChar(255)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// list of betsite account associated with bet site
+  betSiteAccounts BetsBetSiteAccount[]
+
+  @@index([name, code])
+}
+
+/// one bet site can have multiple accounts
+model BetsBetSiteAccount {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  /// bet site account name
+  accountName String @mainDb.VarChar(255)
+  /// id of bet site account
+  accountId   String @mainDb.VarChar(255)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// bet site id associated with account
+  betSiteId String      @mainDb.Uuid
+  betSite   BetsBetSite @relation(fields: [betSiteId], references: [id])
+
+  user UsersUserBetSiteAccount?
+
+  @@index([accountName, accountId, betSiteId])
+}
+
+/// List of BetType e.g. fixed, sports
+model BetsBetType {
+  id   String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// type of betting. e.g.- "Fixed","LIVE" 
+  name String @unique @mainDb.VarChar(255)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  /// associated sports type
+  sportTypes BetsBetTypeSportType[]
+  /// associated bets
+
+  /// associated sport matches
+  sportMatches BetsBetTypeSportMatch[]
+  bets         UsersAssociatedBet[]
+
+  @@index([name])
+}
+
+/// one BetType can have many SportType related to it and  one SportType can belong to many BetType. RELATION: m-n
+model BetsBetTypeSportType {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  status      FieldStatusEnum @default(ACTIVE)
+  metaData    Json?           @default("{}")
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  /// associated BetsBetType id
+  betTypeId   String          @mainDb.Uuid
+  betType     BetsBetType     @relation(fields: [betTypeId], references: [id])
+  /// associated SportsSportType id
+  sportTypeId String          @mainDb.Uuid
+  sportType   SportsSportType @relation(fields: [sportTypeId], references: [id])
+
+  @@index([betTypeId, sportTypeId])
+}
+
+model BetsBetTypeSportMatch {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  status      FieldStatusEnum @default(ACTIVE)
+  /// all information related to a match will be stored in metadata
+  metaData    Json?           @default("{}")
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  /// id of the sport match
+  sportMatchId String           @mainDb.Uuid
+  sportMatch   SportsSportMatch @relation(fields: [sportMatchId], references: [id])
+
+  /// id of the bet type
+  betTypeId String      @mainDb.Uuid
+  betType   BetsBetType @relation(fields: [betTypeId], references: [id])
+
+  @@index([betTypeId, sportMatchId])
+}
+
+/// criterias for bets
+model BetsBetCriteria {
+  id          String  @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// title of criteria.e.g.- "Winner of the Match"
+  name        String  @mainDb.VarChar(255)
+  /// title of criteria.e.g.- "Winner of the Match"
+  code        String  @unique @mainDb.VarChar(100)
+  displayName String  @mainDb.VarChar(100)
+  /// check if the criteria is locked
+  isLocked    Boolean @default(false)
+  /// check if the criteria is visible
+  isVisible   Boolean @default(false)
+
+  status   FieldStatusEnum @default(ACTIVE)
+  /// aditional data related to criteria should be stored in metadata
+  metaData Json?           @default("{}")
+
+  createdById String?   @mainDb.Uuid
+  updatedById String?   @mainDb.Uuid
+  createdAt   DateTime  @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime? @updatedAt
+
+  /// associated conditions
+  betConditions BetsBetCriteriaBetCondition[]
+  sportTypes    SportsSportTypeBetCriteria[]
+
+  @@index([name, isLocked, isVisible])
+}
+
+/// one bet criteria can have one to many conditions
+model BetsBetCondition {
+  id          String  @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// name of the condition
+  /// conditions are created for criterias
+  /// criteria-"macth outcome", conditon e.g.- "Wins" ,"Loss" or "Draw"
+  name        String  @mainDb.VarChar(255)
+  code        String? @unique @default("") @mainDb.VarChar(255)
+  displayName String  @mainDb.VarChar(100)
+  /// odd value of the conditions
+  odd         Decimal @mainDb.Decimal(10, 3)
+  /// check if the criteria is locked
+  isLocked    Boolean @default(false)
+  /// check if the criteria is visible
+  isVisible   Boolean @default(false)
+
+  status      FieldStatusEnum @default(ACTIVE)
+  /// aditional data related to condition should be stored in metadata (ex: run, goal)
+  metaData    Json?           @default("{}")
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  /// associated  bet criterias
+  betCriterias BetsBetCriteriaBetCondition[]
+  sportMatches SportsSportMatchBetCondition[]
+  bets         UsersAssociatedBet[]
+
+  @@index([name, isLocked, isVisible])
+}
+
+/// one BetCriteria can have many BetCondition & one BetCondition can belong to many BetCriteria - RELATION: m-n
+model BetsBetCriteriaBetCondition {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+
+  status      FieldStatusEnum @default(ACTIVE)
+  metaData    Json?           @default("{}")
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt @mainDb.Timestamptz(6)
+
+  /// associated bet criteria ID
+  betCriteriaId  String           @mainDb.Uuid
+  betCriteria    BetsBetCriteria  @relation(fields: [betCriteriaId], references: [id], onDelete: Cascade)
+  /// associated bet condition ID
+  betConditionId String           @mainDb.Uuid
+  betCondition   BetsBetCondition @relation(fields: [betConditionId], references: [id], onDelete: Cascade)
+
+  @@index([betCriteriaId, betConditionId])
+}
+
+/// BetsBetSlipSetting for bet slip settings
+/// e.g.- "Accumulator", "Single" and "Multi" Bet
+model BetsBetSlipSetting {
+  id   String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// type of betting. e.g.- "Accumulator","single","multi" 
+  name String @unique @mainDb.VarChar(255)
+
+  status      FieldStatusEnum @default(ACTIVE)
+  metaData    Json?           @default("{}")
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  /// user match bet
+  userMatchBets UsersUserMatchBet[]
+
+  @@index([name])
+}
+
+/// notifiacation for users
+model NotificationsNotification {
+  id          String  @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// title of the notification
+  title       String  @unique @mainDb.VarChar(255)
+  /// description of the notifications
+  description String? @mainDb.VarChar(255)
+  /// type of the notification.e.g.- public or privet
+  type        String  @mainDb.VarChar(50)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  /// associated user ID who will receive notification
+  userId String?    @mainDb.Uuid
+  user   UsersUser? @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  /// associated group ID who will receive notification
+  groupId String?    @mainDb.Uuid
+  group   AuthGroup? @relation(fields: [groupId], references: [id], onDelete: Cascade)
+
+  /// associated notifiation details
+  notificationDetail NotificationsNotificationDetail[]
+
+  @@index([title, type, userId, groupId])
+}
+
+/// notifiaction details table
+model NotificationsNotificationDetail {
+  id     String  @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// the notification is seen by the user or not
+  isSeen Boolean @default(false)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  /// id of the notification
+  notificationId String                    @mainDb.Uuid
+  notification   NotificationsNotification @relation(fields: [notificationId], references: [id], onDelete: Cascade)
+  /// id of the user who has seen the notification
+  userId         String?                   @mainDb.Uuid
+  user           UsersUser?                @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([notificationId, userId], name: "userNotification")
+  @@index([isSeen, notificationId, userId])
+}
+
+model SupportsEmail {
+  id    String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// type of the EMAIL .e.g.-  general/security
+  type  String @mainDb.VarChar(50)
+  email String @mainDb.VarChar(50)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  @@index([type, email])
+}
+
+model SupportsContact {
+  id        String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// type of the EMAIL .e.g.-  general/security
+  type      String @mainDb.VarChar(50)
+  contactNo String @mainDb.VarChar(50)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  @@index([type, contactNo])
+}
+
+model SupportsSocialMessaging {
+  id        String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// type of the EMAIL .e.g.-  general/security
+  type      String @mainDb.VarChar(50)
+  contactNo String @mainDb.VarChar(50)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  @@index([type, contactNo])
+}
+
+model SupportsCallbackRequest {
+  id             String @id @default(dbgenerated("gen_random_uuid()")) @mainDb.Uuid
+  /// pending / done
+  callBackStatus String @mainDb.VarChar(50)
+  /// issue details/solution
+  description    String @mainDb.VarChar(50)
+  /// callback number
+  callbackTo     String @mainDb.VarChar(50)
+
+  metaData    Json?           @default("{}")
+  status      FieldStatusEnum @default(ACTIVE)
+  createdById String?         @mainDb.Uuid
+  updatedById String?         @mainDb.Uuid
+  createdAt   DateTime        @default(now()) @mainDb.Timestamptz(6)
+  updatedAt   DateTime?       @updatedAt
+
+  /// id of the user who is assigned to perform callback
+  userId String?    @mainDb.Uuid
+  user   UsersUser? @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([callBackStatus, callbackTo, userId])
+}

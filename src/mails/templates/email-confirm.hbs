@@ -1,0 +1,207 @@
+<html lang='en'>
+  <head>
+    <!-- <meta> tags> -->
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link
+      rel='stylesheet'
+      href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'
+    />
+    <link
+      rel='stylesheet'
+      href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
+    />
+
+    <title>Email Verify</title>
+
+    <style>
+      @import
+      url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+      * { margin: 0px; padding: 0px; outline: none; box-sizing: border-box; }
+      body { scroll-behavior: smooth; font-family: "Poppins", sans-serif; /*
+      width: 720px; margin: 0 auto; background-color: #f1f3ff; */
+      background-color: #f1f3ff; } h1, h2, h3, h4, h5, h6, p { margin: 0px; }
+      a:hover { text-decoration: none; } li { text-decoration: none; list-style:
+      none; } .layout-wrapper { position: relative; width: 720px; margin: 0
+      auto; } .header-wrapper { background-image:
+      url(https://bitdeposit.s3.ap-southeast-1.amazonaws.com/public/eb5e00bc-9127-4770-bec5-946d6083b647-banner-image-1.jpg);
+      background-repeat: no-repeat; background-position: center center;
+      background-size: cover; height: 34vh; } .header-logo { text-align: center;
+      padding: 40px 0; } .verify-content-area { position: absolute; top: 112px;
+      left: 50%; transform: translateX(-50%); width: 100%; }
+      .verify-content-wrapper { width: 568px; background-color: #fff; padding:
+      40px; box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.04), 0px 20px 25px
+      -5px rgba(0, 0, 0, 0.1); border-radius: 8px; } .title { font-weight: 700;
+      font-size: 36px; letter-spacing: -0.01em; color: #302a78; }
+      .verify-content { padding-top: 24px; } .verify-user { font-weight: 400;
+      font-size: 16px; line-height: 26px; color: #302a78; padding-bottom: 22px;
+      } .verify-text { font-weight: 400; font-size: 16px; line-height: 26px;
+      color: #302a78; } .otp-verify-wrapper { padding-top: 24px; }
+      .opt-code-content { padding: 24px; height: 84px; background: #c3cdff;
+      border-radius: 8px; } .otp-code { font-weight: 700; font-size: 36px;
+      letter-spacing: 4px; color: #302a78; text-align: center; }
+      .valid-otp-duration { font-weight: 400; font-size: 12px; line-height:
+      12px; color: #6f6c8f; padding-top: 8px; } .verify-option { font-weight:
+      400; font-size: 24px; line-height: 24px; text-align: center; color:
+      #302a78; padding: 24px; } .verify-btn-wrapper {text-align: center; }
+      .verify-btn { gap: 10px; width: 264px; height: 36px; background: #302a78;
+      color: #fff; box-shadow: 0px 4px 19px rgba(119, 147, 65, 0.3);
+      border-radius: 6px; border: none; } .verify-btn a{ color:#fff }
+      .support-content { padding-top: 24px; } .question-title { font-weight:
+      700; font-size: 16px; line-height: 24px; color: #302a78; } .help-text {
+      font-weight: 400; font-size: 16px; line-height: 26px; color: #302a78; }
+      .footer-section { padding: 40px; background: #2b266c; margin-top: 50px; }
+      .social-link { background: rgba(0, 0, 0, 0.2); width: 28px; height: 28px;
+      border-radius: 100%; margin-left: 17px; display: flex; justify-content:
+      center; align-items: center; } .social-link a { color: #fff; }
+      .menu-wrapper { padding-top: 20px; } .menu-item { margin-right: 25px; }
+      .menu-item::after { content: ""; position: absolute; width: 1px; height:
+      24px; background: rgba(241, 243, 255, 0.2); margin: 0 12px; } .menu-item a
+      { font-weight: 700; font-size: 12px; line-height: 16px; color: #f1f3ff; }
+      .menu-item:last-child::after { background: transparent; }
+      .footer-content-wrapper { padding-top: 16px; } .footer-content-wrapper p {
+      font-weight: 400; font-size: 12px; line-height: 20px; color: #f1f3ff;
+      margin-top: 15px; } .email-info, .mobile-info { padding-top: 16px; }
+      .email-info i, .mobile-info i { color: #ffcc00; } .email-info span,
+      .mobile-info span { color: #fff; font-weight: 400; font-size: 12px;
+      line-height: 20px; margin-left: 15px; } @media (max-width: 576px) {
+      .layout-wrapper { width: 100%; } .verify-content-wrapper { width: 327px;
+      padding: 40px 24px; } .title { font-size: 36px; } .footer-section {
+      padding: 20px 0px; } .footer-header { justify-content: flex-start; }
+      .footer-logo { margin-bottom: 15px; } .social-link { margin-right: 17px;
+      margin-left: 0px; } .menu-item { margin-right: 14px; } .menu-wrapper {
+      padding-top: 0px; } .menu-item::after { margin: 0 6px; }
+      .footer-content-wrapper { padding-top: 0px; } }
+    </style>
+  </head>
+
+  <body>
+    <div class='layout-wrapper'>
+      <section class='header-wrapper'>
+        <div class='container'>
+          <div class='header-logo'>
+            <img
+              src='https://bitdeposit.s3.ap-southeast-1.amazonaws.com/public/47e2bce6-24a5-43d0-9d5b-91a291a09985-desktop-logo.png'
+              alt=''
+            />
+          </div>
+        </div>
+      </section>
+
+      <div class='verify-content-area'>
+        <section class='container verify-content-wrapper'>
+          <h1 class='title'>Let's verify your Email</h1>
+
+          <div class='verify-content'>
+            <h5 class='verify-user'>Hello, {{userName}}</h5>
+            <p class='verify-text'>
+              We use this email verify code so you can verify your email address
+              to use in BitDeposit
+            </p>
+          </div>
+
+          <div class='otp-verify-wrapper'>
+            <div class='opt-code-content'>
+              <h2 class='otp-code'>{{verificationCode}}</h2>
+            </div>
+
+            <p class='valid-otp-duration'>
+              Please note this code is only valid for 15 minutes.
+            </p>
+
+            <h4 class='verify-option'>or</h4>
+
+            <div class='verify-btn-wrapper'>
+              <button class='verify-btn'><a href=''>Click Here</a></button>
+            </div>
+          </div>
+
+          <div class='support-content'>
+            <h3 class='question-title'>
+              Have questions or trouble logging in?
+            </h3>
+            <p class='help-text'>
+              Just reply to this email or contact support@bitdeposit.com
+            </p>
+          </div>
+        </section>
+
+        <footer class='footer-section'>
+          <div class='container'>
+            <div class='footer-header d-flex justify-content-between flex-wrap'>
+              <div class='footer-logo'>
+                <img
+                  src='https://bitdeposit.s3.ap-southeast-1.amazonaws.com/public/47e2bce6-24a5-43d0-9d5b-91a291a09985-desktop-logo.png'
+                  alt=''
+                />
+              </div>
+
+              <div className='social-media-wrapper'>
+                <ul class='d-flex'>
+                  <li class='social-link'>
+                    <a href='#'><i class='fa fa-facebook'></i></a>
+                  </li>
+                  <li class='social-link'>
+                    <a href='#'><i class='fa fa-instagram'></i></a>
+                  </li>
+                  <li class='social-link'>
+                    <a href='#'><i class='fa fa-linkedin'></i></a>
+                  </li>
+                  <li class='social-link'>
+                    <a href='#'><i class='fa fa-twitter'></i></a>
+                  </li>
+                  <li class='social-link'>
+                    <a href='#'><i class='fa fa-youtube'></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class='menu-wrapper'>
+              <ul class='d-flex menu-items'>
+                <li class='menu-item'><a href='#'>About Us</a></li>
+                <li class='menu-item'><a href='#'>Terms & conditions</a></li>
+                <li class='menu-item'><a href='#'>Privacy policy</a></li>
+                <li class='menu-item'><a href='#'>Blog</a></li>
+              </ul>
+            </div>
+
+            <div class='footer-content-wrapper'>
+              <p>
+                If you have questions or need help, don't hesitate to contact
+                our support team!
+              </p>
+
+              <div class='contact-info-wrapper'>
+                <div class='mobile-info'>
+                  <i class='fa fa-phone'></i>
+                  <span>+880 123456789</span>
+                </div>
+
+                <div class='email-info'>
+                  <i class='fa fa-envelope'></i>
+                  <span>bitdeposit@gmail.com</span>
+                </div>
+              </div>
+
+              <p>
+                This message was sent to bitdeposit@gmail.com , If you don't
+                want to receive these emails from BITDeposit in the future, you
+                can edit your profile or unsubscribe.
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src='https://code.jquery.com/jquery-3.4.1.slim.min.js'></script>
+    <script
+      src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'
+    ></script>
+    <script
+      src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'
+    ></script>
+  </body>
+</html>

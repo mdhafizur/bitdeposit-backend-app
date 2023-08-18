@@ -1,0 +1,34 @@
+[
+  {
+    "id": "7005521d-f1b9-470d-8955-866e293ff1de",
+    "title": "Hafiz's Affiliate group",
+    "groupId": "a7484ae9-510c-4b1c-b563-ac6d664c0622",
+    "ownerId": "425fde8b-ac30-441e-ab49-6f9b0e554905",
+    "authGroupOwnerGroupTypeId": "091c47fd-b4c0-4884-91a1-9cf9e6e3758f",
+    "note": "Hafiz is a primary user"
+  },
+  {
+    "id": "ed6ebe56-baa8-498f-a799-1425264d879e",
+    "title": "Musa's Affiliate group",
+    "groupId": "a7484ae9-510c-4b1c-b563-ac6d664c0622",
+    "ownerId": "750d1002-8f3f-4fe4-b363-65d026555470",
+    "authGroupOwnerGroupTypeId": "51522dd8-5fbf-484d-be55-286b0f30b497",
+    "note": "Musa is a sub user under hafiz"
+  },
+  {
+    "id": "d137aecd-32ad-4a48-819c-36eb6164c87b",
+    "title": "Munir's Affiliate group",
+    "groupId": "a7484ae9-510c-4b1c-b563-ac6d664c0622",
+    "ownerId": "3c167b4b-6bc7-4078-8a25-5cfa3e1d1533",
+    "authGroupOwnerGroupTypeId": "eace0f9b-d632-4986-abe2-2a2d1ecea5ad",
+    "note": "Munir is a level1 user under Musa"
+  },
+  {
+    "id": "6c7fdd25-a5f8-4252-a4d7-23d87cca26a9",
+    "title": "Pranto's group",
+    "groupId": "a7484ae9-510c-4b1c-b563-ac6d664c0622",
+    "ownerId": "7bf9f43c-39fd-4ef4-8fb2-233489eca3b2",
+    "authGroupOwnerGroupTypeId": "6cc5f2ee-7d38-46f5-aee7-8ad00e8c081b",
+    "note": "Pranto is a level2 user under Munir"
+  }
+]

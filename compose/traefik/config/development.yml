@@ -1,0 +1,176 @@
+global:
+  checkNewVersion: true
+  sendAnonymousUsage: false # true by default
+
+# (Optional) Log information
+# ---
+log:
+  level: DEBUG # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: common # common, json, logfmt
+  filepath: /var/log/traefik/traefik.log
+
+# (Optional) Accesslog
+# ---
+# accesslog:
+# format: common  # common, json, logfmt
+# filePath: /var/log/traefik/access.log
+
+# (Optional) Enable API and Dashboard
+# ---
+api:
+  dashboard: true # true by default
+  insecure: true # Don't do this in production
+  debug: true
+
+entryPoints:
+  web:
+    # http
+    address: :80
+    # (Optional) Redirect to HTTPS
+    # ---
+    http:
+      # https://docs.traefik.io/routing/entrypoints/#entrypoint
+      redirections:
+        entryPoint:
+          to: websecure
+          # scheme: https
+
+  websecure:
+    # https
+    address: :443
+
+certificatesResolvers:
+  leresolver:
+    # https://docs.traefik.io/master/https/acme/#lets-encrypt
+    acme:
+      caserver: https://acme-v02.api.letsencrypt.org/directory
+      email: hafiz@softic.ai
+      storage: /etc/traefik/acme/acme.json
+      # https://docs.traefik.io/master/https/acme/#httpchallenge
+      httpChallenge:
+        entryPoint: web
+      dnsChallenge:
+        provider: digitalocean
+        delayBeforeCheck: 0
+
+http:
+  routers:
+    nestjs-backend:
+      rule: 'Host(`api.{{env "DOMAIN_URL"}}`)'
+      entryPoints:
+        - websecure
+      # middlewares:
+      #   - nestjs-api-docs-auth@file
+      service: nestjs-backend@file
+      tls:
+        # https://docs.traefik.io/master/routing/routers/#certresolver
+        certResolver: leresolver
+
+    nestjs-api-docs:
+      rule: 'Host(`api.{{env "DOMAIN_URL"}}`) && PathPrefix(`/api/docs`)'
+      entryPoints:
+        - websecure
+      middlewares:
+        - nestjs-api-docs-auth@file
+      service: nestjs-backend@file
+      tls:
+        # https://docs.traefik.io/master/routing/routers/#certresolver
+        certResolver: leresolver
+
+    traefik:
+      rule: 'Host(`monitor.{{env "DOMAIN_URL"}}`)'
+      entryPoints:
+        - websecure
+      middlewares:
+        - traefik-auth@file
+      service: api@internal
+      tls:
+        certResolver: leresolver
+
+    rmq-dashboard:
+      rule: 'Host(`rmq.{{env "DOMAIN_URL"}}`)'
+      entryPoints:
+        - websecure
+      # middlewares:
+      #   - authtraefik@file
+      service: rmq-dashboard@file
+      tls:
+        certResolver: leresolver
+
+    whoami:
+      rule: 'Host(`whoami.docker.localhost`)'
+      entryPoints:
+        - websecure
+      service: whoami@file
+      tls:
+        certResolver: leresolver
+
+    nextjs-frontend:
+      rule: 'Host(`www.{{env "DOMAIN_URL"}}`) || Host(`{{env "DOMAIN_URL"}}`)'
+      entryPoints:
+        - websecure
+      service: nextjs-frontend@file
+      tls:
+        certResolver: leresolver
+
+    http-catchall:
+      rule: 'hostregexp(`{host:.+}`)'
+      entrypoints:
+        - web
+      middlewares:
+        - redirect-to-https@file
+
+  middlewares:
+    csrf:
+      # https://docs.traefik.io/master/middlewares/headers/#hostsproxyheaders
+      # https://docs.djangoproject.com/en/dev/ref/csrf/#ajax
+      headers:
+        hostsProxyHeaders: ['X-CSRFToken']
+
+    traefik-auth:
+      basicAuth:
+        users:
+          - 'user:$apr1$QZi4VpsQ$GXe.h5BETxWkkduZdi/NV.'
+
+    nestjs-api-docs-auth:
+      basicAuth:
+        users:
+          - 'user:$apr1$QZi4VpsQ$GXe.h5BETxWkkduZdi/NV.'
+
+    redirect-to-https:
+      redirectScheme:
+        scheme: https
+
+  services:
+    nestjs-backend:
+      loadBalancer:
+        servers:
+          - url: http://nestjs:4000
+
+    nextjs-frontend:
+      loadBalancer:
+        servers:
+          - url: http://nextjs:3000
+
+    rmq-dashboard:
+      loadBalancer:
+        servers:
+          - url: http://rabbitmq:15672
+
+    whoami:
+      loadBalancer:
+        servers:
+          - url: http://whoami:80
+
+providers:
+  # https://docs.traefik.io/master/providers/file/
+  # docker:
+  #   endpoint: 'unix:///var/run/docker.sock'
+  #   watch: true
+  #   swarmMode: false # 是否启用Docker Swarm
+  #   exposedByDefault: false
+  #   network: 'web'
+  file:
+    filename: /etc/traefik/traefik.yml # Link to the dynamic configuration
+    watch: true # Watch for modifications
+  providersThrottleDuration: 30 # Configuration reload frequency

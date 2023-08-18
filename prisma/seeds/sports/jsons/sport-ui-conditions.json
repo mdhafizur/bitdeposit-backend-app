@@ -1,0 +1,14 @@
+[
+  {
+    "id": "82ddd140-e429-41af-b522-c26505e89ac6",
+    "name": "Team One Wins",
+    "code": "t1-team-wins",
+    "displayName": "Win T1"
+  },
+  {
+    "id": "e52eadea-ca5f-4c0a-9271-81881bcd4f56",
+    "name": "Team Two Wins",
+    "code": "t2-team-wins",
+    "displayName": "Win T2"
+  }
+]

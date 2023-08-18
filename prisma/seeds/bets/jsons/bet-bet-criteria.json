@@ -1,0 +1,113 @@
+[
+  {
+    "id": "a3e4cb24-98a1-42a9-bfce-473fe2345197",
+    "name": "T1XT2",
+    "code": "t1xt2",
+    "displayName": "T1XT2"
+  },
+  {
+    "id": "fe373f74-3ff2-486e-8d4a-902d8ef09538",
+    "name": "Team Wins",
+    "code": "team-wins",
+    "displayName": "Team Wins"
+  },
+  {
+    "id": "d86839ad-ce0c-4191-ae16-e80d0b0e4344",
+    "name": "draw",
+    "code": "draw",
+    "displayName": "X"
+  },
+  {
+    "id": "e9e529f5-240b-4763-a271-24ea2e0cdc05",
+    "name": "Super Over",
+    "code": "super-over",
+    "displayName": "Super Over"
+  },
+  {
+    "id": "6b3b711e-0c82-4422-bc6b-964d3af737ef",
+    "name": "Super Over Winner",
+    "code": "super-over-winner",
+    "displayName": "Super Over Winner"
+  },
+  {
+    "id": "37820e34-b245-45a6-b2da-b7066d074929",
+    "name": "Total Runs",
+    "code": "total-runs",
+    "displayName": "Total Runs"
+  },
+  {
+    "id": "20c21ea8-8721-4fd0-a96f-669301c70e82",
+    "name": "Total Even/Odd",
+    "code": "total-even/odd",
+    "displayName": "Total Even/Odd"
+  },
+  {
+    "id": "63269b70-83a5-4e9e-85ea-ea0e8ffc1505",
+    "name": "Total 4's",
+    "code": "total-4s",
+    "displayName": "Total 4's"
+  },
+  {
+    "id": "bc88c96d-d364-44a2-9773-e75edf270f4d",
+    "name": "Total 6's",
+    "code": "total-6s",
+    "displayName": "Total 6's"
+  },
+
+  {
+    "id": "d0af4b8b-4838-4522-8218-95d8e1eea9c8",
+    "name": "Total Wickets",
+    "code": "total-wickets",
+    "displayName": "Total Wickets"
+  },
+  {
+    "id": "e04daebf-5a10-485f-aa88-36ac6f5fa04e",
+    "name": "Total Run. T1 Even/Odd",
+    "code": "total-run-t1-even/odd",
+    "displayName": "Total Run. T1 Even/Odd"
+  },
+  {
+    "id": "2946a624-4965-47c6-a1aa-1a5364b6c05e",
+    "name": "Total Run. T2 Even/Odd",
+    "code": "total-run-t2-even/odd",
+    "displayName": "Total Run. T2 Even/Odd"
+  },
+
+  {
+    "id": "05dbef8a-65f6-4d04-b9b8-04f4859467fc",
+    "name": "Loss More Wicket",
+    "code": "loss-more-wicket",
+    "displayName": "Loss More Wicket"
+  },
+  {
+    "id": "e7094d6c-d9f7-4dae-8c4e-9e344fe4d290",
+    "name": "Highest Opening Partership",
+    "code": "highest-opening-partership",
+    "displayName": "Highest Opening Partership"
+  },
+
+  {
+    "id": "c5154314-0bd9-4dda-8615-764254f55430",
+    "name": "T1 Top BatsMan",
+    "code": "t1-top-batsMan",
+    "displayName": "T1 Top BatsMan"
+  },
+  {
+    "id": "de7aa616-fc0c-46fc-ac3e-6e9a8a25ebbb",
+    "name": "T2 Top BatsMan",
+    "code": "t2-top-batsMan",
+    "displayName": "T2 Top BatsMan"
+  },
+  {
+    "id": "773ff53e-cfa3-40ae-9a65-81c4174bb1de",
+    "name": "T1 Best Bowler",
+    "code": "t1-best-bowler",
+    "displayName": "T1 Best Bowler"
+  },
+  {
+    "id": "7a440fcc-06e1-45b0-a263-43e19b194d85",
+    "name": "T2 Best Bowler",
+    "code": "t2-best-bowler",
+    "displayName": "T2 Best Bowler"
+  }
+]
