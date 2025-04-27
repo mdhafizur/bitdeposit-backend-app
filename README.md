@@ -2,75 +2,162 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<h1 align="center">BitDeposit Backend Application</h1>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
+<p align="center">
+  A backend application built with the <a href="http://nestjs.com/" target="_blank">NestJS</a> framework for managing deposits, transactions, and user accounts efficiently.
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+  <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
+  <a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
+  <a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
   <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+---
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 📖 Overview
 
-## Installation
+The **BitDeposit Backend Application** is a scalable and modular backend system designed to handle deposits, transactions, and user account management. Built with [NestJS](https://nestjs.com/), it leverages modern development practices to ensure performance, security, and maintainability.
+
+---
+
+## 🚀 Features
+
+- **Modular Architecture**: Clean and scalable structure for easy feature addition.
+- **Database Integration**: Uses Prisma ORM for database management.
+- **Authentication**: Secure user authentication with JWT.
+- **RESTful APIs**: Well-documented APIs using Swagger.
+- **File Management**: Integration with AWS S3 for file uploads.
+- **Admin Panel**: AdminJS for managing backend operations.
+- **Docker Support**: Containerized deployment for consistent environments.
+
+---
+
+## 🛠 Tech Stack
+
+- **Framework**: [NestJS](https://nestjs.com/)
+- **Database**: PostgreSQL with [Prisma ORM](https://www.prisma.io/)
+- **Authentication**: JSON Web Tokens (JWT)
+- **File Storage**: AWS S3
+- **Containerization**: Docker
+- **Logging**: Winston Logger
+
+---
+
+## 🛠 Installation
+
+Follow these steps to set up the project locally:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/bitdeposit-backend-app.git
+   cd bitdeposit-backend-app
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Set up environment variables:
+   Create a `.env` file in the root directory and configure the required variables (e.g., database URL, JWT secret, AWS credentials).
+
+---
+
+## 🚀 Usage
+
+Run the application in different modes:
 
 ```bash
-$ npm install
+# Development mode
+npm run start
+
+# Watch mode (auto-restart on changes)
+npm run start:dev
+
+# Production mode
+npm run start:prod
 ```
 
-## Running the app
+---
+
+## ⚙️ Configuration
+
+The application requires the following environment variables:
+
+- `NODE_ENV`: Application environment (e.g., development, production).
+- `PORT`: Port number for the server.
+- `DATABASE_URL`: Connection string for the database.
+- `JWT_SECRET`: Secret key for JWT authentication.
+- `AWS_ACCESS_KEY_ID`: AWS access key for S3.
+- `AWS_SECRET_ACCESS_KEY`: AWS secret key for S3.
+- `AWS_BUCKET_NAME`: AWS S3 bucket name.
+
+---
+
+## 📚 API Endpoints
+
+The API documentation is available via Swagger. Once the app is running, visit:
+
+```
+http://localhost:<PORT>/api
+```
+
+---
+
+## 🧪 Testing
+
+Run tests to ensure the application works as expected:
 
 ```bash
-# development
-$ npm run start
+# Unit tests
+npm run test
 
-# watch mode
-$ npm run start:dev
+# End-to-end (e2e) tests
+npm run test:e2e
 
-# production mode
-$ npm run start:prod
+# Test coverage
+npm run test:cov
 ```
 
-## Test
+---
 
-```bash
-# unit tests
-$ npm run test
+## 🚀 Deployment
 
-# e2e tests
-$ npm run test:e2e
+To deploy the application using Docker:
 
-# test coverage
-$ npm run test:cov
-```
+1. Build the Docker image:
+   ```bash
+   docker build -t bitdeposit-backend-app .
+   ```
 
-## Support
+2. Run the container:
+   ```bash
+   docker run -p 3000:3000 bitdeposit-backend-app
+   ```
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+---
 
-## Stay in touch
+## 🤝 Contributing
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Contributions are welcome! Please follow these steps:
 
-## License
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes and push the branch.
+4. Open a pull request.
 
-Nest is [MIT licensed](LICENSE).
+---
 
-https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
-https://kinsta.com/blog/http-status-codes/
+## 🛡️ License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🌟 Acknowledgements
+
+Special thanks to the [NestJS](https://nestjs.com/) team for their amazing framework and community support.
